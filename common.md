@@ -55,6 +55,12 @@ why: https://airtable.com/shrR83FA2DnAnB2hh
 
 why: https://airtable.com/shrm968JBrOwJ3gd3
 
+### TypeScript runtime
+
+[esbuild-kit/tsx: ⚡️ TypeScript Execute (tsx): Node.js enhanced with esbuild to run TypeScript & ESM](https://github.com/esbuild-kit/tsx)
+
+why: [privatenumber/ts-runtime-comparison: Comparison of TypeScript runtimes](https://github.com/privatenumber/ts-runtime-comparison)
+
 
 ## Python
 
