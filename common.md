@@ -4,6 +4,9 @@
 
 [JetBrains Toolbox App: Manage Your Tools with Ease](https://www.jetbrains.com/toolbox-app/)
 
+[jetbrains-cleanup-recentProjects: Removes a non-existent folder from the recent projects list](https://github.com/andriyor/jetbrains-cleanup-recentProjects)
+
+
 [Visual Studio Code - Code Editing. Redefined](https://code.visualstudio.com/)
 
 why: https://airtable.com/shrxoKj2JqUWnGUrS
