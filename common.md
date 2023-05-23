@@ -8,6 +8,12 @@
 
 why: https://airtable.com/shrxoKj2JqUWnGUrS
 
+#### vs code plugins
+
+[quentinguidee/gitignore-ultimate-vscode: VSCode extension that allows to speed up the drafting of .gitignore files.](https://github.com/quentinguidee/gitignore-ultimate-vscode)
+
+
+
 ### DB GUI
 
 [dbeaver/dbeaver: Free universal database tool and SQL client](https://github.com/dbeaver/dbeaver)
