@@ -23,7 +23,10 @@ why: https://airtable.com/shrti82YTjJf60ipP
 [bat: A cat(1) clone with wings.](https://github.com/sharkdp/bat)
 
 
-## Terminal editor
+## Terminal text editor
 
 [micro: A modern and intuitive terminal-based text editor](https://github.com/zyedidia/micro)
 
+## misc
+
+[jq: Command-line JSON processor](https://github.com/stedolan/jq)

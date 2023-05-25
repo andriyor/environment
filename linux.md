@@ -14,6 +14,21 @@
 
 [plasma-applet-netspeed-widget: Plasma 5 widget that displays the currently used network bandwidth](https://github.com/dfaust/plasma-applet-netspeed-widget)
 
+# GTK apps
+
+[Uniform look for Qt and GTK applications](https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications)
+
+```shell
+yay breeze-gtk
+```
+
+## Terminal
+
+[tilix: A tiling terminal emulator for Linux using GTK+ 3](https://github.com/gnunn1/tilix)
+
+why: https://airtable.com/shr69UHzvjEf3SOOZ
+
+
 ## System monitor
 
 [plasma-systemmonitor: An interface for monitoring system sensors, process information and other system resources](https://github.com/KDE/plasma-systemmonitor)
@@ -35,3 +50,7 @@ why: https://airtable.com/shrbhfzUtnDA2B6Al/tblJj2orYPqJeVg80
 ## Screenshot
 
 [flameshot: Powerful yet simple to use screenshot software](https://github.com/flameshot-org/flameshot)
+
+## Disk space usage
+
+[Filelight](https://invent.kde.org/utilities/filelight)
