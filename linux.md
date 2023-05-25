@@ -6,13 +6,6 @@
 
 [yay: Yet another Yogurt - An AUR Helper written in Go](https://github.com/Jguer/yay)
 
-
-## ZSH plugin manager
-
-[sheldon: Fast, configurable, shell plugin manager](https://github.com/rossmacarthur/sheldon)
-
-why: https://airtable.com/shrti82YTjJf60ipP
-
 ## DE
 
 [Home - KDE Community](https://kde.org/)

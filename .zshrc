@@ -19,3 +19,11 @@ alias rm="rm -i"
 eval `ssh-agent -s`
 
 eval "$(sheldon source)"
+
+# Aliases
+alias cat='bat'
+alias l='exa --all --icons'
+alias ll='exa --long --all --git --icons'
+
+# Console editor
+export EDITOR=micro
