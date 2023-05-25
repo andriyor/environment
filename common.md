@@ -13,13 +13,13 @@ why: https://airtable.com/shrxoKj2JqUWnGUrS
 
 #### vs code plugins
 
-[quentinguidee/gitignore-ultimate-vscode: VSCode extension that allows to speed up the drafting of .gitignore files.](https://github.com/quentinguidee/gitignore-ultimate-vscode)
+[gitignore-ultimate-vscode: VSCode extension that allows to speed up the drafting of .gitignore files.](https://github.com/quentinguidee/gitignore-ultimate-vscode)
 
 
 
 ### DB GUI
 
-[dbeaver/dbeaver: Free universal database tool and SQL client](https://github.com/dbeaver/dbeaver)
+[dbeaver: Free universal database tool and SQL client](https://github.com/dbeaver/dbeaver)
 
 why: https://airtable.com/shrXjGScTuTXgpk8F
 
@@ -32,18 +32,18 @@ why: https://airtable.com/shrXjGScTuTXgpk8F
 
 why: https://airtable.com/shr075LSB6rMYMkwo
 
-### task manager
+### Task manager
 
 [ClickUp™ | One app to replace them all](https://clickup.com/)
 
 why: https://airtable.com/shrnIaBOSzAXkhUhL
 
-### time tracker
+### Time tracker
 
 [Toggl Track: Time Tracking Software for Any Workflow](https://toggl.com/track/)
 
 
-### cloud sync
+### Cloud sync
 
 [Google Drive, OneDrive and Dropbox Syncing - Insync](https://www.insynchq.com/)
 
@@ -52,31 +52,31 @@ why: https://airtable.com/shrgzcxnAnmAUdkDf
 
 ## Node
 
-### node version manager
+### Node version manager
 
-[Schniz/fnm: 🚀 Fast and simple Node.js version manager, built in Rust](https://github.com/Schniz/fnm)
+[fnm: 🚀 Fast and simple Node.js version manager, built in Rust](https://github.com/Schniz/fnm)
 
 why: https://airtable.com/shrR83FA2DnAnB2hh
 
-### package manager
+### Package manager
 
-[pnpm/pnpm: Fast, disk space efficient package manager](https://github.com/pnpm/pnpm)
+[pnpm: Fast, disk space efficient package manager](https://github.com/pnpm/pnpm)
 
 why: https://airtable.com/shrm968JBrOwJ3gd3
 
 ### TypeScript runtime
 
-[esbuild-kit/tsx: ⚡️ TypeScript Execute (tsx): Node.js enhanced with esbuild to run TypeScript & ESM](https://github.com/esbuild-kit/tsx)
+[tsx: ⚡️ TypeScript Execute (tsx): Node.js enhanced with esbuild to run TypeScript & ESM](https://github.com/esbuild-kit/tsx)
 
 why: [privatenumber/ts-runtime-comparison: Comparison of TypeScript runtimes](https://github.com/privatenumber/ts-runtime-comparison)
 
 
 ## Python
 
-### version manager
+### Version manager
 
-[pyenv/pyenv: Simple Python version management](https://github.com/pyenv/pyenv)
+[pyenv: Simple Python version management](https://github.com/pyenv/pyenv)
 
-### package manager
+### Package manager
 
-[python-poetry/poetry: Python packaging and dependency management made easy](https://github.com/python-poetry/poetry)
+[poetry: Python packaging and dependency management made easy](https://github.com/python-poetry/poetry)

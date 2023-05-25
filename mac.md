@@ -1,6 +1,6 @@
 ## Finder context menu
 
-[RoadToDream/SzContext: Add context menu to macOS Finder](https://github.com/RoadToDream/SzContext)
+[SzContext: Add context menu to macOS Finder](https://github.com/RoadToDream/SzContext)
 
 ## File manager
 

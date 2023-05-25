@@ -2,6 +2,10 @@
 
 [Manjaro](https://manjaro.org/)
 
+## Package manager
+
+[yay: Yet another Yogurt - An AUR Helper written in Go](https://github.com/Jguer/yay)
+
 ## DE
 
 [Home - KDE Community](https://kde.org/)
@@ -22,7 +26,7 @@ why: https://airtable.com/shrbhfzUtnDA2B6Al/tblJj2orYPqJeVg80
 
 ## Bluetooth
 
-[blueman-project/blueman: Blueman is a GTK+ Bluetooth Manager](https://github.com/blueman-project/blueman)
+[blueman: Blueman is a GTK+ Bluetooth Manager](https://github.com/blueman-project/blueman)
 
 ## Screenshot
 
