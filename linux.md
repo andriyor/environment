@@ -6,6 +6,13 @@
 
 [yay: Yet another Yogurt - An AUR Helper written in Go](https://github.com/Jguer/yay)
 
+
+## ZSH plugin manager
+
+[sheldon: Fast, configurable, shell plugin manager](https://github.com/rossmacarthur/sheldon)
+
+why: https://airtable.com/shrti82YTjJf60ipP
+
 ## DE
 
 [Home - KDE Community](https://kde.org/)
@@ -13,6 +20,10 @@
 [plasma-applet-eventcalendar](https://github.com/Zren/plasma-applet-eventcalendar)
 
 [plasma-applet-netspeed-widget: Plasma 5 widget that displays the currently used network bandwidth](https://github.com/dfaust/plasma-applet-netspeed-widget)
+
+## System monitor
+
+[plasma-systemmonitor: An interface for monitoring system sensors, process information and other system resources](https://github.com/KDE/plasma-systemmonitor)
 
 ## File manager
 
