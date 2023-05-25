@@ -1,6 +1,8 @@
 SAVEHIST=1000  # Save most-recent 1000 lines
 HISTFILE=~/.zhistory
 
+eval "$(starship init zsh)"
+
 # pnpm
 export PNPM_HOME="/home/andriy/.local/share/pnpm"
 case ":$PATH:" in

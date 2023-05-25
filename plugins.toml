@@ -14,9 +14,6 @@ shell = "zsh"
 
 [plugins]
 
-[plugins.spaceship]
-github = 'spaceship-prompt/spaceship-prompt'
-
 [plugins.zsh-autosuggestions]
 github = 'zsh-users/zsh-autosuggestions'
 

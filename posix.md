@@ -14,6 +14,11 @@ git clone --depth 1 git@github.com:ryanoasis/nerd-fonts.git
 ./install.sh
 ```
 
+## ZSH prompt
+
+[starship: ☄🌌️ The minimal, blazing-fast, and infinitely customizable prompt for any shell!](https://github.com/starship/starship)
+
+
 ## ZSH plugin manager
 
 [sheldon: Fast, configurable, shell plugin manager](https://github.com/rossmacarthur/sheldon)

@@ -1,5 +1,9 @@
 ## Dev
 
+## Font
+
+[mono: Free and open-source monospaced font from Evil Martians](https://github.com/evilmartians/mono)
+
 ### IDE
 
 [JetBrains Toolbox App: Manage Your Tools with Ease](https://www.jetbrains.com/toolbox-app/)

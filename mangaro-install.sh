@@ -33,7 +33,9 @@ brew install sheldon
 yay jq
 yay micro
 yay bat
+yay starship
 
 # misc
 yay krusader
 yay blueman
+yay redshift
