@@ -14,6 +14,8 @@
 
 [plasma-applet-netspeed-widget: Plasma 5 widget that displays the currently used network bandwidth](https://github.com/dfaust/plasma-applet-netspeed-widget)
 
+[plasma-applet-redshift-control: Plasma 5 applet for controlling redshift (screen temperature modifying). It allowes basic redshift settings and fast manual temperature control by mouse wheel.](https://github.com/kotelnik/plasma-applet-redshift-control)
+
 # GTK apps
 
 [Uniform look for Qt and GTK applications](https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications)
