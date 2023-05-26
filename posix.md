@@ -32,6 +32,10 @@ why: https://airtable.com/shrti82YTjJf60ipP
 
 [micro: A modern and intuitive terminal-based text editor](https://github.com/zyedidia/micro)
 
+## find
+
+[fd: A simple, fast and user-friendly alternative to 'find'](https://github.com/sharkdp/fd)
+
 ## git diff
 
 [delta: A syntax-highlighting pager for git, diff, and grep output](https://github.com/dandavison/delta)

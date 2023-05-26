@@ -22,7 +22,6 @@ user = "andriyor"
 [core]
   pager = delta
   editor = micro
-  sshCommand = "ssh -i  ~/.ssh/andriyorehov@gmail.com"
 
 [includeIf "gitdir:~/git/work/"]
     path =  ~/.gitconfig.work
