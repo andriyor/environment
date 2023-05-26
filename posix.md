@@ -3,8 +3,10 @@
 zsh
 
 ```shell
-ln -s ~/environment/.zshrc ~/.zshrc
-ln -s ~/environment/plugins.toml ~/.config/sheldon/plugins.toml
+ln -s ~/git/personal/environment/.gitconfig ~/.gitconfig 
+ln -s ~/git/personal/environment/.zshrc ~/.zshrc 
+ln -s ~/git/personal/environment/plugins.toml ~/.config/sheldon/plugins.toml
+
 ```
 
 ## Terminal icons
