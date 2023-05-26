@@ -34,6 +34,7 @@ yay jq
 yay micro
 yay bat
 yay starship
+yay git-delta
 
 # misc
 yay krusader

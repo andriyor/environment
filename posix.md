@@ -32,6 +32,10 @@ why: https://airtable.com/shrti82YTjJf60ipP
 
 [micro: A modern and intuitive terminal-based text editor](https://github.com/zyedidia/micro)
 
+## git diff
+
+[delta: A syntax-highlighting pager for git, diff, and grep output](https://github.com/dandavison/delta)
+
 ## misc
 
 [jq: Command-line JSON processor](https://github.com/stedolan/jq)
