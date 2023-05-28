@@ -30,12 +30,13 @@ curl -fsSL https://get.pnpm.io/install.sh | sh -
 # terminal
 yay -S tilix
 brew install sheldon
-yay -S jq
+yay -S starship
 yay -S micro
 yay -S bat
-yay -S starship
 yay -S git-delta
 yay -S fd
+yay -S jq
+yay -S yt-dlp
 
 # misc
 yay -S krusader

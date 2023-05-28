@@ -68,6 +68,12 @@ https://chrome.google.com/webstore/detail/pockettube-youtube-subscr/kdmnjgijlmjg
 https://addons.mozilla.org/en-US/firefox/addon/youtube-subscription-groups/
 
 
+Youtube Playlist Duration Calculator
+
+https://chrome.google.com/webstore/detail/youtube-playlist-duration/pijbakhgmhhadeakaocjfockpndcpobk
+
+https://addons.mozilla.org/en-US/firefox/addon/youtube-playlist-duration-calc/
+
 
 ## twitter 
 

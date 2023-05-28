@@ -45,3 +45,8 @@ why: https://airtable.com/shrti82YTjJf60ipP
 ## misc
 
 [jq: Command-line JSON processor](https://github.com/stedolan/jq)
+
+
+## youtube downloader
+
+[yt-dlp/yt-dlp: A youtube-dl fork with additional features and fixes](https://github.com/yt-dlp/yt-dlp)
