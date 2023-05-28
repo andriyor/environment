@@ -27,6 +27,7 @@ alias g='git'
 alias cat='bat'
 alias l='exa --all --icons'
 alias ll='exa --long --all --git --icons'
+alias ytdl="yt-dlp -f 'bestvideo[ext=mp4][vcodec!^=av0][vcodec!^=av1]+bestaudio[ext=m4a]/mp4/best' --recode-video mp4"
 
 # Console editor
 export EDITOR=micro
