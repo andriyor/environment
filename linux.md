@@ -60,3 +60,12 @@ why: https://airtable.com/shrbhfzUtnDA2B6Al/tblJj2orYPqJeVg80
 
 [redshift: Redshift adjusts the color temperature of your screen according to your surroundings. This may help your eyes hurt less if you are working in front of the screen at night.](https://github.com/jonls/redshift)
 
+
+## Video  VA-API
+
+[media-driver](https://github.com/intel/media-driver)
+
+[libva-utils: Libva-utils is a collection of tests for VA-API (VIdeo Acceleration API)](https://github.com/intel/libva-utils)
+
+https://gist.github.com/lbrame/1678c00213c2bd069c0a59f8733e0ee6#setting-up-va-api
+

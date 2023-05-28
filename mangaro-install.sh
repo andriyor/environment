@@ -9,6 +9,11 @@ yay -S google-chrome-dev
 yay -S firefox
 yay -S firefox-developer-edition
 
+# video
+yay -S intel-media-driver
+yay -S libva-utils
+yay -S mpv
+
 # media
 yay -S vlc
 yay -S spotify
