@@ -27,6 +27,7 @@ snap install slack
 yay -S jetbrains-toolbox
 snap install code --classic
 snap install code-insiders --classic
+yay -S nginx
 
 # node
 curl -fsSL https://fnm.vercel.app/install | bash
