@@ -39,6 +39,7 @@ brew install sheldon
 yay -S starship
 yay -S micro
 yay -S bat
+yay -S exa
 yay -S git-delta
 yay -S fd
 yay -S jq
