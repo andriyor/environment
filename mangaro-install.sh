@@ -28,6 +28,8 @@ yay -S jetbrains-toolbox
 snap install code --classic
 snap install code-insiders --classic
 yay -S nginx
+yay -S redis
+redis-server --daemonize yes
 
 # node
 curl -fsSL https://fnm.vercel.app/install | bash
