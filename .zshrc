@@ -24,6 +24,7 @@ alias rm="rm -i"
 
 # fix this
 eval `ssh-agent -s`
+redis-server --daemonize yes
 
 eval "$(sheldon source)"
 
