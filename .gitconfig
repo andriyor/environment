@@ -12,12 +12,6 @@
   r  = "!git rm $(git ls-files --deleted) && git status"
   lg = log --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --abbrev-commit
 
-[user]
-email = andriyorehov@gmail.com
-name = Andrii Oriekhov
-
-[github]
-user = "andriyor"
 
 [core]
   pager = delta
