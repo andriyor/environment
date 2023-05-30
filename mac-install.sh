@@ -8,3 +8,6 @@ brew install micro
 # dev
 brew install redis
 brew install nginx
+
+
+brew install stats

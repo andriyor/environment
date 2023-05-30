@@ -11,3 +11,7 @@ why: https://airtable.com/shrbhfzUtnDA2B6Al/tblJj2orYPqJeVg80
 ## Terminal
 
 [iTerm2 - macOS Terminal Replacement](https://iterm2.com/)
+
+## system monitor 
+
+[stats: macOS system monitor in your menu bar](https://github.com/exelban/stats)
