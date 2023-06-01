@@ -31,6 +31,11 @@ yay -S nginx
 yay -S redis
 flatpak install flathub io.dbeaver.DBeaverCommunity
 
+# docker
+# https://docs.portainer.io/start/install-ce/server/docker/linux
+docker volume create portainer_data
+docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+
 # node
 curl -fsSL https://fnm.vercel.app/install | bash
 curl -fsSL https://get.pnpm.io/install.sh | sh -
