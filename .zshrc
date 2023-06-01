@@ -41,6 +41,7 @@ alias ni='npm i'
 alias nu='npm uninstall'
 alias ns='npm run start'
 alias nt='npm run test'
+alias nt='npm run build'
 
 alias rmnm="find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
 alias rmbuild="find . -name 'build' -type d -prune -exec rm -rf '{}' +"
