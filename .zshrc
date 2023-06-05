@@ -37,7 +37,7 @@ alias ytdl="yt-dlp -f 'bestvideo[ext=mp4][vcodec!^=av0][vcodec!^=av1]+bestaudio[
 
 alias npmd='rm -rf ~/.npmrc'
 
-alias ni='npm i'
+alias ni='npm i --no-audit'
 alias nu='npm uninstall'
 alias ns='npm run start'
 alias nt='npm run test'
