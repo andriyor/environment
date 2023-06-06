@@ -1,6 +1,7 @@
 [alias]
   current-branch = "!git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/'"
   a  = "!git add . && git s"
+  ma = "!git merge --abort"
   ch = checkout
   c  = commit -m
   ac = commit -am
@@ -9,7 +10,8 @@
   l  = "!git pull origin $(git current-branch) --rebase"
   h  = "!git push origin $(git current-branch)"
   lh = "!git l && git h"
-  r  = "!git rm $(git ls-files --deleted) && git status"
+  rm  = "!git rm $(git ls-files --deleted) && git status"
+  r  = "!git reset --hard origin/$(git current-branch)"
   lg = log --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --abbrev-commit
 
 
