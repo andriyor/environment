@@ -159,9 +159,14 @@ https://chrome.google.com/webstore/detail/checker-plus-for-gmail/oeopbcgkkoapgob
 
 https://chrome.google.com/webstore/detail/copy-as-markdown/fkeaekngjflipcockcnpobkpbbfbhmdn
 
-https://addons.mozilla.org/en-US/firefox/addon/copy-as-markdown
+https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/
 
 
 ## Firefox theme
 
 https://addons.mozilla.org/en-US/firefox/addon/firefox-color/
+
+
+## Test servers
+
+[Lightweight Proxy to Intercept & Modify HTTP(s) requests | Requestly](https://requestly.io/)
