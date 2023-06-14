@@ -40,6 +40,9 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /va
 curl -fsSL https://fnm.vercel.app/install | bash
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 
+# python
+yay -S pyenv
+
 # terminal
 yay -S tilix
 brew install sheldon
@@ -56,3 +59,5 @@ yay -S yt-dlp
 yay -S krusader
 yay -S blueman
 yay -S redshift
+yay -S gnome-clocks
+yay -S logiops
