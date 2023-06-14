@@ -170,3 +170,7 @@ https://addons.mozilla.org/en-US/firefox/addon/firefox-color/
 ## Test servers
 
 [Lightweight Proxy to Intercept & Modify HTTP(s) requests | Requestly](https://requestly.io/)
+
+## Multi-Account Containers
+
+https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/

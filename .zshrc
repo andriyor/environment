@@ -61,3 +61,8 @@ alias checklock2="jq '.packages[].resolved' package-lock.json | grep -v"
 
 # Console editor
 export EDITOR=micro
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
