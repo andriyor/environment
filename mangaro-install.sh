@@ -18,9 +18,10 @@ yay -S mpv
 yay -S vlc
 yay -S spotify
 yay -S flameshot
+flatpak install flathub org.gnome.Loupe
 
 # messengers
-yay -S telegram-desktop
+flatpak install flathub org.telegram.desktop # tray icon on gnome works only in flatpack
 snap install slack
 
 # dev
@@ -61,3 +62,10 @@ yay -S blueman
 yay -S redshift
 yay -S gnome-clocks
 yay -S logiops
+
+# gnome
+yay -S gnome
+yay -S gnome-browser-connector
+yay -S gdm 
+systemctl enable gdm.service --force
+flatpak install flathub com.mattjakeman.ExtensionManager

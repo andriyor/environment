@@ -6,7 +6,7 @@
 
 [yay: Yet another Yogurt - An AUR Helper written in Go](https://github.com/Jguer/yay)
 
-## DE
+## KDE
 
 [Home - KDE Community](https://kde.org/)
 
@@ -15,6 +15,22 @@
 [plasma-applet-netspeed-widget: Plasma 5 widget that displays the currently used network bandwidth](https://github.com/dfaust/plasma-applet-netspeed-widget)
 
 [plasma-applet-redshift-control: Plasma 5 applet for controlling redshift (screen temperature modifying). It allowes basic redshift settings and fast manual temperature control by mouse wheel.](https://github.com/kotelnik/plasma-applet-redshift-control)
+
+## GNOME
+
+[gnome-shell-extension-appindicator](https://github.com/ubuntu/gnome-shell-extension-appindicator) to show AppIndicator
+
+[micheleg/dash-to-dock: A dock for the Gnome Shell. This extension moves the dash out of the overview transforming it in a dock for an easier launching of applications and a faster switching between windows and desktops.](https://github.com/micheleg/dash-to-dock)
+
+[Just Perfection](https://gitlab.gnome.org/jrahmatzadeh/just-perfection) to customize notification position
+
+[prateekmedia/netspeedsimplified: A Net Speed extension With Loads of Customization for GNOME shell.](https://github.com/prateekmedia/netspeedsimplified)
+
+[marcinjahn/gnome-do-not-disturb-while-screen-sharing-or-recording-extension](https://github.com/marcinjahn/gnome-do-not-disturb-while-screen-sharing-or-recording-extension)
+
+[GSConnect/gnome-shell-extension-gsconnect: KDE Connect implementation for GNOME](https://github.com/GSConnect/gnome-shell-extension-gsconnect)
+
+[qwreey75/quick-settings-tweaks: Let's tweak gnome 43's quick settings! You can add Media Controls, Notifications, Volume Mixer on quick settings and remove useless buttons!](https://github.com/qwreey75/quick-settings-tweaks)
 
 # GTK apps
 
