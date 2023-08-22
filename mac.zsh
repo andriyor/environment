@@ -12,3 +12,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 bindkey "\e\eOD" backward-word
 bindkey "\e\eOC" forward-word
+
+# fnm
+export PATH="/Users/andrejorehov/Library/Application Support/fnm:$PATH"
+eval "`fnm env`"
