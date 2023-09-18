@@ -41,17 +41,19 @@ eval "$(sheldon source)"
 # Aliases
 alias g='git'
 alias cat='bat'
-alias l='exa --all --icons'
-alias ll='exa --long --all --git --icons'
+alias l='eza --all --icons'
+alias ll='eza --long --all --git --icons'
 alias ytdl="yt-dlp -f 'bestvideo[ext=mp4][vcodec!^=av0][vcodec!^=av1]+bestaudio[ext=m4a]/mp4/best' --recode-video mp4"
 
 alias npmd='rm -rf ~/.npmrc'
 
 alias ni='npm i --no-audit'
+alias nsb='npm run storybook '
 alias nu='npm uninstall'
 alias ns='npm run start'
 alias nt='npm run test'
 alias nb='npm run build'
+alias pi='pnpm i'
 
 alias rmnm="find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
 alias rmbuild="find . -name 'build' -type d -prune -exec rm -rf '{}' +"
@@ -66,3 +68,10 @@ export EDITOR=micro
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# export VOLTA_HOME="$HOME/.volta"
+# export PATH="$VOLTA_HOME/bin:$PATH"
