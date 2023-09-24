@@ -75,3 +75,10 @@ eval "$(pyenv init -)"
 
 # export VOLTA_HOME="$HOME/.volta"
 # export PATH="$VOLTA_HOME/bin:$PATH"
+
+# bun completions
+[ -s "/home/andriy/.bun/_bun" ] && source "/home/andriy/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
