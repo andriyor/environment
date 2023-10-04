@@ -30,7 +30,8 @@ esac
 export PATH="/home/andriy/.local/share/fnm:$PATH"
 eval "`fnm env`"
 
-alias rm="rm -i"
+# save rm
+# alias rm="rm -i"
 
 # fix this
 eval `ssh-agent -s`
