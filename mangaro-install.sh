@@ -15,14 +15,15 @@ yay -S libva-utils
 yay -S mpv
 
 # media
-yay -S vlc
-yay -S spotify
-yay -S flameshot
+yay -S vlc # official repo ships newer version
+yay -S spotify # aur repo ships newer version
+flatpak install flathub org.flameshot.Flameshot
 flatpak install flathub org.gnome.Loupe
 
-# messengers
+# messengers/calls
 flatpak install flathub org.telegram.desktop # tray icon on gnome works only in flatpack
-snap install slack
+snap install slack # snap ships new version
+yay -S zoom # aur repo ships newer version
 
 # dev
 yay -S jetbrains-toolbox
@@ -63,9 +64,13 @@ yay -S redshift
 yay -S gnome-clocks
 yay -S logiops
 
+# notes/syncing
+flatpak install flathub md.obsidian.Obsidian
+yay -S insync # aur is single source
+
 # gnome
 yay -S gnome
 yay -S gnome-browser-connector
-yay -S gdm 
+yay -S gdm
 systemctl enable gdm.service --force
 flatpak install flathub com.mattjakeman.ExtensionManager

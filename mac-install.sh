@@ -1,4 +1,5 @@
 # terminal
+brew install iterm2
 brew install sheldon
 brew install bat
 brew install exa

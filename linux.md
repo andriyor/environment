@@ -4,7 +4,15 @@
 
 ## Package manager
 
+[flatpak/flatpak: Linux application sandboxing and distribution framework](https://github.com/flatpak/flatpak)
+
+why: https://airtable.com/appIvSj1vJt6bL0rp/shrjEilTJsfL8ALNp
+
+## Arch/AUR package manager
+
 [yay: Yet another Yogurt - An AUR Helper written in Go](https://github.com/Jguer/yay)
+
+why: https://airtable.com/appIvSj1vJt6bL0rp/shrd1Cz5WMMooxHFe
 
 ## KDE
 
