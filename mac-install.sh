@@ -1,14 +1,38 @@
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/aoriekhov/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # terminal
+curl -sS https://starship.rs/install.sh | sh
 brew install iterm2
+
 brew install sheldon
+sheldon init --shell zsh
+
 brew install bat
-brew install exa
-brew install fnm
+brew install eza
 brew install micro
 
 # dev
 brew install redis
 brew install nginx
 
+# env
+brew install pyenv
+brew install fnm
+
+brew install --cask sublime-text
+brew install --cask visual-studio-code
+
+# notes
+brew install --cask obsidian
+brew install --cask insync
+
+# media
+brew install --cask spotify
+brew install --cask obs
+brew install --cask vlc
+brew install --cask zoom
 
 brew install stats

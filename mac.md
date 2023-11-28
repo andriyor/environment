@@ -1,3 +1,7 @@
+## Package manager
+
+[Homebrew/brew: 🍺 The missing package manager for macOS (or Linux)](https://github.com/Homebrew/brew)
+
 ## Finder context menu
 
 [SzContext: Add context menu to macOS Finder](https://github.com/RoadToDream/SzContext)

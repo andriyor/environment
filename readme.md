@@ -1,14 +1,13 @@
 # environment
 
+Goal: reproduce environment on new machine as fast as possible, share daily used tools and reasons of choices
 
 ## todo
 
-- [ ] install chrome extension script
-- [ ] install firefox extension script
-- [ ] vs code extensions
+- [ ] list of vs code extensions
 
 
-## sorce
+## links
 
 [ai/environment: My home config, scripts and installation process](https://github.com/ai/environment/tree/main)
 

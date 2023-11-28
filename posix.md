@@ -1,10 +1,21 @@
+## ssh
+
+after copy
+
+```shell
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/*
+```
+
 ## shell
 
 zsh
 
 ```shell
 ln -s ~/git/personal/environment/.gitconfig ~/.gitconfig 
-ln -s ~/git/personal/environment/.zshrc ~/.zshrc 
+ln -s ~/git/personal/environment/.zshrc ~/.zshrc
+mkdir os
+ln -s ~/git/personal/environment/mac.zsh ~/os/mac.zsh
 ln -s ~/git/personal/environment/plugins.toml ~/.config/sheldon/plugins.toml
 ln -s ~/git/personal/environment/mpv.conf ~/.config/mpv/mpv.conf
 ```
@@ -13,7 +24,7 @@ ln -s ~/git/personal/environment/mpv.conf ~/.config/mpv/mpv.conf
 
 ```shell
 git clone --depth 1 git@github.com:ryanoasis/nerd-fonts.git
-./install.sh
+./nerd-fonts/install.sh
 ```
 
 ## ZSH prompt
