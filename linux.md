@@ -2,6 +2,13 @@
 
 [Manjaro](https://manjaro.org/)
 
+`manjaro_package_list.txt` file conains packages installed by pacman
+
+```shell
+pacman -Qqe > manjaro_package_list.txt
+```
+
+
 ## Package manager
 
 [flatpak/flatpak: Linux application sandboxing and distribution framework](https://github.com/flatpak/flatpak)
