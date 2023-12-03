@@ -26,10 +26,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# fnm
-export PATH="/home/andriy/.local/share/fnm:$PATH"
-eval "`fnm env`"
-
 # save rm
 # alias rm="rm -i"
 
@@ -70,12 +66,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# export VOLTA_HOME="$HOME/.volta"
-# export PATH="$VOLTA_HOME/bin:$PATH"
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
 
 # bun completions
 [ -s "/home/andriy/.bun/_bun" ] && source "/home/andriy/.bun/_bun"
