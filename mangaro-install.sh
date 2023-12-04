@@ -29,6 +29,7 @@ yay -S zoom # aur repo ships newer version
 yay -S jetbrains-toolbox
 snap install code --classic
 snap install code-insiders --classic
+sudo snap install sublime-text --classic 
 yay -S nginx
 yay -S redis
 flatpak install flathub io.dbeaver.DBeaverCommunity
