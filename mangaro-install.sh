@@ -59,7 +59,7 @@ yay -S jq
 yay -S yt-dlp
 
 # misc
-yay -S krusader
+yay -S krusader-git #have HiDPI support https://github.com/KDE/krusader/commit/7ea9f1f0dbdd07cd5c5baae56bb672a7be519932
 yay -S blueman
 yay -S redshift
 yay -S gnome-clocks
