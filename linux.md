@@ -8,6 +8,14 @@
 pacman -Qqe > manjaro_package_list.txt
 ```
 
+```shell
+flatpak list --columns=name --app
+```
+
+```shell
+snap list
+```
+
 
 ## Package manager
 
