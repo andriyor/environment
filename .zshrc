@@ -18,6 +18,8 @@ fi
 
 eval "$(starship init zsh)"
 
+export PATH="$PATH:./node_modules/.bin"
+
 # pnpm
 export PNPM_HOME="/home/andriy/.local/share/pnpm"
 case ":$PATH:" in
@@ -66,8 +68,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+# fnm
+eval "`fnm env`"
 
 # bun completions
 [ -s "/home/andriy/.bun/_bun" ] && source "/home/andriy/.bun/_bun"
