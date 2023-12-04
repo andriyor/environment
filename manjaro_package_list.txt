@@ -71,6 +71,7 @@ firefox-i18n-en-us
 firefox-i18n-uk
 fish
 fluidsynth
+fnm-bin
 fontforge
 fwupd
 fzf
@@ -175,7 +176,7 @@ kio-extras
 kmenuedit
 konsole
 konversation
-krusader
+krusader-git
 kscreen
 kscreenlocker
 ksshaskpass
@@ -374,7 +375,6 @@ util-linux
 vcdimager
 vi
 vlc
-volta-bin
 vulkan-intel
 vulkan-radeon
 wget
