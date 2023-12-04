@@ -32,7 +32,9 @@ esac
 # alias rm="rm -i"
 
 # fix this
-eval `ssh-agent -s`
+eval `ssh-agent`
+ssh-add
+
 redis-server --daemonize yes
 
 eval "$(sheldon source)"
