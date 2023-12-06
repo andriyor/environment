@@ -7,16 +7,9 @@
 
 [pacman/Tips and tricks - ArchWiki](https://wiki.archlinux.org/title/pacman/Tips_and_tricks)
 
-
 ```shell
 pacman -Q > manjaro/packages/all.txt 
-```
-
-```shell
 pacman -Qe > manjaro/packages/explicit.txt
-```
-
-```shell
 pacman -Qent > manjaro/packages/explicit_native.txt 
 ```
 
