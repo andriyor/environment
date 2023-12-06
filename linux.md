@@ -4,12 +4,20 @@
 
 `manjaro_package_list.txt` file conains packages installed by pacman
 
+
+[pacman/Tips and tricks - ArchWiki](https://wiki.archlinux.org/title/pacman/Tips_and_tricks)
+
+
 ```shell
-pacman -Qe > manjaro_package_list.txt
+pacman -Q > manjaro/packages/all.txt 
 ```
 
 ```shell
-pacman -Q > manjaro_package_all_list.txt 
+pacman -Qe > manjaro/packages/explicit.txt
+```
+
+```shell
+pacman -Qent > manjaro/packages/explicit_native.txt 
 ```
 
 
