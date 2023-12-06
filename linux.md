@@ -12,6 +12,7 @@ pacman -Q > manjaro/packages/all.txt
 pacman -Qe > manjaro/packages/explicit.txt
 pacman -Qent > manjaro/packages/explicit_native.txt
 pacman -Qttdq | pacman -Rs --print - > manjaro/packages/optional.txt
+flatpak list --columns=name --app > manjaro/packages/flatpak.txt 
 ```
 
 

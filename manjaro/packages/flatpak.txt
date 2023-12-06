@@ -1,0 +1,11 @@
+Dropbox
+Postman
+Extension Manager
+Sublime Merge
+Visual Studio Code
+DBeaver Community
+Obsidian
+Flameshot
+Bustle
+Image Viewer
+Clock
