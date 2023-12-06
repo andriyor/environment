@@ -5,8 +5,13 @@
 `manjaro_package_list.txt` file conains packages installed by pacman
 
 ```shell
-pacman -Qqe > manjaro_package_list.txt
+pacman -Qq > manjaro_package_list.txt
 ```
+
+```shell
+pacman -Q > manjaro_package_all_list.txt 
+```
+
 
 ```shell
 flatpak list --columns=name --app

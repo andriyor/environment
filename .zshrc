@@ -80,4 +80,7 @@ eval "`fnm env`"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+export NIX_INSTALL="$HOME/.nix-profile"
+export PATH="$NIX_INSTALL/bin:$PATH"
+
 [ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh

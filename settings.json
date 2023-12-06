@@ -30,5 +30,6 @@
     "javascript.updateImportsOnFileMove.enabled": "always",
     
     "jest.shell": "/bin/zsh",
-    "jest.jestCommandLine": "source ~/.zshrc && jest"
+    "jest.jestCommandLine": "source ~/.zshrc && jest",
+    "git.confirmSync": false
 }

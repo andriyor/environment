@@ -1,411 +1,399 @@
-acpi
-acpid
-alacritty
-alsa-firmware
-alsa-utils
-android-tools
-android-udev
-apparmor
-appimagelauncher
-ark
-avahi
-b43-fwcutter
-baobab
-base-devel
-bash
-bat
-bind
-blackbox-terminal
-bluedevil
-blueman
-breeze-gtk
-btrfs-progs
-bzip2
-cantata
-cdparanoia
-cheese
-cmake
-coreutils
-cpupower
-cronie
-cryptsetup
-d-feet
-d-spy
-darkman
-device-mapper
-dhclient
-dhcpcd
-diffutils
-discover
-dmidecode
-dmraid
-dnsmasq
-docker
-docker-compose
-dolphin
-dolphin-plugins
-dosfstools
-doublecmd-qt5
-dvd+rw-tools
-e2fsprogs
-ecryptfs-utils
-efibootmgr
-emovix
-eog
-epiphany
-evince
-extra-cmake-modules
-f2fs-tools
-fd
-ffmpeg
-ffmpegthumbs
-file
-filelight
-filesystem
-findutils
-firefox
-firefox-developer-edition
-firefox-developer-edition-i18n-en-us
-firefox-developer-edition-i18n-uk
-firefox-i18n-en-us
-firefox-i18n-uk
-fish
-fluidsynth
-fnm-bin
-fontforge
-fwupd
-fzf
-gawk
-gcc-libs
-gdal
-gdm
-gettext
-git-delta
-github-cli
-glibc
-globalprotect-bin
-gnome-backgrounds
-gnome-browser-connector
-gnome-calculator
-gnome-calendar
-gnome-characters
-gnome-clocks
-gnome-color-manager
-gnome-console
-gnome-contacts
-gnome-control-center
-gnome-disk-utility
-gnome-font-viewer
-gnome-icon-theme
-gnome-keyring
-gnome-logs
-gnome-maps
-gnome-menus
-gnome-music
-gnome-photos
-gnome-remote-desktop
-gnome-session
-gnome-settings-daemon
-gnome-shell
-gnome-shell-extensions
-gnome-software
-gnome-system-monitor
-gnome-terminal
-gnome-text-editor
-gnome-themes-extra
-gnome-user-docs
-gnome-user-share
-gnome-weather
-go
-google-chrome
-google-chrome-dev
-gparted
-grep
-grilo-plugins
-grub
-grub-theme-manjaro
-gst-libav
-gst-plugins-bad
-gst-plugins-base
-gst-plugins-good
-gst-plugins-ugly
-gtk3
-gvfs
-gvfs-afc
-gvfs-goa
-gvfs-google
-gvfs-gphoto2
-gvfs-mtp
-gvfs-nfs
-gvfs-smb
-gwenview
-gzip
-hardinfo-git
-htop
-hyphen-en
-illyria-wallpaper
-inetutils
-insync
-intel-media-driver
-intel-ucode
-inxi
-iproute2
-iputils
-jetbrains-toolbox
-jfsutils
-jq
-kaccounts-providers
-kamera
-kate
-kcalc
-kde-gtk-config
-kdeconnect
-kdegraphics-thumbnailers
-kdenetwork-filesharing
-kdeplasma-addons
-kdiff3
-keditbookmarks
-kernel-alive
-kfind
-kgamma5
-kget
-khelpcenter
-khotkeys
-kinfocenter
-kio-extras
-kmenuedit
-konsole
-konversation
-krusader-git
-kscreen
-kscreenlocker
-ksshaskpass
-ksysguard
-ksystemlog
-kwallet-pam
-kwalletmanager
-kwayland-integration
-kwin
-kwrited
-less
-lib32-libcanberra
-lib32-libva-intel-driver
-lib32-libva-mesa-driver
-lib32-libva-vdpau-driver
-lib32-mesa-demos
-lib32-mesa-vdpau
-lib32-vulkan-intel
-lib32-vulkan-radeon
-libcanberra
-libdvdcss
-libfido2
-libktorrent
-libopenmpt
-libva-intel-driver
-libva-mesa-driver
-libva-utils
-libva-vdpau-driver
-libwebsockets
-licenses
-linux64
-llvm
-logiops
-logrotate
-lvm2
-malcontent
-man-db
-man-pages
-manjaro-alsa
-manjaro-application-utility
-manjaro-browser-settings
-manjaro-documentation-en
-manjaro-firmware
-manjaro-hello
-manjaro-hotfixes
-manjaro-kde-settings
-manjaro-printer
-manjaro-pulse
-manjaro-release
-manjaro-settings-manager-kcm
-manjaro-settings-manager-knotifier
-manjaro-system
-manjaro-wallpapers-18.0
-maven
-mdadm
-memtest86+
-mesa-demos
-mesa-vdpau
-mhwd
-mhwd-db
-micro
-milou
-minio-client
-mkinitcpio-openswap
-mobile-broadband-provider-info
-modemmanager
-mpd
-mpv
-mtpfs
-nano
-neofetch
-networkmanager
-networkmanager-openconnect
-networkmanager-openvpn
-networkmanager-pptp
-networkmanager-vpnc
-nfs-utils
-nginx
-notekit-appimage
-noto-fonts
-noto-fonts-cjk
-noto-fonts-emoji
-nss-mdns
-ntfs-3g
-ntp
-numlockx
-obs-studio
-okular
-onefetch
-openresolv
-openssh
-orca
-os-prober
-otf-aurulent-nerd
-oxygen
-oxygen-icons
-p7zip
-pacman
-pamac-cli
-pamac-gtk
-pamac-tray-icon-plasma
-partitionmanager
-pciutils
-perl
-perl-file-mimeinfo
-pgweb-bin
-phonon-qt5-gstreamer
-pick-colour-picker
-plasma-browser-integration
-plasma-desktop
-plasma-nm
-plasma-pa
-plasma-simplemenu
-plasma-systemmonitor
-plasma-workspace
-plasma-workspace-wallpapers
-playerctl
-poppler-data
-portaudio
-portmaster-stub
-postgresql-libs
-powerdevil
-powertop
-print-manager
-procps-ng
-psensor
-psmisc
-pulseaudio-bluetooth
-pulseaudio-ctl
-pulseaudio-zeroconf
-pyenv
-python-numpy
-python-pillow
-python-pip
-python-pyaudio
-python-pyqt5
-python-pysmbc
-python-reportlab
-python-websockets
-python-wheel
-qt5-imageformats
-qt5-translations
-qt5-virtualkeyboard
-qt5-webkit
-qt5-websockets
-redis
-redshift
-reiserfsprogs
-rhythmbox
-rsync
-rustup
-rygel
-s-nail
-samba
-sddm
-sddm-kcm
-sed
-shadow
-skanlite
-snapd
-snapd-glib
-solaar
-spectacle
-spectre-meltdown-checker
-spotify
-sshfs
-starship
-sudo
-sushi
-sysfsutils
-systemd
-systemd-fsck-silent
-systemd-kcm
-systemd-sysvcompat
-systemsettings
-tar
-terminus-font
-texinfo
-tilix
-timeshift
-tk
-tlp
-topgrade
-ttf-dejavu
-ttf-droid
-ttf-inconsolata
-ttf-indic-otf
-ttf-liberation
-typora
-udiskie
-udisks2
-unarchiver
-usb_modeswitch
-usbutils
-util-linux
-vcdimager
-vi
-vlc
-vulkan-intel
-vulkan-radeon
-wget
-which
-wpa_supplicant
-xdg-desktop-portal
-xdg-desktop-portal-gnome
-xdg-desktop-portal-kde
-xdg-user-dirs
-xdg-user-dirs-gtk
-xdg-utils
-xf86-input-elographics
-xf86-input-evdev
-xf86-input-libinput
-xf86-input-void
-xf86-video-amdgpu
-xf86-video-ati
-xf86-video-intel
-xf86-video-nouveau
-xfsprogs
-xorg-server
-xorg-twm
-xorg-xinit
-xorg-xkill
-xz
-yakuake
-yay-bin
-yelp
-yin-yang
-yt-dlp
-yubikey-manager-qt
-yubikey-personalization-gui
-zensu
-zoom
+acpi 1.7-3
+acpid 2.0.34-1
+alsa-firmware 1.2.4-3
+alsa-utils 1.2.10-1
+android-tools 34.0.4-3
+android-udev 20231124-1
+apparmor 3.1.6-2
+appimagelauncher 2.2.0-9
+ark 23.08.3-1
+avahi 1:0.8+r189+g35bb1ba-1
+b43-fwcutter 019-4
+base-devel 1-2
+bash 5.2.021-1
+bat 0.24.0-1
+bind 9.18.20-1
+bluedevil 1:5.27.9-1
+blueman 2.3.5-2
+breeze-gtk 5.27.9-1
+btrfs-progs 6.6.2-1
+bzip2 1.0.8-5
+cdparanoia 10.2-8
+cmake 3.27.9-1
+coreutils 9.4-2
+cpupower 6.5-1
+cronie 1.7.0-4
+cryptsetup 2.6.1-3.4
+d-feet 0.3.16-3
+d-spy 1.8.0-1
+darkman 1.5.4-2
+device-mapper 2.03.22-2
+dhclient 4.4.3.P1-2
+dhcpcd 10.0.5-1
+diffutils 3.10-1
+discover 5.27.9-3
+dmidecode 3.5-1
+dmraid 1.0.0.rc16.3-14
+dnsmasq 2.89-1
+docker 1:24.0.7-1
+docker-compose 2.23.3-1
+dolphin 23.08.3-1
+dolphin-plugins 23.08.3-2
+dosfstools 4.2-3
+dvd+rw-tools 7.1-9
+e2fsprogs 1.47.0-1
+ecryptfs-utils 111-8
+efibootmgr 18-2
+emovix 0.9.0-8
+eog 45.1-1
+evince 45.0-1
+extra-cmake-modules 5.112.0-1
+f2fs-tools 1.16.0-2
+fd 8.7.1-1
+ffmpeg 2:6.1-1
+ffmpegthumbs 23.08.3-1
+file 5.45-1
+filelight 23.08.3-1
+filesystem 2023.09.22-1
+findutils 4.9.0-3
+firefox 120.0-1
+firefox-developer-edition 121.0b4-1
+firefox-developer-edition-i18n-en-us 121.0b4-1
+firefox-developer-edition-i18n-uk 121.0b4-1
+firefox-i18n-en-us 120.0-1
+firefox-i18n-uk 120.0-1
+fluidsynth 2.3.4-1
+fnm-bin 1.35.1-0
+fwupd 1.9.9-1
+fzf 0.43.0-1
+gawk 5.3.0-1
+gcc-libs 13.2.1-3
+gdal 3.7.3-2
+gdm 45.0.1-1
+gettext 0.22.4-1
+git-delta 0.16.5-1
+github-cli 2.39.1-1
+glibc 2.38-7
+globalprotect-bin 6.1.0.0-44
+gnome-backgrounds 45.0-1
+gnome-browser-connector 42.1-4
+gnome-calculator 45.0.2-1
+gnome-calendar 45.1-1
+gnome-characters 45.0-1
+gnome-clocks 45.0-1
+gnome-color-manager 3.36.0+r51+gcf7ee2b5-1
+gnome-console 45.0-1
+gnome-contacts 45.0-1
+gnome-control-center 45.1-1
+gnome-disk-utility 45.0-1
+gnome-font-viewer 45.0-1
+gnome-icon-theme 3.12.0-7
+gnome-keyring 1:42.1-3
+gnome-logs 45beta-1
+gnome-maps 45.1-1
+gnome-menus 3.36.0-2
+gnome-music 1:45.0-1
+gnome-photos 1:44.0-4
+gnome-remote-desktop 45.1-1
+gnome-session 45.0-1
+gnome-settings-daemon 45.0-1
+gnome-shell 1:45.1-1
+gnome-shell-extensions 45.1-3
+gnome-software 45.1-2
+gnome-system-monitor 45.0.2-1
+gnome-terminal 3.50.1-1
+gnome-text-editor 45.1-1
+gnome-themes-extra 3.28+r6+g45b1d457-1
+gnome-user-docs 45.1-1
+gnome-user-share 43.0-1
+gnome-weather 45.0-1
+go 2:1.21.4-1
+google-chrome 120.0.6099.62-1
+google-chrome-dev 121.0.6156.3-1
+gparted 1.5.0-1
+grep 3.11-1
+grilo-plugins 1:0.3.16-1
+grub 2.12rc1.r49.ge58b870ff-2
+grub-theme-manjaro 20.2-16
+gst-libav 1.22.7-1
+gst-plugins-bad 1.22.7-1
+gst-plugins-base 1.22.7-1
+gst-plugins-good 1.22.7-1
+gst-plugins-ugly 1.22.7-1
+gtk3 1:3.24.38-1
+gvfs 1.52.1-1
+gvfs-afc 1.52.1-1
+gvfs-goa 1.52.1-1
+gvfs-google 1.52.1-1
+gvfs-gphoto2 1.52.1-1
+gvfs-mtp 1.52.1-1
+gvfs-nfs 1.52.1-1
+gvfs-smb 1.52.1-1
+gwenview 23.08.3-2
+gzip 1.13-2
+hardinfo-git 0.6.alpha.1417.g5996ceb-1
+htop 3.2.2-1
+hyphen-en 2.8.8-5
+illyria-wallpaper 1.4-1
+inetutils 2.4-2
+insync 3.8.6.50504-2
+intel-media-driver 23.3.5-1
+intel-ucode 20231114-1
+inxi 3.3.31.2-1
+iproute2 6.6.0-2
+iputils 20221126-2
+jetbrains-toolbox 2.1.1.18388-1
+jfsutils 1.1.15-8
+jq 1.7-1
+kaccounts-providers 23.08.3-1
+kamera 23.08.3-1
+kde-gtk-config 5.27.9-1
+kdeconnect 23.08.3-1
+kdegraphics-thumbnailers 23.08.3-2
+kdenetwork-filesharing 23.08.3-1
+kdeplasma-addons 5.27.9-1
+kdiff3 1.10.6-1
+keditbookmarks 23.08.3-1
+kernel-alive 0.5.1-1
+kfind 23.08.3-1
+kgamma5 5.27.9-1
+kget 23.08.3-1
+khelpcenter 23.08.3-1
+khotkeys 5.27.9-1
+kinfocenter 5.27.9-1
+kio-extras 23.08.3-1
+kmenuedit 5.27.9-1
+konsole 23.08.3-1
+konversation 23.08.3-1
+krusader-git 2.9.0.dev.r6703.g6e3f33fb-1
+kscreen 5.27.9-1
+kscreenlocker 5.27.9-1
+ksshaskpass 5.27.9-1
+ksysguard 5.22.0-2
+ksystemlog 23.08.3-1
+kwallet-pam 5.27.9-1
+kwalletmanager 23.08.3-1
+kwayland-integration 5.27.9-1
+kwin 5.27.9-1
+kwrited 5.27.9-1
+less 1:643-1
+lib32-libcanberra 1:0.30+r2+gc0620e4-2
+lib32-libva-intel-driver 2.4.1-1
+lib32-libva-mesa-driver 1:23.1.9-1
+lib32-libva-vdpau-driver 0.7.4-7
+lib32-mesa-demos 9.0.0-1
+lib32-mesa-vdpau 1:23.1.9-1
+lib32-vulkan-intel 1:23.1.9-1
+lib32-vulkan-radeon 1:23.1.9-1
+libcanberra 1:0.30+r2+gc0620e4-3
+libdvdcss 1.4.3-1
+libfido2 1.14.0-1
+libktorrent 23.08.3-1
+libopenmpt 0.7.3-1
+libva-intel-driver 2.4.1-2
+libva-mesa-driver 1:23.1.9-1
+libva-utils 2.20.0-1
+libva-vdpau-driver 0.7.4-6
+libwebsockets 4.3.3-1
+licenses 20231011-1
+linux64 6.4.16-5
+linux66 6.6.3-1
+llvm 16.0.6-1
+logiops 0.3.3-1
+logrotate 3.21.0-2
+lvm2 2.03.22-2
+malcontent 0.11.1-3
+man-db 2.12.0-1
+man-pages 6.05.01-2
+manjaro-alsa 20221002-1
+manjaro-application-utility 1.3.3-10
+manjaro-browser-settings 20231111-1
+manjaro-documentation-en 20181009-1
+manjaro-firmware 20160419-1
+manjaro-hello 0.7.1-3
+manjaro-hotfixes 2018.08-6
+manjaro-kde-settings 20230529-1
+manjaro-printer 20220924-1
+manjaro-pulse 20221015-2
+manjaro-release 23.1.0-1
+manjaro-settings-manager-kcm 0.5.7-18
+manjaro-settings-manager-knotifier 0.5.7-18
+manjaro-system 20230401-1
+manjaro-wallpapers-18.0 1.4-3
+maven 3.8.7-1
+mdadm 4.2-2
+memtest86+ 6.20-1
+mesa-demos 9.0.0-3
+mesa-vdpau 1:23.1.9-1
+mhwd 0.6.5-28
+mhwd-db 0.6.5-28
+micro 2.0.13-1
+milou 5.27.9-1
+mkinitcpio-openswap 0.1.0-3
+mobile-broadband-provider-info 20230416-1
+modemmanager 1.22.0-1
+mpd 0.23.14-2
+mpv 1:0.36.0-1
+mtpfs 1.1-4
+nano 7.2-1
+neofetch 7.1.0-2
+networkmanager 1.44.2-3
+networkmanager-openconnect 1.2.10-1
+networkmanager-openvpn 1.10.2-3
+networkmanager-pptp 1.2.12-3
+networkmanager-vpnc 1.2.8-3
+nfs-utils 2.6.4-1
+nginx 1.24.0-3
+nix 2.19.1-1
+noto-fonts 1:23.11.1-1
+noto-fonts-cjk 20230817-1
+noto-fonts-emoji 1:2.041-1
+nss-mdns 0.15.1-1
+ntfs-3g 2022.10.3-1
+ntp 4.2.8.p17-1
+numlockx 1.2-5
+obs-studio 30.0.0-1
+okular 23.08.3-1
+onefetch 2.18.1-2
+openresolv 3.13.2-1
+openssh 9.5p1-1
+orca 45.1-1
+os-prober 1.81-1
+otf-aurulent-nerd 3.1.1-1
+oxygen 5.27.9-1
+oxygen-icons 1:5.112.0-1
+p7zip 1:17.05-2
+pacman 6.0.2-14
+pamac-cli 11.6.0-2
+pamac-gtk 11.6.0+2+g5ac9b28-1
+pamac-tray-icon-plasma 0.1.3-2
+partitionmanager 23.08.3-1
+pciutils 3.10.0-1
+perl 5.38.1-1
+perl-file-mimeinfo 0.33-2
+pgweb-bin 0.14.1-1
+phonon-qt5-gstreamer 4.10.0-4
+pick-colour-picker 1.51-1
+plasma-browser-integration 5.27.9-1
+plasma-desktop 5.27.9-1
+plasma-nm 5.27.9-1
+plasma-pa 5.27.9-1
+plasma-simplemenu 1.0.12-1
+plasma-systemmonitor 5.27.9-1
+plasma-workspace 5.27.9.1-3
+plasma-workspace-wallpapers 5.27.9-1
+playerctl 2.4.1-3
+poppler-data 0.4.12-1
+portaudio 1:19.7.0-2
+portmaster-stub 1.0.13-1
+postgresql-libs 15.4-2
+powerdevil 5.27.9-2
+powertop 2.15-1
+print-manager 23.08.3-1
+procps-ng 4.0.4-2
+psensor 1.2.1-4
+psmisc 23.6-1
+pulseaudio-bluetooth 16.1-6
+pulseaudio-ctl 1.70-1
+pulseaudio-zeroconf 16.1-6
+pyenv 1:2.3.33-1
+python-numpy 1.26.2-1
+python-pillow 10.1.0-2
+python-pip 23.3.1-1
+python-pyaudio 0.2.14-1
+python-pyqt5 5.15.10-1
+python-pysmbc 1.0.25.1-1
+python-reportlab 3.6.12-3
+python-websockets 10.4-3
+python-wheel 0.40.0-3
+qt5-imageformats 5.15.11+kde+r12-1
+qt5-translations 5.15.11-1
+qt5-virtualkeyboard 5.15.11-1
+qt5-webkit 5.212.0alpha4-20
+qt5-websockets 5.15.11+kde+r2-1
+redis 7.2.3-1
+redshift 1.12-8
+reiserfsprogs 3.6.27-4
+rhythmbox 3.4.7-1
+rsync 3.2.7-6
+rustup 1.26.0-5
+rygel 1:0.42.4-1
+s-nail 14.9.24-2
+samba 4.19.3-1
+sddm 0.20.0-2
+sddm-kcm 5.27.9-1
+sed 4.9-3
+shadow 4.14.2-1
+skanlite 23.08.3-1
+snapd 2.61-1
+snapd-glib 1.64-1
+solaar 1.1.10-2
+spectacle 23.08.3-1
+spectre-meltdown-checker 0.46+20+g9b7b09a-1
+spotify 1:1.2.25.1011-1
+sshfs 3.7.3-1
+starship 1.16.0-1
+sudo 1.9.15.p2-1
+sushi 45.0-1
+sysfsutils 2.1.1-1
+systemd 254.6-2
+systemd-fsck-silent 239-1
+systemd-kcm 1.2.1-8
+systemd-sysvcompat 254.6-2
+systemsettings 5.27.9-1
+tar 1.35-2
+terminus-font 4.49.1-6
+texinfo 7.1-2
+tilix 1.9.6-1
+timeshift 23.07.1-2
+tk 8.6.13-2
+tlp 1.6.1-1
+topgrade 13.0.0-1
+ttf-dejavu 2.37+18+g9b5d1b2f-4
+ttf-droid 20121017-10
+ttf-inconsolata 1:3.000-3
+ttf-indic-otf 0.2-11
+ttf-liberation 2.1.5-1
+typora 1.7.6-2
+udiskie 2.5.0-1
+udisks2 2.10.1-2
+unarchiver 1.10.7-9
+usb_modeswitch 2.6.1-3
+usbutils 017-1
+util-linux 2.39.2-2
+vcdimager 2.0.1-4
+vi 1:070224-6
+vulkan-intel 1:23.1.9-1
+vulkan-radeon 1:23.1.9-1
+wget 1.21.4-1
+which 2.21-6
+wpa_supplicant 2:2.10-8
+xdg-desktop-portal 1.18.2-1
+xdg-desktop-portal-gnome 45.1-1
+xdg-desktop-portal-kde 5.27.9-1
+xdg-user-dirs 0.18-1
+xdg-user-dirs-gtk 0.11-2
+xdg-utils 1.2.0r17+g21fb316-1
+xf86-input-elographics 1.4.3-1
+xf86-input-evdev 2.10.6-3
+xf86-input-libinput 1.4.0-1
+xf86-input-void 1.4.2-1
+xf86-video-amdgpu 23.0.0-1
+xf86-video-ati 1:22.0.0-1
+xf86-video-intel 1:2.99.917+923+gb74b67f0-1
+xf86-video-nouveau 1.0.17-2
+xfsprogs 6.5.0-1
+xorg-server 21.1.9-1
+xorg-twm 1.0.12-1
+xorg-xinit 1.4.2-1
+xorg-xkill 1.0.6-1
+xz 5.4.5-1
+yakuake 23.08.3-1
+yay-bin 12.2.0-1
+yelp 42.2-2
+yin-yang 3.2.4-1
+yt-dlp 2023.11.16-1
+yubikey-manager-qt 1.2.5-1
+yubikey-personalization-gui 3.1.25-2
+zensu 0.3-7
+zoom 5.16.10-1
