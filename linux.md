@@ -5,7 +5,7 @@
 `manjaro_package_list.txt` file conains packages installed by pacman
 
 ```shell
-pacman -Qq > manjaro_package_list.txt
+pacman -Qe > manjaro_package_list.txt
 ```
 
 ```shell
