@@ -8,9 +8,10 @@
 [pacman/Tips and tricks - ArchWiki](https://wiki.archlinux.org/title/pacman/Tips_and_tricks)
 
 ```shell
-pacman -Q > manjaro/packages/all.txt 
+pacman -Q > manjaro/packages/all.txt
 pacman -Qe > manjaro/packages/explicit.txt
-pacman -Qent > manjaro/packages/explicit_native.txt 
+pacman -Qent > manjaro/packages/explicit_native.txt
+pacman -Qttdq | pacman -Rs --print - > manjaro/packages/optional.txt
 ```
 
 
