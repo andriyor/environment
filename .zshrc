@@ -33,7 +33,7 @@ esac
 
 # fix this
 eval `ssh-agent`
-ssh-add
+# ssh-add
 
 redis-server --daemonize yes
 
