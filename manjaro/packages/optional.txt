@@ -7,8 +7,8 @@ luit-20230201-1
 xorg-xwininfo-1.1.6-1
 xdotool-3.20211022.1-1
 xclip-0.13-4
-wxwidgets-gtk3-3.2.4-2
-wxwidgets-common-3.2.4-2
+wxwidgets-gtk3-3.2.4-3
+wxwidgets-common-3.2.4-3
 libmspack-1:0.11alpha-1
 wireless-regdb-2023.09.01-1
 webkit2gtk-2.42.3-1
@@ -84,11 +84,11 @@ libappindicator-gtk3-12.10.0.r298-3
 lhasa-0.3.1-3
 krename-5.0.2-6
 podofo-0.10.3-1
-kompare-23.08.3-1
+kompare-23.08.4-1
 libkomparediff2-23.08.4-1
 kimageformats5-5.112.0-1
 kgamma-5.27.10-2
-kdepim-addons-23.08.3-1
+kdepim-addons-23.08.4-1
 libksieve-23.08.4-1
 ktnef-23.08.4-1
 kontactinterface-23.08.4-1
@@ -132,7 +132,7 @@ jp2a-1.1.1-2
 hunspell-en_us-2020.12.07-5
 graphviz-9.0.0-1
 gts-0.7.6.121130-2
-netpbm-10.73.43-2
+netpbm-10.86.39-1
 gperf-3.1-5
 gpart-0.3-4
 gdb-13.2-1
@@ -155,7 +155,7 @@ vtk-9.3.0-7
 onetbb-2021.10.0-1
 libmsym-0.2.3-8
 avogadrolibs-1.98.1-4
-spglib-2.1.0-2
+spglib-2.2.0-1
 pugixml-1.14-1
 molequeue-0.9.0-3
 avogadro-molecules-1.0.0-1
