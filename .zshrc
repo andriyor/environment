@@ -20,14 +20,6 @@ eval "$(starship init zsh)"
 
 export PATH="$PATH:./node_modules/.bin"
 
-# pnpm
-export PNPM_HOME="/home/andriy/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
 # save rm
 # alias rm="rm -i"
 
@@ -49,12 +41,14 @@ alias ytdl="yt-dlp -f 'bestvideo[ext=mp4][vcodec!^=av0][vcodec!^=av1]+bestaudio[
 alias npmd='rm -rf ~/.npmrc'
 
 alias ni='npm i --no-audit'
-alias nsb='npm run storybook '
+alias nsb='npm run storybook'
 alias nu='npm uninstall'
 alias ns='npm run start'
 alias nt='npm run test'
 alias nb='npm run build'
 alias pi='pnpm i'
+
+alias nts='node --import=tsimp/import'
 
 alias rmnm="find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
 alias rmbuild="find . -name 'build' -type d -prune -exec rm -rf '{}' +"
