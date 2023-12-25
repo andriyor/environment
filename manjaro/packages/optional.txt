@@ -10,9 +10,11 @@ xclip-0.13-4
 wxwidgets-gtk3-3.2.4-3
 wxwidgets-common-3.2.4-3
 libmspack-1:0.11alpha-1
+wmctrl-1.07-6
 wireless-regdb-2023.09.01-1
-webkit2gtk-2.42.3-1
+webkit2gtk-2.42.4-1
 w3m-0.5.3.git20230121_1-1
+update-grub-2.12-3
 unrar-1:6.2.12-1
 unarj-2.65-1
 unace-2.5-11
@@ -35,7 +37,7 @@ python-mutagen-1.47.0-1
 python-matplotlib-3.8.1-1
 python-pyparsing-3.1.1-1
 python-kiwisolver-1.4.5-1
-python-fonttools-4.46.0-1
+python-fonttools-4.47.0-1
 python-cycler-0.12.1-1
 python-contourpy-1.2.0-1
 python-markdown-3.5.1-1
@@ -86,7 +88,7 @@ krename-5.0.2-6
 podofo-0.10.3-1
 kompare-23.08.4-1
 libkomparediff2-23.08.4-1
-kimageformats5-5.112.0-1
+kimageformats5-5.113.0-1
 kgamma-5.27.10-2
 kdepim-addons-23.08.4-1
 libksieve-23.08.4-1
@@ -116,11 +118,11 @@ pimcommon-23.08.4-1
 kpimtextedit-23.08.4-1
 ktextaddons-1.5.2-4
 kldap-23.08.4-1
-qtkeychain-qt5-0.14.1-2
+qtkeychain-qt5-0.14.2-1
 kimap-23.08.4-1
 akonadi-search-23.08.4-1
 akonadi-mime-23.08.4-1
-kcalendarcore5-5.112.0-1
+kcalendarcore5-5.113.0-1
 akonadi-contacts-23.08.4-1
 libakonadi-23.08.4-1
 grantleetheme-23.08.4-1
