@@ -16,6 +16,10 @@ if [[ $(uname) == "Darwin" ]]; then
   source ~/os/mac.zsh;
 fi
 
+if [[ $(uname) == "Linux" ]]; then
+  source ~/os/linux.zsh;
+fi
+
 eval "$(starship init zsh)"
 
 export PATH="$PATH:./node_modules/.bin"

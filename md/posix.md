@@ -16,6 +16,7 @@ ln -s ~/git/personal/environment/.gitconfig ~/.gitconfig
 ln -s ~/git/personal/environment/.zshrc ~/.zshrc
 mkdir os
 ln -s ~/git/personal/environment/mac.zsh ~/os/mac.zsh
+ln -s ~/git/personal/environment/linux.zsh ~/os/linux.zsh
 ln -s ~/git/personal/environment/plugins.toml ~/.config/sheldon/plugins.toml
 ln -s ~/git/personal/environment/mpv.conf ~/.config/mpv/mpv.conf
 ln -s ~/git/personal/environment/settings.json ~/.config/Code\ -\ Insiders/User/settings.json
