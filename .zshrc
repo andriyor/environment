@@ -69,7 +69,7 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # fnm
-eval "`fnm env`"
+eval "$(fnm env --use-on-cd)"
 
 # bun completions
 [ -s "/home/andriy/.bun/_bun" ] && source "/home/andriy/.bun/_bun"
