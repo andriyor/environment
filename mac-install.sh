@@ -14,6 +14,7 @@ sheldon init --shell zsh
 brew install bat
 brew install eza
 brew install micro
+brew install jq
 
 # dev
 brew install redis
