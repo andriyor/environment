@@ -51,6 +51,7 @@ alias ns='npm run start'
 alias nt='npm run test'
 alias nb='npm run build'
 alias nrl='npm run lint'
+alias nrt='npm run typecheck'
 alias pi='pnpm i'
 
 alias nts='node --import=tsimp/import'
