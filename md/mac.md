@@ -6,6 +6,10 @@
 
 [SzContext: Add context menu to macOS Finder](https://github.com/RoadToDream/SzContext)
 
+## Window manager
+
+[rxhanson/Rectangle: Move and resize windows on macOS with keyboard shortcuts and snap areas](https://github.com/rxhanson/Rectangle)
+
 ## File manager
 
 [Commander One](https://mac.eltima.com/file-manager.html)
