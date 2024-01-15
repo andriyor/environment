@@ -1,3 +1,12 @@
+## Browser
+
+### Firefox
+
+#### Disable sound effect on search
+
+1. about:config
+2. accessibility.typeaheadfind.enablesound = false
+
 ## Dev
 
 ## Font
