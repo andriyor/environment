@@ -19,6 +19,7 @@ brew install jq
 # dev
 brew install redis
 brew install nginx
+brew install golang
 
 # env
 brew install pyenv
