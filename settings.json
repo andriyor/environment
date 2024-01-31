@@ -1,5 +1,9 @@
 {
   "editor.accessibilitySupport": "off",
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+
+  "terminal.integrated.fontSize": 14,
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
@@ -18,11 +22,10 @@
   },
 
   "files.insertFinalNewline": true,
-  "editor.fontSize": 14,
   "explorer.confirmDelete": false,
   "jest.autoRun": "off",
   "git.confirmSync": false,
-  "editor.formatOnSave": true,
+
   "window.nativeTabs": true,
   "window.openFoldersInNewWindow": "on"
 }
