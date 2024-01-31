@@ -1,27 +1,25 @@
 {
-  "diffEditor.ignoreTrimWhitespace": false,
   "editor.accessibilitySupport": "off",
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "files.autoSaveDelay": 10000,
-  "terminal.integrated.env.osx": { "FIG_NEW_SESSION": "1" },
-  "terminal.integrated.scrollback": 5000,
-  "[python]": { "editor.formatOnType": true },
-  "update.mode": "manual",
-  "[typescript]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[jsonc]": { "editor.defaultFormatter": "rvest.vs-code-prettier-eslint" },
-  "[scss]": { "editor.defaultFormatter": "rvest.vs-code-prettier-eslint" },
-  "workbench.iconTheme": "vscode-icons",
-  "git.enableSmartCommit": true,
-  "editor.fontFamily": "'Martian Mono'",
-  "terminal.integrated.fontFamily": "monospace",
-  "editor.fontSize": 12,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "jest.shell": "/bin/zsh",
-  "jest.jestCommandLine": "source ~/.zshrc && jest",
+
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "files.insertFinalNewline": true,
+  "editor.fontSize": 14,
+  "explorer.confirmDelete": false,
+  "jest.autoRun": "off",
   "git.confirmSync": false,
-  "workbench.colorTheme": "Default Dark+"
+  "editor.formatOnSave": true,
+  "window.nativeTabs": true,
+  "window.openFoldersInNewWindow": "on"
 }

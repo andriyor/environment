@@ -1,9 +1,14 @@
-## Distro 
+```shell
+ln -s ~/git/personal/environment/plugins.toml ~/.config/sheldon/plugins.toml
+ln -s ~/git/personal/environment/mpv.conf ~/.config/mpv/mpv.conf
+ln -s ~/git/personal/environment/settings.json ~/.config/Code\ -\ Insiders/User/settings.json
+```
+
+## Distro
 
 [Manjaro](https://manjaro.org/)
 
 `manjaro_package_list.txt` file conains packages installed by pacman
-
 
 [pacman/Tips and tricks - ArchWiki](https://wiki.archlinux.org/title/pacman/Tips_and_tricks)
 
@@ -12,9 +17,8 @@ pacman -Q > manjaro/packages/all.txt
 pacman -Qe > manjaro/packages/explicit.txt
 pacman -Qent > manjaro/packages/explicit_native.txt
 pacman -Qttdq | pacman -Rs --print - > manjaro/packages/optional.txt
-flatpak list --columns=name --app > manjaro/packages/flatpak.txt 
+flatpak list --columns=name --app > manjaro/packages/flatpak.txt
 ```
-
 
 ```shell
 flatpak list --columns=name --app
@@ -23,7 +27,6 @@ flatpak list --columns=name --app
 ```shell
 snap list
 ```
-
 
 ## Package manager
 
@@ -77,7 +80,6 @@ yay breeze-gtk
 
 why: https://airtable.com/shr69UHzvjEf3SOOZ
 
-
 ## System monitor
 
 [plasma-systemmonitor: An interface for monitoring system sensors, process information and other system resources](https://github.com/KDE/plasma-systemmonitor)
@@ -104,11 +106,9 @@ why: https://airtable.com/shrbhfzUtnDA2B6Al/tblJj2orYPqJeVg80
 
 [Filelight](https://invent.kde.org/utilities/filelight)
 
-
 [redshift: Redshift adjusts the color temperature of your screen according to your surroundings. This may help your eyes hurt less if you are working in front of the screen at night.](https://github.com/jonls/redshift)
 
-
-## Video  VA-API
+## Video VA-API
 
 [media-driver](https://github.com/intel/media-driver)
 
