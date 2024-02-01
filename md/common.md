@@ -31,6 +31,8 @@ why: https://airtable.com/shrxoKj2JqUWnGUrS
 
 [prettier/prettier-vscode: Visual Studio Code extension for Prettier](https://github.com/prettier/prettier-vscode)
 
+[Gruntfuggly/todo-tree: Use ripgrep to find TODO tags and display the results in a tree view](https://github.com/Gruntfuggly/todo-tree)
+
 [gitignore-ultimate-vscode: VSCode extension that allows to speed up the drafting of .gitignore files.](https://github.com/quentinguidee/gitignore-ultimate-vscode)
 
 ### DB GUI
