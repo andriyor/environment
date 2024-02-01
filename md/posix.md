@@ -19,13 +19,6 @@ ln -s ~/git/personal/environment/mac.zsh ~/os/mac.zsh
 ln -s ~/git/personal/environment/linux.zsh ~/os/linux.zsh
 ```
 
-## Terminal icons
-
-```shell
-git clone --depth 1 git@github.com:ryanoasis/nerd-fonts.git
-./nerd-fonts/install.sh
-```
-
 ## ZSH prompt
 
 [starship: ☄🌌️ The minimal, blazing-fast, and infinitely customizable prompt for any shell!](https://github.com/starship/starship)

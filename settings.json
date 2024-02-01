@@ -8,6 +8,7 @@
 
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.scrollback": 5000,
+  "terminal.integrated.fontFamily": "'Hack Nerd Font'",
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
