@@ -2,6 +2,9 @@
   "editor.accessibilitySupport": "off",
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
 
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.env.osx": {
