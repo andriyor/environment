@@ -37,6 +37,8 @@ why: https://airtable.com/shrxoKj2JqUWnGUrS
 
 [wakatime/vscode-wakatime: Visual Studio Code plugin for automatic time tracking and metrics generated from your programming activity.](https://github.com/wakatime/vscode-wakatime)
 
+[shd101wyy/vscode-markdown-preview-enhanced: One of the "BEST" markdown preview extensions for Visual Studio Code](https://github.com/shd101wyy/vscode-markdown-preview-enhanced)
+
 ### DB GUI
 
 [dbeaver: Free universal database tool and SQL client](https://github.com/dbeaver/dbeaver)
