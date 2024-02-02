@@ -35,6 +35,8 @@ why: https://airtable.com/shrxoKj2JqUWnGUrS
 
 [gitignore-ultimate-vscode: VSCode extension that allows to speed up the drafting of .gitignore files.](https://github.com/quentinguidee/gitignore-ultimate-vscode)
 
+[wakatime/vscode-wakatime: Visual Studio Code plugin for automatic time tracking and metrics generated from your programming activity.](https://github.com/wakatime/vscode-wakatime)
+
 ### DB GUI
 
 [dbeaver: Free universal database tool and SQL client](https://github.com/dbeaver/dbeaver)
