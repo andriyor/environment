@@ -19,6 +19,7 @@ brew install bat
 brew install eza
 brew install micro
 brew install jq
+brew install git-delta
 
 # dev
 brew install redis

@@ -2,6 +2,7 @@
   "editor.accessibilitySupport": "off",
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modifications",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always"
   },
@@ -23,6 +24,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
