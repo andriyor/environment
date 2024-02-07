@@ -25,6 +25,7 @@ brew install git-delta
 brew install redis
 brew install nginx
 brew install golang
+brew install --cask postman
 
 # env
 brew install pyenv

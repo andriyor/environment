@@ -23,21 +23,43 @@
 
 why: https://airtable.com/shrxoKj2JqUWnGUrS
 
-#### vs code plugins
+#### vs code extensions
 
 [jest-community/vscode-jest: The optimal flow for Jest based testing in VS Code](https://github.com/jest-community/vscode-jest)
 
+code --install-extension orta.vscode-jest
+
 [microsoft/vscode-eslint: VSCode extension to integrate eslint into VSCode](https://github.com/Microsoft/vscode-eslint)
+
+code --install-extension dbaeumer.vscode-eslint
 
 [prettier/prettier-vscode: Visual Studio Code extension for Prettier](https://github.com/prettier/prettier-vscode)
 
+code --install-extension esbenp.prettier-vscode
+
 [Gruntfuggly/todo-tree: Use ripgrep to find TODO tags and display the results in a tree view](https://github.com/Gruntfuggly/todo-tree)
+
+code --install-extension gruntfuggly.todo-tree
 
 [gitignore-ultimate-vscode: VSCode extension that allows to speed up the drafting of .gitignore files.](https://github.com/quentinguidee/gitignore-ultimate-vscode)
 
+code --install-extension quentinguidee.gitignore-ultimate
+
 [wakatime/vscode-wakatime: Visual Studio Code plugin for automatic time tracking and metrics generated from your programming activity.](https://github.com/wakatime/vscode-wakatime)
 
+code --install-extension dbaeumer.vscode-eslint
+
 [shd101wyy/vscode-markdown-preview-enhanced: One of the "BEST" markdown preview extensions for Visual Studio Code](https://github.com/shd101wyy/vscode-markdown-preview-enhanced)
+
+code --install-extension shd101wyy.markdown-preview-enhanced
+
+[GitHub Actions - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
+
+code --install-extension github.vscode-github-actions
+
+[WakaTime - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime)
+
+code --install-extension wakatime.vscode-wakatim
 
 ### DB GUI
 
