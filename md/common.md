@@ -61,6 +61,10 @@ code --install-extension github.vscode-github-actions
 
 code --install-extension wakatime.vscode-wakatim
 
+[SVG - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=jock.svg)
+
+code --install-extension ock.svg
+
 ### DB GUI
 
 [dbeaver: Free universal database tool and SQL client](https://github.com/dbeaver/dbeaver)

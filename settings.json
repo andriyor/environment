@@ -7,7 +7,7 @@
   "editor.formatOnSave": false,
   "editor.formatOnSaveMode": "modifications",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always"
+    "source.fixAll.eslint": "off"
   },
 
   "terminal.integrated.fontSize": 14,
@@ -39,5 +39,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
-  "jest.autoRun": "off"
+  "jest.autoRun": "off",
+  "jest.showCoverageOnLoad": true
 }
