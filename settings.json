@@ -1,10 +1,13 @@
 {
+  "window.nativeTabs": true,
+  "window.openFoldersInNewWindow": "on",
+
   "editor.accessibilitySupport": "off",
   "editor.fontSize": 14,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.formatOnSaveMode": "modifications",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "false"
+    "source.fixAll.eslint": "always"
   },
 
   "terminal.integrated.fontSize": 14,
@@ -13,6 +16,12 @@
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
+
+  "files.insertFinalNewline": true,
+
+  "explorer.confirmDelete": false,
+
+  "git.confirmSync": false,
 
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -30,11 +39,5 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
-  "files.insertFinalNewline": true,
-  "explorer.confirmDelete": false,
-  "jest.autoRun": "off",
-  "git.confirmSync": false,
-
-  "window.nativeTabs": true,
-  "window.openFoldersInNewWindow": "on"
+  "jest.autoRun": "off"
 }
