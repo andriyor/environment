@@ -2,6 +2,7 @@
   "window.nativeTabs": true,
   "window.openFoldersInNewWindow": "on",
 
+  "editor.stickyScroll.enabled": true,
   "editor.accessibilitySupport": "off",
   "editor.fontSize": 14,
   "editor.formatOnSave": false,
