@@ -5,8 +5,8 @@
   "editor.stickyScroll.enabled": true,
   "editor.accessibilitySupport": "off",
   "editor.fontSize": 14,
-  "editor.formatOnSave": false,
-  "editor.formatOnSaveMode": "modifications",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "off"
   },
@@ -21,6 +21,7 @@
   "files.insertFinalNewline": true,
 
   "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
 
   "git.confirmSync": false,
 
@@ -41,5 +42,7 @@
   },
 
   "jest.autoRun": "off",
-  "jest.showCoverageOnLoad": true
+  "jest.showCoverageOnLoad": true,
+
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
