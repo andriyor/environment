@@ -11,7 +11,7 @@
 
 ## Font
 
-[mono: Free and open-source monospaced font from Evil Martians](https://github.com/evilmartians/mono)
+[tonsky/FiraCode: Free monospaced font with programming ligatures](https://github.com/tonsky/FiraCode)
 
 ### IDE
 

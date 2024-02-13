@@ -2,9 +2,12 @@
   "window.nativeTabs": true,
   "window.openFoldersInNewWindow": "on",
 
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+
   "editor.stickyScroll.enabled": true,
   "editor.accessibilitySupport": "off",
-  "editor.fontSize": 14,
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "modificationsIfAvailable",
   "editor.codeActionsOnSave": {

@@ -3,9 +3,10 @@
 (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/aoriekhov/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# terminal font
+# fonts
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
+brew install --cask font-fira-code
 
 # terminal
 curl -sS https://starship.rs/install.sh | sh
