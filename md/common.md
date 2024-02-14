@@ -27,8 +27,6 @@ why: https://airtable.com/shrxoKj2JqUWnGUrS
 
 [keyboard shortcuts - How can we save all files in (VSCode) like we do in Visual Studio - Stack Overflow](https://stackoverflow.com/questions/37014171/how-can-we-save-all-files-in-vscode-like-we-do-in-visual-studio?answertab=scoredesc#tab-top)
 
-
-
 #### vs code extensions
 
 [jest-community/vscode-jest: The optimal flow for Jest based testing in VS Code](https://github.com/jest-community/vscode-jest)
@@ -70,6 +68,10 @@ code --install-extension wakatime.vscode-wakatim
 [SVG - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=jock.svg)
 
 code --install-extension ock.svg
+
+[Partial Diff - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ryu1kn.partial-diff)
+
+code --install-extension ryu1kn.partial-diff
 
 ### DB GUI
 
