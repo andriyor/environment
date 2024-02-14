@@ -13,6 +13,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "off"
   },
+  "editor.tabSize": 2,
 
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.scrollback": 5000,
