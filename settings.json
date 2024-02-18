@@ -8,7 +8,7 @@
 
   "editor.stickyScroll.enabled": true,
   "editor.accessibilitySupport": "off",
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.formatOnSaveMode": "modificationsIfAvailable",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "off"
@@ -48,5 +48,7 @@
   "jest.autoRun": "off",
   "jest.showCoverageOnLoad": true,
 
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "markdown-preview-enhanced.previewTheme": "github-dark.css",
+  "security.promptForLocalFileProtocolHandling": false
 }

@@ -26,6 +26,9 @@ brew install git-delta
 brew install redis
 brew install nginx
 brew install golang
+# java
+brew install temurin 
+
 brew install --cask postman
 
 # env
