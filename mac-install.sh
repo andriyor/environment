@@ -8,6 +8,12 @@ brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
 brew install --cask font-fira-code
 
+# keyboard
+brew install --cask karabiner-elements
+
+# VM
+brew install --cask alt-tab
+
 # terminal
 curl -sS https://starship.rs/install.sh | sh
 brew install iterm2
@@ -16,6 +22,7 @@ brew install --cask fig
 brew install sheldon
 sheldon init --shell zsh
 
+# CLI tools
 brew install bat
 brew install eza
 brew install micro
@@ -31,10 +38,11 @@ brew install temurin
 
 brew install --cask postman
 
-# env
+# vm
 brew install pyenv
 brew install fnm
 
+# code editor
 brew install --cask sublime-text
 brew install --cask visual-studio-code
 

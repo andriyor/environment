@@ -1,4 +1,7 @@
+## Symlink settings
+
 ```shell
+ln -s ~/git/personal/environment/karabiner.json ~/.config/karabiner/karabiner.json
 ln -s ~/git/personal/environment/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ```
 
@@ -12,7 +15,13 @@ ln -s ~/git/personal/environment/settings.json ~/Library/Application\ Support/Co
 
 ## Window manager
 
-[rxhanson/Rectangle: Move and resize windows on macOS with keyboard shortcuts and snap areas](https://github.com/rxhanson/Rectangle)
+[Magnet – Window manager for Mac](https://magnet.crowdcafe.com/)
+
+[rcmd - Switch apps instantly using the ⌘ Right Command key](https://lowtechguys.com/rcmd/)
+
+[lwouis/alt-tab-macos: Windows alt-tab on macOS](https://github.com/lwouis/alt-tab-macos)
+
+
 
 ## File manager
 
