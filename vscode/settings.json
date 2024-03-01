@@ -6,7 +6,6 @@
   "editor.fontSize": 14,
   "editor.fontLigatures": true,
 
-  "editor.stickyScroll.enabled": true,
   "editor.accessibilitySupport": "off",
   "editor.formatOnSave": false,
   "editor.formatOnSaveMode": "modificationsIfAvailable",
@@ -51,5 +50,6 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "markdown-preview-enhanced.previewTheme": "github-dark.css",
   "security.promptForLocalFileProtocolHandling": false,
-  "security.workspace.trust.untrustedFiles": "open"
+  "security.workspace.trust.untrustedFiles": "open",
+  "diffEditor.ignoreTrimWhitespace": false
 }
