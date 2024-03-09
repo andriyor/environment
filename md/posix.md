@@ -14,6 +14,8 @@ zsh
 ```shell
 ln -s ~/git/personal/environment/.gitconfig ~/.gitconfig
 ln -s ~/git/personal/environment/zsh/.zshrc ~/.zshrc
+ln -s ~/git/personal/environment/zsh/alias.zsh ~/alias.zsh
+
 mkdir os
 ln -s ~/git/personal/environment/zsh/mac.zsh ~/os/mac.zsh
 ln -s ~/git/personal/environment/zsh/linux.zsh ~/os/linux.zsh
