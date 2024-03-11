@@ -19,6 +19,9 @@ ln -s ~/git/personal/environment/zsh/alias.zsh ~/alias.zsh
 mkdir os
 ln -s ~/git/personal/environment/zsh/mac.zsh ~/os/mac.zsh
 ln -s ~/git/personal/environment/zsh/linux.zsh ~/os/linux.zsh
+
+ln -s ~/git/personal/environment/zsh/plugins.toml ~/.config/sheldon/plugins.toml
+sheldon lock
 ```
 
 ## ZSH prompt

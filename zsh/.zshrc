@@ -50,9 +50,6 @@ eval "$(pyenv init -)"
 # fnm
 eval "$(fnm env --use-on-cd)"
 
-# bun completions
-[ -s "/home/andriy/.bun/_bun" ] && source "/home/andriy/.bun/_bun"
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
@@ -60,9 +57,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export NIX_INSTALL="$HOME/.nix-profile"
 export PATH="$NIX_INSTALL/bin:$PATH"
 
-[ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
-
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
-[[ "$TERM_PROGRAM" == "CodeEditApp_Terminal" ]] && . "/Applications/CodeEdit.app/Contents/Resources/codeedit_shell_integration.zsh"
