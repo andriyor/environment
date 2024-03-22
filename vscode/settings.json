@@ -10,7 +10,7 @@
   "editor.formatOnSave": false,
   "editor.formatOnSaveMode": "modificationsIfAvailable",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "off"
+    "source.fixAll.eslint": "always"
   },
   "editor.tabSize": 2,
 

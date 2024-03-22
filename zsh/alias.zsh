@@ -17,6 +17,9 @@ alias nr='npm run'
 alias nrl='npm run lint'
 alias nrt='npm run typecheck'
 
+alias nrcw='rm ~/.npmrc;ln -s ~/git/work/.npmrc ~/.npmrc'
+alias nrcp='rm ~/.npmrc;ln -s ~/git/personal/.npmrc ~/.npmrc'
+
 alias pi='pnpm i'
 
 alias nts='node --import=tsimp/import'
