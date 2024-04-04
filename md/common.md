@@ -73,6 +73,11 @@ code --install-extension ock.svg
 
 code --install-extension ryu1kn.partial-diff
 
+[Even Better TOML - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml)
+
+code --install-extension tamasfe.even-better-toml
+
+
 ### DB GUI
 
 [dbeaver: Free universal database tool and SQL client](https://github.com/dbeaver/dbeaver)

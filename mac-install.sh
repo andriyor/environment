@@ -28,13 +28,16 @@ brew install eza
 brew install micro
 brew install jq
 brew install git-delta
+brew install gh
+brew install awscli
+brew install pipx
 
 # dev
 brew install redis
 brew install nginx
 brew install golang
 # java
-brew install temurin 
+brew install temurin
 
 brew install --cask postman
 
