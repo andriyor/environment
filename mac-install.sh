@@ -36,6 +36,7 @@ brew install pipx
 brew install redis
 brew install nginx
 brew install golang
+brew install --cask switchhosts
 # java
 brew install temurin
 
@@ -48,6 +49,7 @@ brew install fnm
 # code editor
 brew install --cask sublime-text
 brew install --cask visual-studio-code
+brew install --cask dbeaver-community
 
 # notes
 brew install --cask obsidian
