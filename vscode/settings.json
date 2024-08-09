@@ -27,6 +27,7 @@
   "explorer.confirmDragAndDrop": false,
 
   "git.confirmSync": false,
+  "git.enableSmartCommit": true,
 
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

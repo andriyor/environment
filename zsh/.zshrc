@@ -21,6 +21,7 @@ bindkey '\e[A' history-search-backward
 bindkey '\e[B' history-search-forward
 
 source ~/alias.zsh;
+source ~/secrets.sh;
 
 # What OS are we running?
 if [[ $(uname) == "Darwin" ]]; then
@@ -66,3 +67,7 @@ export PATH="$NIX_INSTALL/bin:$PATH"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+. "$HOME/.cargo/env"
+
+# source "$HOME/.rye/env"

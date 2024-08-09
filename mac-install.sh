@@ -27,7 +27,7 @@ brew install bat
 brew install eza
 brew install micro
 brew install jq
-brew install git-delta
+brew install difftastic
 brew install gh
 brew install awscli
 brew install pipx
@@ -41,6 +41,7 @@ brew install --cask switchhosts
 brew install temurin
 
 brew install --cask postman
+brew install --cask bruno
 
 # vm
 brew install pyenv
@@ -62,4 +63,7 @@ brew install --cask obs
 brew install --cask vlc
 brew install --cask zoom
 
-brew install stats
+# monitoring
+brew install btop
+brew install --cask stats
+brew install --cask little-snitch
