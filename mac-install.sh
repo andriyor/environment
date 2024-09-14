@@ -37,6 +37,7 @@ brew install redis
 brew install nginx
 brew install golang
 brew install --cask switchhosts
+
 # java
 brew install temurin
 

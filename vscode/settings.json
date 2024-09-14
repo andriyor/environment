@@ -1,6 +1,7 @@
 {
   "window.nativeTabs": true,
   "window.openFoldersInNewWindow": "off",
+  "window.newWindowDimensions": "maximized",
 
   "editor.fontFamily": "Fira Code",
   "editor.fontSize": 14,
