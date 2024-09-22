@@ -58,6 +58,8 @@ brew install --cask obsidian
 brew install --cask insync
 
 # media
+brew install yt-dlp
+brew install ffmpeg
 brew install --cask commander-one
 brew install --cask spotify
 brew install --cask obs
