@@ -15,7 +15,7 @@ brew install --cask karabiner-elements
 brew install --cask alt-tab
 
 # terminal
-curl -sS https://starship.rs/install.sh | sh
+brew install starship
 brew install iterm2
 brew install --cask fig
 
