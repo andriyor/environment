@@ -70,3 +70,4 @@ brew install --cask zoom
 brew install btop
 brew install --cask stats
 brew install --cask little-snitch
+brew install --cask bartender
