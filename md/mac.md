@@ -4,11 +4,28 @@
 ln -s ~/git/personal/environment/karabiner.json ~/.config/karabiner/karabiner.json
 ln -s ~/git/personal/environment/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ln -s ~/git/personal/environment/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+ln -s ~/git/personal/environment/flake.nix ~/.config/nix-darwin/flake.nix
 ```
 
 ## Package manager
 
 [Homebrew/brew: 🍺 The missing package manager for macOS (or Linux)](https://github.com/Homebrew/brew)
+
+[LnL7/nix-darwin: nix modules for darwin](https://github.com/LnL7/nix-darwin)
+
+[Nix is my favorite package manager to use on macOS - YouTube](https://www.youtube.com/watch?v=Z8BL8mdzWHI)
+
+```shell
+mkdir -p ~/.config/nix-darwin                                                                                   
+cd ~/.config/nix-darwin
+nix flake init -t nix-darwin --extra-experimental-features "nix-command flakes"
+sed -i '' "s/simple/$(scutil --get LocalHostName)/" flake.nix
+
+nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/.config/nix-darwin#mbp
+
+darwin-rebuild switch --flake ~/.config/nix-darwin#mbp --impure'  
+```
+
 
 ## Finder context menu
 
