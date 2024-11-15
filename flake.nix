@@ -14,8 +14,6 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [
-            # mac
-            pkgs.iterm2
             # terminal
             pkgs.neovim
             pkgs.starship

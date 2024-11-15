@@ -21,6 +21,7 @@ bindkey '\e[A' history-search-backward
 bindkey '\e[B' history-search-forward
 
 source ~/alias.zsh;
+source ~/aws-alias.zsh;
 source ~/secrets.sh;
 
 # What OS are we running?

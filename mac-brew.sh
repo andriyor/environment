@@ -17,6 +17,10 @@ brew install nginx
 brew install golang
 brew install --cask switchhosts
 
+# term cli
+brew install --cask iterm2
+brew install --cask session-manager-plugin
+
 # java
 brew install temurin
 
