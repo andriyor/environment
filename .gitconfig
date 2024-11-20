@@ -9,7 +9,7 @@
   s  = status --short --branch
   d  = diff
   ds = diff --shortstat --cached
-  l  = "!git pull origin $(git current-branch) --rebase"
+  l  = "!git pull origin $(git current-branch)"
   h  = "!git push origin $(git current-branch)"
   lh = "!git l && git h"
   rm  = "!git rm $(git ls-files --deleted) && git status"

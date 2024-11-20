@@ -1,4 +1,3 @@
-
 # fonts
 brew install --cask font-hack-nerd-font
 brew install --cask font-fira-code
@@ -41,6 +40,7 @@ brew install --cask obsidian
 brew install --cask insync
 
 # media
+brew install MonitorControl
 brew install --cask commander-one
 brew install --cask spotify
 brew install --cask obs
