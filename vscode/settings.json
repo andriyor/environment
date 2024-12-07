@@ -34,6 +34,9 @@
   "[markdown]": {
     "editor.wordWrap": "off"
   },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
 
   "jest.autoRun": "off",
   "jest.showCoverageOnLoad": true,
