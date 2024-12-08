@@ -76,7 +76,7 @@ libwebsockets 4.3.3-1
 man-pages 6.9.1-1
 manjaro-alsa 20221002-1
 manjaro-browser-settings 20231111-1
-manjaro-hello 0.7.2-9
+manjaro-hello 0.7.2-10
 manjaro-kde-settings 20241119-1
 manjaro-printer 20240827-1
 manjaro-pulse 20240817-1
