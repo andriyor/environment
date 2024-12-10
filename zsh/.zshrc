@@ -41,7 +41,7 @@ export PATH="$PATH:./node_modules/.bin"
 # alias rm="rm -i"
 
 # fix this
-eval `ssh-agent`
+eval "$(ssh-agent -s)"
 # ssh-add
 
 redis-server --daemonize yes
