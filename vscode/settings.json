@@ -42,7 +42,6 @@
   "jest.showCoverageOnLoad": true,
 
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "markdown-preview-enhanced.previewTheme": "github-dark.css",
   "security.promptForLocalFileProtocolHandling": false,
   "security.workspace.trust.untrustedFiles": "open",
   "diffEditor.ignoreTrimWhitespace": false

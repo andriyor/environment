@@ -62,6 +62,8 @@ cask "qview"
 
 # files
 cask "commander-one"
+brew "rclone"
+brew "rsync"
 cask "insync"
 cask "sublime-merge"
 cask "sublime-text"
@@ -72,6 +74,7 @@ cask "obsidian"
 brew "nginx", restart_service: true
 brew "postgresql@14"
 brew "scrcpy"
+brew "redis"
 cask "another-redis-desktop-manager"
 cask "dbeaver-community"
 cask "switchhosts"
