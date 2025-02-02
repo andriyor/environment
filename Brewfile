@@ -12,7 +12,7 @@ cask "font-martian-mono"
 cask "font-monaspace"
 
 # languages and tools
-brew "deno"
+brew "tokei"
 brew "fnm"
 brew "go"
 brew "maven"

@@ -12,6 +12,10 @@ ln -s ~/git/personal/environment/flake.nix ~/.config/nix-darwin/flake.nix
 
 [Homebrew/brew: 🍺 The missing package manager for macOS (or Linux)](https://github.com/Homebrew/brew)
 
+
+[Brew Bundle Brewfile Tips](https://gist.github.com/ChristopherA/a579274536aab36ea9966f301ff14f3f)
+
+
 [LnL7/nix-darwin: nix modules for darwin](https://github.com/LnL7/nix-darwin)
 
 [Nix is my favorite package manager to use on macOS - YouTube](https://www.youtube.com/watch?v=Z8BL8mdzWHI)

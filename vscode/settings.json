@@ -42,7 +42,12 @@
   "jest.showCoverageOnLoad": true,
 
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.suggest.autoImports": true,
+
   "security.promptForLocalFileProtocolHandling": false,
   "security.workspace.trust.untrustedFiles": "open",
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  }
 }
