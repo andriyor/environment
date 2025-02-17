@@ -11,9 +11,9 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": false,
   "editor.formatOnSaveMode": "modificationsIfAvailable",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always"
-  },
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll.eslint": "always"
+  // },
   "editor.tabSize": 2,
 
   "terminal.integrated.fontSize": 14,

@@ -92,6 +92,14 @@ why: https://airtable.com/shrXjGScTuTXgpk8F
 
 why: https://airtable.com/shr075LSB6rMYMkwo
 
+### Obsidian extensions
+
+[zsviczian/obsidian-excalidraw-plugin: A plugin to edit and view Excalidraw drawings in Obsidian](https://github.com/zsviczian/obsidian-excalidraw-plugin)
+
+[chrisgrieser/new-tab-default-page: Obsidian plugin to open a note of your choice when creating a new tab, like in the browser.](https://github.com/chrisgrieser/new-tab-default-page)
+
+[ryjjin/Obsidian-shortcuts-extender: Plugin for Obsidian: Use shortcuts for input special symbols and changing level of headings without language switching](https://github.com/ryjjin/Obsidian-shortcuts-extender)
+
 ### Task manager
 
 [ClickUp™ | One app to replace them all](https://clickup.com/)
