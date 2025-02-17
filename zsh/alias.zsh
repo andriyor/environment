@@ -29,3 +29,5 @@ alias rmbuild="find . -name 'build' -type d -prune -exec rm -rf '{}' +"
 
 alias checklock1="jq '.dependencies[].resolved' package-lock.json | grep -v"
 alias checklock2="jq '.packages[].resolved' package-lock.json | grep -v"
+
+alias psmem='function _psmem() { ps -o rss= -p $(pgrep -g $1) | awk "{sum += \$1} END {print sum / 1048576 \" GB\"}"; }; _psmem'
