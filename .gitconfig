@@ -7,6 +7,7 @@
   c  = commit -m
   ac = commit -am
   s  = status --short --branch
+  f  = fetch
   d  = diff
   ds = diff --shortstat --cached
   l  = "!git pull origin $(git current-branch)"

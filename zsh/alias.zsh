@@ -1,5 +1,7 @@
 # Aliases
 alias g='git'
+alias gl="git pull && (git diff --name-only HEAD@{1} HEAD | grep -qE 'package(-lock)?\.json' && ni || echo 'No dependency changes detected')"
+
 alias cat='bat'
 alias l='eza --all --icons'
 alias ll='eza --long --all --git --icons'
@@ -7,7 +9,7 @@ alias ytdl="yt-dlp -f 'bestvideo[ext=mp4][vcodec!^=av0][vcodec!^=av1]+bestaudio[
 
 alias npmd='rm -rf ~/.npmrc'
 
-alias ni='npm i --no-audit'
+# alias ni='npm i --no-audit'
 alias nsb='npm run storybook'
 alias nu='npm uninstall'
 alias ns='npm run start'
