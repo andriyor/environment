@@ -35,5 +35,5 @@ alias checklock2="jq '.packages[].resolved' package-lock.json | grep -v"
 # process memory `psmem 20128`
 alias psmem='function _psmem() { ps -o rss= -p $(pgrep -g $1) | awk "{sum += \$1} END {print sum / 1048576 \" GB\"}"; }; _psmem'
 
-# top files by line count
-alias tl='f() { [ -n "$1" ] && find . -type f -name "*.$1" -print0 | xargs -0 wc -l | sort -nr | head -n 10; }; f'
+# top files by line count `tl md 20`
+alias tl='f() { [ -n "$1" ] && find . -type f -name "*.$1" -print0 | xargs -0 wc -l | sort -nr | head -n "${2:-10}"; }; f'
