@@ -4,8 +4,12 @@
 ln -s ~/git/personal/environment/karabiner.json ~/.config/karabiner/karabiner.json
 ln -s ~/git/personal/environment/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ln -s ~/git/personal/environment/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+
 ln -s ~/git/personal/environment/Brewfile ~/Brewfile
 ln -s ~/git/personal/environment/flake.nix ~/.config/nix-darwin/flake.nix
+
+ mkdir ~/script
+ ln -s ~/git/personal/environment/scripts/log_output.js ~/scripts/filter_output.js
 ```
 
 ## Package manager

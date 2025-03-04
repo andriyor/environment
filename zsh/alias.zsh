@@ -37,3 +37,6 @@ alias psmem='function _psmem() { ps -o rss= -p $(pgrep -g $1) | awk "{sum += \$1
 
 # top files by line count `tl md 20`
 alias tl='f() { [ -n "$1" ] && find . -type f -name "*.$1" -print0 | xargs -0 wc -l | sort -nr | head -n "${2:-10}"; }; f'
+
+# log output to file
+alias lo="node ~/scripts/filter_output.js"
