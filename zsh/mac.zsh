@@ -11,8 +11,14 @@ bindkey "\e\eOD" backward-word
 bindkey "\e\eOC" forward-word
 
 # fnm
-export PATH="/Users/andrejorehov/Library/Application Support/fnm:$PATH"
-eval "`fnm env`"
+#export PATH="/Users/andrejorehov/Library/Application Support/fnm:$PATH"
+#eval "`fnm env`"
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 
 # pnpm
 export PNPM_HOME="/Users/aoriekhov/Library/pnpm"
