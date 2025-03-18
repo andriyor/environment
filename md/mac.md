@@ -1,6 +1,8 @@
 ## Symlink settings
 
 ```shell
+code --list-extensions > vscode/extensions.txt
+
 ln -s ~/git/personal/environment/karabiner.json ~/.config/karabiner/karabiner.json
 ln -s ~/git/personal/environment/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ln -s ~/git/personal/environment/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
