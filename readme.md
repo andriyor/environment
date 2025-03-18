@@ -5,6 +5,7 @@ Goal: reproduce environment on new machine as fast as possible, share daily used
 ## todo
 
 - [ ] list of vs code extensions
+- [ ] setup pre commit for secrets check
 
 
 ## links

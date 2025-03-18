@@ -8,8 +8,10 @@ ln -s ~/git/personal/environment/vscode/keybindings.json ~/Library/Application\ 
 ln -s ~/git/personal/environment/Brewfile ~/Brewfile
 ln -s ~/git/personal/environment/flake.nix ~/.config/nix-darwin/flake.nix
 
- mkdir ~/script
- ln -s ~/git/personal/environment/scripts/log_output.js ~/scripts/filter_output.js
+mkdir ~/script
+ln -s ~/git/personal/environment/scripts/log_output.js ~/scripts/filter_output.js
+ 
+ln -s ~/git/personal/environment/zsh/secrets.zsh ~/secrets.zsh
 ```
 
 ## Package manager

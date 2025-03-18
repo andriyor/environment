@@ -22,7 +22,7 @@ bindkey '\e[B' history-search-forward
 
 source ~/alias.zsh;
 source ~/aws-alias.zsh;
-source ~/secrets.sh;
+source ~/secrets.zsh;
 
 # What OS are we running?
 if [[ $(uname) == "Darwin" ]]; then
