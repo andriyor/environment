@@ -12,7 +12,6 @@ bindkey "\e\eOC" forward-word
 
 # fnm
 export PATH="/Users/andrejorehov/Library/Application Support/fnm:$PATH"
-eval "`fnm env`"
 
 # nvm
 #export NVM_DIR="$HOME/.nvm"
