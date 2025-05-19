@@ -23,6 +23,10 @@ ln -s ~/git/personal/environment/zsh/secrets.zsh ~/secrets.zsh
 
 [Brew Bundle Brewfile Tips](https://gist.github.com/ChristopherA/a579274536aab36ea9966f301ff14f3f)
 
+```shell
+brew bundle install
+```
+
 
 [LnL7/nix-darwin: nix modules for darwin](https://github.com/LnL7/nix-darwin)
 

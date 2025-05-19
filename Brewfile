@@ -34,6 +34,7 @@ cask "little-snitch"
 
 # git
 brew "difftastic"
+brew "gh"
 brew "git-quick-stats"
 brew "onefetch"
 
@@ -45,7 +46,6 @@ cask "postman"
 
 # terminal
 cask "iterm2"
-cask "fig"
 brew "curl"
 brew "fd"
 cask "session-manager-plugin"
@@ -109,5 +109,4 @@ vscode "tomoki1207.pdf"
 vscode "unifiedjs.vscode-mdx"
 vscode "vitest.explorer"
 vscode "wakatime.vscode-wakatime"
-vscode "withfig.fig"
 vscode "kejun.markdown-alert"

@@ -41,4 +41,4 @@ alias tl='f() { [ -n "$1" ] && find . -type f -name "*.$1" -print0 | xargs -0 wc
 # log output to file
 alias lo="node ~/scripts/filter_output.js"
 
-alias fjs "npx prettier --print-width=130 --single-quote=true --write"
+alias fjs="npx prettier --print-width=130 --single-quote=true --write"

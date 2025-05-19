@@ -1,6 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
-
 # https://jdhao.github.io/2021/03/24/zsh_history_setup/
 # history setup
 HISTFILE=$HOME/.zsh_history
@@ -65,9 +62,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 export NIX_INSTALL="$HOME/.nix-profile"
 export PATH="$NIX_INSTALL/bin:$PATH"
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
 . "$HOME/.cargo/env"
 
