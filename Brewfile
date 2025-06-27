@@ -41,7 +41,6 @@ brew "onefetch"
 # api
 brew "hurl"
 cask "bruno"
-cask "mitmproxy"
 cask "postman"
 
 # terminal
