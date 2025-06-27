@@ -18,7 +18,12 @@ brew "go"
 brew "maven"
 brew "pyenv"
 
-# mac speciffic
+# chat
+cask "signal"
+cask "telegram"
+cask "viber"
+
+# mac specific
 brew "mas"
 cask "rectangle"
 cask "stats"
@@ -79,7 +84,6 @@ cask "dbeaver-community"
 cask "switchhosts"
 cask "vivaldi"
 cask "wkhtmltopdf"
-cask "telegram"
 
 vscode "astro-build.astro-vscode"
 vscode "bbenoist.nix"
