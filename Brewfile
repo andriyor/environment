@@ -36,6 +36,7 @@ cask "little-snitch"
 cask "bartender"
 cask "contexts"
 cask "little-snitch"
+cask "coreutils"
 
 # git
 brew "difftastic"
