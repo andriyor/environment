@@ -42,3 +42,9 @@ alias tl='f() { [ -n "$1" ] && find . -type f -name "*.$1" -print0 | xargs -0 wc
 alias lo="node ~/scripts/filter_output.js"
 
 alias fjs="npx prettier --print-width=130 --single-quote=true --write"
+
+gsm() {
+   git log --since="30 days ago" --pretty=format:"%ad|%H" --date=short --numstat |
+   awk 'BEGIN{FS="|"} /\|/ {date=$1; next} /^[0-9]/ {added[date]+=$1} END {for(d in added) print d, added[d]}' | 
+   sort > ~/gbm.dat | termgraph ~/gbm.dat --color blue
+}
