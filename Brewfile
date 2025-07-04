@@ -17,6 +17,7 @@ brew "fnm"
 brew "go"
 brew "maven"
 brew "pyenv"
+brew "coreutils"
 
 # chat
 cask "signal"
@@ -36,7 +37,6 @@ cask "little-snitch"
 cask "bartender"
 cask "contexts"
 cask "little-snitch"
-cask "coreutils"
 
 # git
 brew "difftastic"
@@ -85,6 +85,7 @@ cask "dbeaver-community"
 cask "switchhosts"
 cask "vivaldi"
 cask "wkhtmltopdf"
+cask "raspberry-pi-imager"
 
 vscode "astro-build.astro-vscode"
 vscode "bbenoist.nix"
