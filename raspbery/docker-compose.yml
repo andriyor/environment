@@ -86,6 +86,10 @@ services:
     container_name: gatus
     ports:
       - "8090:8080"
+    volumes:
+      - ./config.yaml:/config/config.yaml
+    environment:
+      - GATUS_CONFIG_PATH=/config/config.yaml
     restart: unless-stopped
 
 volumes:
