@@ -33,12 +33,6 @@
 name = Andrii Oriekhov
 email = andriyorehov@gmail.com
 
-[url "ssh://git@github.com/"]
-  insteadOf = https://github.com/
-[credential "https://github.com"]
-	helper = store
-
-
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
