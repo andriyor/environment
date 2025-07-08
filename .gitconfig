@@ -18,8 +18,13 @@
   lg = log --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --abbrev-commit
 
 
+[user]
+    name = Andrii Oriekhov
+    email = andriyorehov@gmail.com
+
 [core]
   editor = micro
+  sshCommand = "ssh -i ~/.ssh/andriyorehov@gmail.com"
 
 [diff]
     external = difft
@@ -29,9 +34,6 @@
 
 [includeIf "gitdir:~/git/personal/"]
     path =  ~/.gitconfig.personal
-	
-name = Andrii Oriekhov
-email = andriyorehov@gmail.com
 
 [filter "lfs"]
 	required = true
