@@ -29,8 +29,9 @@
 
 [includeIf "gitdir:~/git/personal/"]
     path =  ~/.gitconfig.personal
-[user]
-	name = Andrii Oriekhov
+	
+name = Andrii Oriekhov
+email = andriyorehov@gmail.com
 
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/

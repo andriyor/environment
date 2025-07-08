@@ -14,6 +14,9 @@ mkdir ~/script
 ln -s ~/git/personal/environment/scripts/log_output.js ~/scripts/filter_output.js
  
 ln -s ~/git/personal/environment/zsh/secrets.zsh ~/secrets.zsh
+
+rm ~/.config/micro/settings.json
+ln -s ~/git/personal/environment/.config/micro/settings.json ~/.config/micro/settings.json
 ```
 
 ## Package manager
