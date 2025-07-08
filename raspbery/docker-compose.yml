@@ -81,6 +81,13 @@ services:
     volumes:
       - uptime-kuma:/app/data
 
+  gatus:
+    image: twinproduction/gatus
+    container_name: gatus
+    ports:
+      - "8090:8080"
+    restart: unless-stopped
+
 volumes:
   uptime-kuma:
   kafka_data:
