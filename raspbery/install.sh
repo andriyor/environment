@@ -1,3 +1,5 @@
+scp ~/git/personal/environment/raspbery/cmdline.txt aoriekhov@192.168.0.162:/boot/firmware/cmdline.txt
+
 apt install micro
 apt install bat
 
