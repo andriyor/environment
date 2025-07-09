@@ -1,5 +1,6 @@
 services:
   kafka:
+    container_name: kafka
     image: docker.io/bitnami/kafka:4.0
     ports:
       - "9092:9092"
@@ -24,6 +25,7 @@ services:
     restart: unless-stopped
 
   redpanda-console:
+    container_name: redpanda-console
     image: docker.redpanda.com/redpandadata/console:latest
     depends_on:
       kafka:
@@ -140,12 +142,15 @@ services:
 
   prometheus:
     image: prom/prometheus
+    container_name: prometheus
     ports:
       - "9090:9090"
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
 
   grafana:
+    container_name: grafana
     image: grafana/grafana
     ports:
       - "3000:3000"
@@ -153,10 +158,18 @@ services:
       - grafana-storage:/var/lib/grafana
       - ./grafana/provisioning:/etc/grafana/provisioning
 
+  blog:
+    container_name: blog
+    build:
+      context: https://github.com/andriyor/blog.git
+    ports:
+      - "8080:80"
+
   
 
 volumes:
   portainer_data:
+  prometheus-data:
   grafana-storage:
   uptime-kuma:
   kafka_data:
