@@ -90,6 +90,7 @@ services:
       - "8090:8080"
     volumes:
       - ./config.yaml:/config/config.yaml
+      - ./data:/data/
     environment:
       - GATUS_CONFIG_PATH=/config/config.yaml
     restart: unless-stopped
