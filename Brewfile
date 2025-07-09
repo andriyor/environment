@@ -62,8 +62,14 @@ cask "eagle"
 cask "flameshot"
 cask "zoom"
 cask "vlc"
-cask "spotify"
 cask "qview"
+
+# audio
+cask "spotify"
+cask "loopback"
+cask "soundsource"
+cask "audio-hijack"
+brew "cava"
 
 # files
 cask "commander-one"
