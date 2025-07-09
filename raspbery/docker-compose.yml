@@ -31,7 +31,7 @@ services:
       kafka:
         condition: service_healthy
     ports:
-        - "8085:8080"
+      - "8085:8080"
     environment:
       - KAFKA_BROKERS=kafka:9092
     restart: unless-stopped
@@ -73,11 +73,11 @@ services:
       # Optional, if Pi-hole should get some more processing time
       - SYS_NICE
     restart: unless-stopped
-    
+  
   uptime-kuma:
     image: louislam/uptime-kuma:1
     container_name: uptime-kuma
-    restart: always
+    restart: unless-stopped
     ports:
       - "3001:3001"
     volumes:
@@ -93,7 +93,7 @@ services:
     environment:
       - GATUS_CONFIG_PATH=/config/config.yaml
     restart: unless-stopped
-    
+  
   portainer:
     image: portainer/portainer-ce
     container_name: portainer
@@ -127,7 +127,7 @@ services:
       - /dev/disk/:/dev/disk:ro
       - /etc/machine-id:/etc/machine-id:ro
     healthcheck:
-      test: ["CMD", "wget", "-O", "/dev/null", "http://localhost:8080/healthz"]
+      test: [ "CMD", "wget", "-O", "/dev/null", "http://localhost:8080/healthz" ]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -148,6 +148,7 @@ services:
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
       - prometheus-data:/prometheus
+    restart: unless-stopped
 
   grafana:
     container_name: grafana
@@ -157,6 +158,7 @@ services:
     volumes:
       - grafana-storage:/var/lib/grafana
       - ./grafana/provisioning:/etc/grafana/provisioning
+    restart: unless-stopped
 
   blog:
     container_name: blog
@@ -164,8 +166,8 @@ services:
       context: https://github.com/andriyor/blog.git
     ports:
       - "8080:80"
+    restart: unless-stopped
 
-  
 
 volumes:
   portainer_data:
