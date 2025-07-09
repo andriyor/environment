@@ -103,21 +103,40 @@ services:
     restart: unless-stopped
 
   cadvisor:
+    container_name: monitoring-cadvisor
     image: gcr.io/cadvisor/cadvisor:latest
-    container_name: cadvisor
-    pid: host
+    hostname: rpi-cadvisor
+    restart: unless-stopped
+    cap_add:
+      - SYS_ADMIN
     ports:
       - "8081:8080"
-    privileged: true
+    command:
+      - '-housekeeping_interval=15s'
+      - '-docker_only=true'
+      - '-store_container_labels=false'
+    devices:
+      - /dev/kmsg
     volumes:
       - /:/rootfs:ro
-      - /var/run:/var/run:ro
+      - /var/run:/var/run:rw
       - /sys:/sys:ro
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /var/lib/docker/:/var/lib/docker:ro
-      - /etc/machine-id:/etc/machine-id:ro
       - /dev/disk/:/dev/disk:ro
-    restart: unless-stopped
+      - /etc/machine-id:/etc/machine-id:ro
+    healthcheck:
+      test: ["CMD", "wget", "-O", "/dev/null", "http://localhost:8080/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    labels:
+      - "com.example.description=cAdvisor Container Monitoring"
+      - "com.example.service=monitoring"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
   prometheus:
     image: prom/prometheus
