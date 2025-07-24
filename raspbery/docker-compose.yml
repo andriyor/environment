@@ -104,10 +104,5 @@ services:
     ports:
       - "8880:8080"
 
-
 volumes:
   portainer_data:
-  prometheus-data:
-  grafana-storage:
-  kafka_data:
-    driver: local
