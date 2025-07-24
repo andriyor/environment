@@ -59,13 +59,13 @@ services:
       - portainer_data:/data
     restart: unless-stopped
 
-#  blog:
-#    container_name: blog
-#    build:
-#      context: https://github.com/andriyor/blog.git
-#    ports:
-#      - "8080:80"
-#    restart: unless-stopped
+  blog:
+    container_name: blog
+    build:
+      context: https://github.com/andriyor/blog.git
+    ports:
+      - "8080:80"
+    restart: unless-stopped
     
   homeassistant:
     container_name: homeassistant
@@ -76,32 +76,6 @@ services:
     restart: unless-stopped
     network_mode: host
     privileged: true
-
-  mqtt:
-    container_name: mosquitto
-    image: eclipse-mosquitto:2
-    volumes:
-      - ./mosquitto/config:/mosquitto/config
-      - ./mosquitto/data:/mosquitto/data
-      - ./mosquitto/log:/mosquitto/log
-    ports:
-      - "1883:1883"
-      - "9001:9001"
-    restart: unless-stopped
-
-  zigbee2mqtt:
-    container_name: zigbee2mqtt
-    image: koenkk/zigbee2mqtt
-    volumes:
-      - ./zigbee2mqtt:/app/data
-      - /run/udev:/run/udev:ro
-    devices:
-      - /dev/ttyUSB0:/dev/ttyUSB0
-    restart: unless-stopped
-    environment:
-      - TZ=Europe/Kyiv
-    ports:
-      - "8880:8080"
 
 volumes:
   portainer_data:
