@@ -6,4 +6,4 @@ mqtt:
 serial:
   port: /dev/ttyUSB0  # Adjust if different
 frontend:
-  port: 8100
+  port: 8080
