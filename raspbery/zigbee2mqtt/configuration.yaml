@@ -10,7 +10,7 @@ mqtt:
 
 serial:
   port: /dev/ttyUSB0
-  adapter: ezsp
+  adapter: ember
 
 frontend:
   port: 8080
