@@ -73,15 +73,6 @@ services:
       # Optional, if Pi-hole should get some more processing time
       - SYS_NICE
     restart: unless-stopped
-  
-  uptime-kuma:
-    image: louislam/uptime-kuma:1
-    container_name: uptime-kuma
-    restart: unless-stopped
-    ports:
-      - "3001:3001"
-    volumes:
-      - uptime-kuma:/app/data
 
   gatus:
     image: twinproduction/gatus
@@ -103,62 +94,6 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
-    restart: unless-stopped
-
-  cadvisor:
-    container_name: monitoring-cadvisor
-    image: gcr.io/cadvisor/cadvisor:latest
-    hostname: rpi-cadvisor
-    restart: unless-stopped
-    cap_add:
-      - SYS_ADMIN
-    ports:
-      - "8081:8080"
-    command:
-      - '-housekeeping_interval=15s'
-      - '-docker_only=true'
-      - '-store_container_labels=false'
-    devices:
-      - /dev/kmsg
-    volumes:
-      - /:/rootfs:ro
-      - /var/run:/var/run:rw
-      - /sys:/sys:ro
-      - /var/lib/docker/:/var/lib/docker:ro
-      - /dev/disk/:/dev/disk:ro
-      - /etc/machine-id:/etc/machine-id:ro
-    healthcheck:
-      test: [ "CMD", "wget", "-O", "/dev/null", "http://localhost:8080/healthz" ]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-    labels:
-      - "com.example.description=cAdvisor Container Monitoring"
-      - "com.example.service=monitoring"
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "3"
-
-  prometheus:
-    image: prom/prometheus
-    container_name: prometheus
-    ports:
-      - "9090:9090"
-    volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
-      - prometheus-data:/prometheus
-    restart: unless-stopped
-
-  grafana:
-    container_name: grafana
-    image: grafana/grafana
-    ports:
-      - "3000:3000"
-    volumes:
-      - grafana-storage:/var/lib/grafana
-      - ./grafana/provisioning:/etc/grafana/provisioning
     restart: unless-stopped
 
   blog:
@@ -209,6 +144,5 @@ volumes:
   portainer_data:
   prometheus-data:
   grafana-storage:
-  uptime-kuma:
   kafka_data:
     driver: local
