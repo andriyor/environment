@@ -96,13 +96,13 @@ services:
       - portainer_data:/data
     restart: unless-stopped
 
-  blog:
-    container_name: blog
-    build:
-      context: https://github.com/andriyor/blog.git
-    ports:
-      - "8080:80"
-    restart: unless-stopped
+#  blog:
+#    container_name: blog
+#    build:
+#      context: https://github.com/andriyor/blog.git
+#    ports:
+#      - "8080:80"
+#    restart: unless-stopped
     
   homeassistant:
     container_name: homeassistant
