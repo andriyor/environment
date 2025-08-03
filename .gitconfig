@@ -22,6 +22,11 @@
     name = Andrii Oriekhov
     email = andriyorehov@gmail.com
 
+[url "ssh://git@github.com/"]
+    insteadOf = https://github.com/
+[credential "https://github.com"]
+    helper = store
+
 [core]
   editor = micro
   sshCommand = "ssh -i ~/.ssh/andriyorehov@gmail.com"

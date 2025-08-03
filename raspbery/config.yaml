@@ -1,0 +1,105 @@
+default-endpoint: &defaults
+  alerts:
+    - type: telegram
+  conditions:
+    - "[STATUS] == 200"
+
+endpoints:
+  - name: dev
+    group: settlement
+    url: "https://dev.poynt.net/ping/settlement?momo_was_here_and_mimi_was_not_but_meme_was_well_here"
+    <<: *defaults
+
+  - name: test
+    group: settlement
+    url: "https://test.poynt.net/ping/settlement?momo_was_here_and_mimi_was_not_but_meme_was_well_here"
+    <<: *defaults
+
+  - name: ote
+    group: settlement
+    url: "https://ote.poynt.net/ping/settlement?momo_was_here_and_mimi_was_not_but_meme_was_well_here"
+    <<: *defaults
+
+  - name: prod
+    group: settlement
+    url: "https://poynt.net/ping/settlement?momo_was_here_and_mimi_was_not_but_meme_was_well_here"
+    <<: *defaults
+
+
+  - name: dev
+    group: web
+    url: "https://dev.poynt.net/ping"
+    <<: *defaults
+
+  - name: test
+    group: web
+    url: "https://test.poynt.net/ping"
+    <<: *defaults
+
+  - name: ote
+    group: web
+    url: "https://ote.poynt.net/ping"
+    <<: *defaults
+
+  - name: prod
+    group: web
+    url: "https://poynt.net/ping"
+    <<: *defaults
+
+
+  - name: dev
+    group: dispatch
+    url: "https://dev.poynt.net/ping/dispatch?momo_was_here_and_mimi_was_not_but_meme_was_well_here"
+    <<: *defaults
+
+  - name: test
+    group: dispatch
+    url: "https://test.poynt.net/ping/dispatch?momo_was_here_and_mimi_was_not_but_meme_was_well_here"
+    <<: *defaults
+
+  - name: ote
+    group: dispatch
+    url: "https://ote.poynt.net/ping/dispatch?momo_was_here_and_mimi_was_not_but_meme_was_well_here"
+    <<: *defaults
+
+  - name: prod
+    group: dispatch
+    url: "https://poynt.net/ping/dispatch?momo_was_here_and_mimi_was_not_but_meme_was_well_here"
+    <<: *defaults
+
+
+  - name: dev
+    group: stats
+    url: "https://dev.poynt.net/ping/stats?momo_was_here_and_mimi_was_not_but_meme_was_well_here"
+    <<: *defaults
+
+  - name: test
+    group: stats
+    url: "https://test.poynt.net/ping/stats?momo_was_here_and_mimi_was_not_but_meme_was_well_here"
+    <<: *defaults
+
+  - name: ote
+    group: stats
+    url: "https://ote.poynt.net/ping/stats?momo_was_here_and_mimi_was_not_but_meme_was_well_here"
+    <<: *defaults
+
+  - name: prod
+    group: stats
+    url: "https://poynt.net/ping/stats?momo_was_here_and_mimi_was_not_but_meme_was_well_here"
+    <<: *defaults
+
+
+alerting:
+  telegram:
+    token: "7444738648:AAEnWInzbqZSfXgssCznijpfG6oxJZqRS_o"
+    id: "100030546"
+    default-alert:
+      description: "health check failed"
+      send-on-resolved: true
+      failure-threshold: 3
+      success-threshold: 3
+
+storage:
+  type: sqlite
+  path: /data/data.db
+

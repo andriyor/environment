@@ -49,5 +49,6 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "[svg]": {
     "editor.defaultFormatter": "jock.svg"
-  }
+  },
+  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3"
 }
