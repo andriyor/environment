@@ -9,11 +9,17 @@
 
   "editor.accessibilitySupport": "off",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "modificationsIfAvailable",
-  // "editor.codeActionsOnSave": {
-  //   "source.fixAll.eslint": "always"
-  // },
+  "eslint.autoFixOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always",
+    "source.fixAll.eslint": "always"
+  },
+  "editor.codeActionsOnPaste": {
+    "source.addMissingImports": true
+  },
+
   "editor.tabSize": 2,
 
   "terminal.integrated.fontSize": 14,
@@ -41,6 +47,7 @@
   "jest.autoRun": "off",
   "jest.showCoverageOnLoad": true,
 
+  "typescript.preferences.includePackageJsonAutoImports": "on",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.suggest.autoImports": true,
 
