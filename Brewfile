@@ -82,6 +82,7 @@ cask "visual-studio-code"
 cask "obsidian"
 
 # misc
+brew "espanso"
 brew "nginx", restart_service: true
 brew "postgresql@14"
 brew "scrcpy"

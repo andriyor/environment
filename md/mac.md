@@ -16,7 +16,9 @@ ln -s ~/git/personal/environment/scripts/log_output.js ~/scripts/filter_output.j
 ln -s ~/git/personal/environment/zsh/secrets.zsh ~/secrets.zsh
 
 rm ~/.config/micro/settings.json
-ln -s ~/git/personal/environment/.config/micro/settings.json ~/.config/micro/settings.json
+ln -s ~/git/personal/environment/.config/micro ~/.config/micro
+
+ln -s ~/git/personal/environment/.config/espanso ~/.config/espanso
 ```
 
 ## Package manager
