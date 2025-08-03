@@ -25,6 +25,15 @@ matches:
         params:
           format: "%m/%d/%Y"
 
+  # Print the current time
+  - trigger: ":time"
+    replace: "{{now}}"
+    vars:
+      - name: now
+        type: date
+        params:
+          format: "%H:%M"
+
   # Print the output of a shell command
   - trigger: ":shell"
     replace: "{{output}}"
