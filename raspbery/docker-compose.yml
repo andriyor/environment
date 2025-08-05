@@ -78,5 +78,15 @@ services:
     network_mode: host
     privileged: true
 
+  nocodb:
+    image: nocodb/nocodb:latest
+    container_name: nocodb
+    ports:
+      - "9100:8080"
+    volumes:
+      - ./nocodb:/usr/app/data
+    restart: unless-stopped
+
+
 volumes:
   portainer_data:
