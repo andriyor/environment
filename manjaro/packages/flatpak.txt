@@ -1,3 +1,4 @@
+Zen
 Dropbox
 Postman
 Extension Manager
@@ -9,3 +10,4 @@ Flameshot
 Bustle
 Image Viewer
 Clock
+Telegram
