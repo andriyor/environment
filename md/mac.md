@@ -21,6 +21,8 @@ ln -s ~/git/personal/environment/.config/micro ~/.config/micro
 ln -s ~/git/personal/environment/.config/espanso ~/.config/espanso
 
 ln -s ~/git/personal/environment/.config/zed/settings.json ~/.config/zed/settings.json
+
+ln -s ~/git/personal/environment/.config/fish/config.fish ~/.config/fish/config.fish
 ```
 
 ## Package manager
