@@ -55,6 +55,7 @@ brew "curl"
 brew "fd"
 cask "session-manager-plugin"
 brew "neofetch"
+brew "starship"
 
 # media
 cask "obs"
@@ -82,7 +83,7 @@ cask "visual-studio-code"
 cask "obsidian"
 
 # misc
-brew "espanso"
+cask "espanso"
 brew "nginx", restart_service: true
 brew "postgresql@14"
 brew "scrcpy"
