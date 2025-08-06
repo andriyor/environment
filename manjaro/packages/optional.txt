@@ -169,6 +169,7 @@ python-xlib-0.33-4
 python-validate-pyproject-0.24.1-1
 python-trove-classifiers-2025.5.9.12-1
 python-fastjsonschema-2.21.1-1
+python-typing-inspection-0.4.1-1
 python-tomli-2.0.1-5
 python-sphinx-8.2.3-1
 python-sphinxcontrib-serializinghtml-2.0.0-3
@@ -194,10 +195,7 @@ python-pluggy-1.6.0-1
 python-iniconfig-2.1.0-1
 python-pyqtgraph-0.13.7-2
 python-pyopenssl-25.1.0-1
-python-pydantic-2.11.7-1
-python-typing-inspection-0.4.1-1
 python-pydantic-core-2:2.33.2-2
-python-annotated-types-0.7.0-2
 python-pycryptodomex-3.23.0-1
 python-pycodestyle-2.12.1-2
 python-ply-3.11-15
