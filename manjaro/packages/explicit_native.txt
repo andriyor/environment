@@ -11,6 +11,7 @@ cpupower 6.15-2
 d-spy 48.0-2
 darkman 2.0.1-1
 dhclient 4.4.3.P1-4
+difftastic 0.64.0-2
 dmraid 1.0.0.rc16.3-15
 docker 1:28.3.2-1
 docker-compose 2.38.2-1
