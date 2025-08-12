@@ -2,6 +2,7 @@ Zen
 Dropbox
 Postman
 Extension Manager
+Spotify
 Sublime Merge
 Visual Studio Code
 DBeaver Community
