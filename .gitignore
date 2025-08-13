@@ -1,4 +1,6 @@
 .idea
 example
 zsh/secrets.zsh
+node_modules
 raspbery/config.yaml
+raspbery/config.js

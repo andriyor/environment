@@ -38,8 +38,9 @@ services:
     restart: unless-stopped
 
   gatus:
-    image: twinproduction/gatus
     container_name: gatus
+    build:
+      context: https://github.com/andriyor/blog.git#chore/allow-to-pass-link-in-telegram-message
     ports:
       - "8090:8080"
     volumes:
