@@ -8,6 +8,7 @@ android-udev 20250525-1
 apparmor 4.1.1-3
 appimagelauncher 2.2.0-10
 ark 25.04.3-1
+audacious 4.4.2-1
 avahi 1:0.9rc2-1
 b43-fwcutter 019-6
 base-devel 1-3
@@ -108,7 +109,7 @@ gnome-user-docs 48.2-1
 gnome-user-share 48.1-1
 gnome-weather 48.0-2
 go 2:1.24.6-1
-google-chrome 139.0.7258.66-1
+google-chrome 139.0.7258.127-1
 gparted 1.7.0-1
 grep 3.12-2
 grilo-plugins 1:0.3.18-1
@@ -216,7 +217,7 @@ manjaro-printer 20240827-1
 manjaro-release 25.0.7-1
 manjaro-settings-manager-kcm 0.5.7-21
 manjaro-settings-manager-knotifier 0.5.8-6
-manjaro-system 20230401-1
+manjaro-system 20250814-1
 manjaro-wallpapers-18.0 1.4-4
 mdadm 4.4-1
 memtest86+ 7.20-2
@@ -271,7 +272,6 @@ pciutils 3.14.0-1
 perl 5.42.0-1
 perl-file-mimeinfo 0.35-3
 pgweb-bin 0.16.2-1
-phonon-qt5-gstreamer 4.10.0-4
 pick-colour-picker 1.51-1
 plasma-browser-integration 6.3.6-1
 plasma-desktop 6.3.6-1
@@ -302,6 +302,7 @@ python-pysmbc 1.0.25.1-4
 python-reportlab 4.2.2-5
 python-websockets 15.0.1-1
 python-wheel 0.45.1-1
+qmmp 2.2.5-1
 qt5-imageformats 5.15.17+kde+r2-1
 qt5-translations 5.15.17-1
 qt5-virtualkeyboard 5.15.17-1
@@ -358,7 +359,7 @@ usbutils 018-1
 util-linux 2.41.1-1
 vcdimager 2.0.1-7
 vi 1:070224-6
-vivaldi 7.5.3735.58-1
+vivaldi 7.5.3735.62-1
 vulkan-intel 1:25.1.7-1
 vulkan-radeon 1:25.1.7-1
 wget 1.25.0-2

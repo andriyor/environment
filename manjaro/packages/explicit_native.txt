@@ -2,6 +2,7 @@ acpi 1.8-2
 acpid 2.0.34-2
 android-tools 35.0.2-17
 ark 25.04.3-1
+audacious 4.4.2-1
 b43-fwcutter 019-6
 bat 0.25.0-4
 binwalk 3.1.0-1
@@ -83,7 +84,7 @@ manjaro-kde-settings 20241119-1
 manjaro-pipewire 20231009-1
 manjaro-printer 20240827-1
 manjaro-release 25.0.7-1
-manjaro-system 20230401-1
+manjaro-system 20250814-1
 manjaro-wallpapers-18.0 1.4-4
 memtest86+ 7.20-2
 micro 2.0.14-1
@@ -119,6 +120,7 @@ psensor 1.2.1-4
 pyenv 1:2.6.5-1
 python-pyaudio 0.2.14-4
 python-pysmbc 1.0.25.1-4
+qmmp 2.2.5-1
 qt5-imageformats 5.15.17+kde+r2-1
 qt5-virtualkeyboard 5.15.17-1
 redshift 1.12-14
@@ -137,7 +139,7 @@ ttf-indic-otf 0.2-12
 udiskie 2.5.7-1
 vcdimager 2.0.1-7
 vi 1:070224-6
-vivaldi 7.5.3735.58-1
+vivaldi 7.5.3735.62-1
 xf86-input-elographics 1.4.4-1
 xf86-input-evdev 2.11.0-1
 xf86-input-void 1.4.2-2

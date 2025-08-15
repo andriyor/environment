@@ -11,4 +11,5 @@ Flameshot
 Bustle
 Image Viewer
 Clock
+Cavalier
 Telegram
