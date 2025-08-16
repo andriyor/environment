@@ -1,5 +1,8 @@
 alias subl='open -a "Sublime Text"'
 
+redis-server --daemonize yes
+. "$HOME/.cargo/env"
+
 # bun completions
 [ -s "/Users/andrejorehov/.bun/_bun" ] && source "/Users/andrejorehov/.bun/_bun"
 

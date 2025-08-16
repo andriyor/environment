@@ -41,8 +41,6 @@ export PATH="$PATH:./node_modules/.bin"
 eval "$(ssh-agent -s)"
 # ssh-add
 
-redis-server --daemonize yes
-
 eval "$(sheldon source)"
 
 # Console editor
@@ -62,7 +60,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 export NIX_INSTALL="$HOME/.nix-profile"
 export PATH="$NIX_INSTALL/bin:$PATH"
-
-. "$HOME/.cargo/env"
 
 # source "$HOME/.rye/env"
