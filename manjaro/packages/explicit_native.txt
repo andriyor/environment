@@ -58,7 +58,6 @@ htop 3.4.1-1
 hyphen-en 2.8.8-6
 inetutils 2.6-1
 intel-ucode 20250512-1
-inxi 3.3.38.1-1
 jq 1.8.1-1
 kaccounts-providers 25.04.3-1
 kde-gtk-config 6.3.6-1
@@ -104,11 +103,11 @@ ntp 4.2.8.p18-3
 numlockx 1.2-6
 nvidia-prime 1.0-5
 obs-studio 31.1.2-1
+octopi 0.17.0-2
 okular 25.04.3-1
 onefetch 2.25.0-1
 orca 48.6-1
 oxygen-icons 1:6.1.0-2
-pacman-contrib 1.12.0-1
 pamac-tray-icon-plasma 0.1.3-3
 partitionmanager 25.04.3-1
 plasma-browser-integration 6.3.6-1
@@ -123,7 +122,6 @@ python-pysmbc 1.0.25.1-4
 qmmp 2.2.5-1
 qt5-imageformats 5.15.17+kde+r2-1
 qt5-virtualkeyboard 5.15.17-1
-redshift 1.12-14
 rhythmbox 3.4.8-4
 rpi-imager 1.9.6-1
 rustup 1.28.2-3

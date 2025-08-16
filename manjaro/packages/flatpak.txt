@@ -6,10 +6,11 @@ Spotify
 Sublime Merge
 Visual Studio Code
 DBeaver Community
+Warehouse
 Obsidian
+Chromium Web Browser
 Flameshot
 Bustle
 Image Viewer
 Clock
-Cavalier
 Telegram
