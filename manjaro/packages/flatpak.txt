@@ -1,12 +1,12 @@
 Zen
 Dropbox
-Postman
 Extension Manager
 Spotify
 Sublime Merge
 Visual Studio Code
 DBeaver Community
 Warehouse
+Bazaar
 Obsidian
 Chromium Web Browser
 Flameshot
