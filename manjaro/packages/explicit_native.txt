@@ -73,8 +73,9 @@ kwrited 6.3.6-1
 lib32-mesa-demos 9.0.0-4
 libva-utils 2.22.0-1
 libwebsockets 4.4.1-1
-linux612-nvidia-open 575.64.05-5
-linux66-nvidia-open 575.64.05-6
+libxnvctrl 575.64.05-1
+linux612-nvidia 575.64.05-6
+linux66-nvidia 575.64.05-6
 man-pages 6.15-1
 manjaro-alsa 20221002-1
 manjaro-browser-settings 20231111-1
@@ -101,7 +102,6 @@ nginx 1.28.0-4
 nix 2.31.0-1
 ntp 4.2.8.p18-3
 numlockx 1.2-6
-nvidia-prime 1.0-5
 obs-studio 31.1.2-1
 octopi 0.17.0-2
 okular 25.08.0-1
@@ -115,7 +115,6 @@ plasma-desktop 6.3.6-1
 plasma-systemmonitor 6.3.6-1
 playerctl 2.4.1-4
 powertop 2.15-2
-psensor 1.2.1-4
 pyenv 1:2.6.7-1
 python-pyaudio 0.2.14-4
 python-pysmbc 1.0.25.1-4

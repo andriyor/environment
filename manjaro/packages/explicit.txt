@@ -189,9 +189,9 @@ licenses 20240728-1
 lightdm 1:1.32.0-6
 lightdm-gtk-greeter 1:2.0.9-1
 linux612 6.12.43-1
-linux612-nvidia-open 575.64.05-5
+linux612-nvidia 575.64.05-6
 linux66 6.6.102-1
-linux66-nvidia-open 575.64.05-6
+linux66-nvidia 575.64.05-6
 llvm 20.1.8-1
 logiops 0.3.5-1
 logrotate 3.22.0-1
@@ -240,7 +240,6 @@ nss-mdns 0.15.1-2
 ntfs-3g 2022.10.3-2
 ntp 4.2.8.p18-3
 numlockx 1.2-6
-nvidia-prime 1.0-5
 nvidia-settings 575.64.05-1
 nvidia-utils 575.64.05-1
 obs-studio 31.1.2-1
@@ -280,7 +279,6 @@ powerdevil 6.3.6-1
 powertop 2.15-2
 print-manager 1:6.3.6-2
 procps-ng 4.0.5-3
-psensor 1.2.1-4
 psmisc 23.7-1
 pulseaudio-ctl 1.70-2
 pyenv 1:2.6.7-1

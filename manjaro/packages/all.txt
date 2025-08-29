@@ -969,7 +969,6 @@ libmd 1.1.0-2
 libmediaart 1.9.7-1
 libmfx 23.2.2-4
 libmicrodns 0.2.0-2
-libmicrohttpd 1.0.2-1
 libmikmod 3.3.13-1
 libmm-glib 1.24.2-1
 libmms 0.6.4-5
@@ -1169,9 +1168,9 @@ linux-firmware-radeon 20250808-1
 linux-firmware-realtek 20250808-1
 linux-firmware-whence 20250808-1
 linux612 6.12.43-1
-linux612-nvidia-open 575.64.05-5
+linux612-nvidia 575.64.05-6
 linux66 6.6.102-1
-linux66-nvidia-open 575.64.05-6
+linux66-nvidia 575.64.05-6
 lirc 1:0.10.2-5
 lldb 20.1.8-1
 llhttp 9.2.1-2
@@ -1300,7 +1299,6 @@ ntp 4.2.8.p18-3
 numactl 2.0.19-1
 numlockx 1.2-6
 nvidia-driver-assistant 0.22.65.06-1
-nvidia-prime 1.0-5
 nvidia-settings 575.64.05-1
 nvidia-utils 575.64.05-1
 oath-toolkit 2.6.13-1
@@ -1464,7 +1462,6 @@ projectm 3.1.12-5
 protobuf 31.1-2
 protobuf-c 1.5.2-4
 prrte 3.0.11-1
-psensor 1.2.1-4
 psmisc 23.7-1
 pugixml 1.15-2
 pulseaudio-ctl 1.70-2
