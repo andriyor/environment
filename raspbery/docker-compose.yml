@@ -99,6 +99,7 @@ services:
       - ./airtable:/code
     environment:
       - AIRTABLE_API=${AIRTABLE_API}
+    restart: unless-stopped
 
 
 volumes:
