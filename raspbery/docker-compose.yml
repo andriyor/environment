@@ -68,7 +68,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /run/dbus:/run/dbus:ro
     restart: unless-stopped
-    network_mode: host
+    network_mode: host8080
     privileged: true
 
   nocodb:
@@ -96,6 +96,7 @@ services:
       - "8000:80"
     volumes:
       - ./app:/app/app:rw,cached # live reload
+      - ./airtable:/code
     environment:
       - AIRTABLE_API=${AIRTABLE_API}
 
