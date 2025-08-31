@@ -91,7 +91,7 @@ services:
   airtable:
     container_name: airtable-wrapper
     build:
-      context: https://github.com/andriyor/airtable-wrapper.git#29cd1a179cc942a48bdd204b73cffff574b18b37
+      context: https://github.com/andriyor/airtable-wrapper.git#main
     ports:
       - "8000:80"
     volumes:
