@@ -60,14 +60,6 @@ services:
       - portainer_data:/data
     restart: unless-stopped
 
-  blog:
-    container_name: blog
-    build:
-      context: https://github.com/andriyor/blog.git
-    ports:
-      - "8080:80"
-    restart: unless-stopped
-    
   homeassistant:
     container_name: homeassistant
     image: ghcr.io/home-assistant/home-assistant:stable
@@ -87,6 +79,25 @@ services:
     volumes:
       - ./nocodb:/usr/app/data
     restart: unless-stopped
+
+  blog:
+    container_name: blog
+    build:
+      context: https://github.com/andriyor/blog.git
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+  airtable:
+    container_name: airtable-wrapper
+    build:
+      context: https://github.com/andriyor/airtable-wrapper.git
+    ports:
+      - "8000:80"
+    volumes:
+      - ./app:/app/app:rw,cached # live reload
+    environment:
+      - AIRTABLE_API=${AIRTABLE_API}
 
 
 volumes:
