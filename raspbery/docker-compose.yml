@@ -96,7 +96,7 @@ services:
       - "8000:80"
     volumes:
       - ./app:/app/app:rw,cached # live reload
-      - ./airtable:/code
+      - ./airtable:/app
     environment:
       - AIRTABLE_API=${AIRTABLE_API}
     restart: unless-stopped
