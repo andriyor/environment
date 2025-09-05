@@ -26,20 +26,17 @@ cask "telegram"
 cask "viber"
 
 # mac specific
-brew "mas"
 cask "rectangle"
 cask "stats"
-cask "lunar"
+cask "lunar" # displays brightness
 cask "trex" # OCR
 cask "hammerspoon"
 cask "karabiner-elements"
-cask "monitorcontrol"
-cask "raycast"
 cask "alt-tab"
 cask "little-snitch"
-cask "bartender"
+cask "jordanbaird-ice" # bar
 cask "contexts"
-cask "little-snitch"
+cask "little-snitch" # network monitoring
 
 # git
 brew "difftastic"
@@ -157,3 +154,4 @@ vscode "gruntfuggly.todo-tree"
 vscode "humao.rest-client"
 vscode "wakatime.vscode-wakatime"
 vscode "qwtel.sqlite-viewer"
+vscode "bruno-api-client.bruno"
