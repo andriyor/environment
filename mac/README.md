@@ -50,19 +50,21 @@ darwin-rebuild switch --flake ~/.config/nix-darwin#mbp --impure'
 
 [rcmd - Switch apps instantly using the ⌘ Right Command key](https://lowtechguys.com/rcmd/)
 
-[lwouis/alt-tab-macos: Windows alt-tab on macOS](https://github.com/lwouis/alt-tab-macos)
+[Contexts - Radically simpler & faster window switcher for Mac](https://contexts.co/)
 
 
 
 ## File manager
 
-[Commander One](https://mac.eltima.com/file-manager.html)
+[File manager for macOS with Support: FTP\SFTP, WebDav, Amazon S3, Google Drive, Dropbox etc.](https://commander-one.com/)
 
 why: https://airtable.com/shrbhfzUtnDA2B6Al/tblJj2orYPqJeVg80
 
 ## Terminal
 
 [iTerm2 - macOS Terminal Replacement](https://iterm2.com/)
+
+why https://airtable.com/appIvSj1vJt6bL0rp/shrpQI57Sqy0zHPup
 
 ## System monitor
 
