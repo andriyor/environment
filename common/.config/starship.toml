@@ -1,0 +1,17 @@
+# https://github.com/basecamp/omarchy/blob/0d5b41b83af7a68cfc81b8bcbabab757c83a07f4/config/starship.toml#L4
+add_newline = true
+command_timeout = 500
+
+# Show only the branch; full git status is the usual bottleneck
+[git_status]
+disabled = true
+
+# Make Node detection cheap: only show if these files exist in the CWD
+[nodejs]
+detect_extensions = []  # don't scan by extension
+detect_folders = []     # don't pay for folder checks (e.g., node_modules)
+detect_files = ["package.json", "pnpm-lock.yaml", "yarn.lock", "bun.lockb"]
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
