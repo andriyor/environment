@@ -20,12 +20,9 @@ bindkey '\e[B' history-search-forward
 source ~/alias.zsh;
 source ~/aws-alias.zsh;
 source ~/secrets.zsh;
+source ~/os-specific.zsh;
 
 # What OS are we running?
-if [[ $(uname) == "Darwin" ]]; then
-  source ~/os/mac.zsh;
-fi
-
 if [[ $(uname) == "Linux" ]]; then
   source ~/os/linux.zsh;
 fi

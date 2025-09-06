@@ -52,6 +52,7 @@ cask "postman"
 # terminal
 cask "iterm2" # main terminal
 cask "ghostty" # fast but i need search
+
 # terminal cli
 brew "curl"
 brew "fd"

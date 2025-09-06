@@ -1,5 +1,8 @@
+# Linux
+
 ```shell
-ln -s ~/git/personal/environment/mpv.conf ~/.config/mpv/mpv.conf
+stow -t "$HOME" common
+stow -t "$HOME" linux
 ln -s ~/git/personal/environment/settings.json ~/.config/Code\ -\ Insiders/User/settings.json
 ```
 
@@ -12,11 +15,11 @@ ln -s ~/git/personal/environment/settings.json ~/.config/Code\ -\ Insiders/User/
 [pacman/Tips and tricks - ArchWiki](https://wiki.archlinux.org/title/pacman/Tips_and_tricks)
 
 ```shell
-pacman -Q > manjaro/packages/all.txt
-pacman -Qe > manjaro/packages/explicit.txt
-pacman -Qent > manjaro/packages/explicit_native.txt
-pacman -Qttdq | pacman -Rs --print - > manjaro/packages/optional.txt
-flatpak list --columns=name --app > manjaro/packages/flatpak.txt
+pacman -Q > linux/manjaro/packages/all.txt
+pacman -Qe > linux/manjaro/packages/explicit.txt
+pacman -Qent > linux/manjaro/packages/explicit_native.txt
+pacman -Qttdq | pacman -Rs --print - > linux/manjaro/packages/optional.txt
+flatpak list --columns=name --app > linux/manjaro/packages/flatpak.txt
 ```
 
 ```shell

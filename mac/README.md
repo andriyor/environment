@@ -1,28 +1,19 @@
-## Symlink settings
+# Mac
+
+## Install
+
+```shell
+./mac-install.sh
+brew "stow"
+stow common
+stow mac
+brew bundle install
+```
+
+## List installed vscode extensions
 
 ```shell
 code --list-extensions > vscode/extensions.txt
-
-ln -s ~/git/personal/environment/karabiner.json ~/.config/karabiner/karabiner.json
-ln -s ~/git/personal/environment/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-ln -s ~/git/personal/environment/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
-
-ln -s ~/git/personal/environment/Brewfile ~/Brewfile
-ln -s ~/git/personal/environment/flake.nix ~/.config/nix-darwin/flake.nix
-
-mkdir ~/script
-ln -s ~/git/personal/environment/scripts/log_output.js ~/scripts/filter_output.js
- 
-ln -s ~/git/personal/environment/zsh/secrets.zsh ~/secrets.zsh
-
-rm ~/.config/micro/settings.json
-ln -s ~/git/personal/environment/.config/micro ~/.config/micro
-
-ln -s ~/git/personal/environment/.config/espanso ~/.config/espanso
-
-ln -s ~/git/personal/environment/.config/zed/settings.json ~/.config/zed/settings.json
-
-ln -s ~/git/personal/environment/.config/fish/config.fish ~/.config/fish/config.fish
 ```
 
 ## Package manager
@@ -31,10 +22,6 @@ ln -s ~/git/personal/environment/.config/fish/config.fish ~/.config/fish/config.
 
 
 [Brew Bundle Brewfile Tips](https://gist.github.com/ChristopherA/a579274536aab36ea9966f301ff14f3f)
-
-```shell
-brew bundle install
-```
 
 
 [LnL7/nix-darwin: nix modules for darwin](https://github.com/LnL7/nix-darwin)
@@ -77,6 +64,6 @@ why: https://airtable.com/shrbhfzUtnDA2B6Al/tblJj2orYPqJeVg80
 
 [iTerm2 - macOS Terminal Replacement](https://iterm2.com/)
 
-## system monitor
+## System monitor
 
 [stats: macOS system monitor in your menu bar](https://github.com/exelban/stats)
