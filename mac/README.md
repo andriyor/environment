@@ -25,6 +25,14 @@ code --list-extensions > vscode/extensions.txt
 
 [Brew Bundle Brewfile Tips](https://gist.github.com/ChristopherA/a579274536aab36ea9966f301ff14f3f)
 
+```shell
+brew doctor
+brew cleanup
+
+brew bundle install
+brew bundle cleanup
+```
+
 
 [LnL7/nix-darwin: nix modules for darwin](https://github.com/LnL7/nix-darwin)
 
