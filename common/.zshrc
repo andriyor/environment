@@ -26,22 +26,11 @@ eval "$(starship init zsh)"
 
 export PATH="$PATH:./node_modules/.bin"
 
-# save rm
-# alias rm="rm -i"
-
-# fix this
-eval "$(ssh-agent -s)"
-# ssh-add
-
 eval "$(sheldon source)"
 
 # Console editor
 export EDITOR=micro
 
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
 
 # fnm
 eval "$(fnm env --use-on-cd --shell zsh)"

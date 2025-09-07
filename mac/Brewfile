@@ -1,7 +1,6 @@
 tap "caskroom/cask"
 tap "homebrew/bundle"
 tap "buo/cask-upgrade"
-tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
 
@@ -54,12 +53,14 @@ cask "iterm2" # main terminal
 cask "ghostty" # fast but i need search
 
 # terminal cli
+brew "stow"
 brew "curl"
 brew "fd"
 brew "jq"
 cask "session-manager-plugin"
 brew "neofetch"
 brew "starship"
+brew "fastfetch"
 
 # media
 cask "obs"
@@ -156,3 +157,5 @@ vscode "humao.rest-client"
 vscode "wakatime.vscode-wakatime"
 vscode "qwtel.sqlite-viewer"
 vscode "bruno-api-client.bruno"
+vscode "streetsidesoftware.code-spell-checker"
+vscode "usernamehw.errorlens"

@@ -12,6 +12,8 @@ brew bundle install
 
 ## List installed vscode extensions
 
+https://github.com/antfu/vscode-settings
+
 ```shell
 code --list-extensions > vscode/extensions.txt
 ```

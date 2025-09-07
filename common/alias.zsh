@@ -28,6 +28,8 @@ alias pi='pnpm i'
 
 alias nts='node --import=tsimp/import'
 
+# save rm
+# alias rm="rm -i"
 alias rmnm="find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
 alias rmbuild="find . -name 'build' -type d -prune -exec rm -rf '{}' +"
 
