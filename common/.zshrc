@@ -22,11 +22,6 @@ source ~/aws-alias.zsh;
 source ~/secrets.zsh;
 source ~/os-specific.zsh;
 
-# What OS are we running?
-if [[ $(uname) == "Linux" ]]; then
-  source ~/os/linux.zsh;
-fi
-
 eval "$(starship init zsh)"
 
 export PATH="$PATH:./node_modules/.bin"
