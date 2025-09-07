@@ -36,6 +36,7 @@ cask "contexts"
 cask "little-snitch" # network monitoring
 
 # git
+brew "git"
 brew "difftastic"
 brew "gh"
 brew "git-quick-stats"
