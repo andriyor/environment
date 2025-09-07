@@ -1,8 +1,8 @@
 # Linux
 
 ```shell
-stow -t "$HOME" common
-stow -t "$HOME" linux
+stow common
+stow linux
 ln -s ~/git/personal/environment/settings.json ~/.config/Code\ -\ Insiders/User/settings.json
 ```
 
