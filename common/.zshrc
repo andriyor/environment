@@ -23,23 +23,12 @@ source ~/secrets.zsh;
 source ~/os-specific.zsh;
 
 eval "$(starship init zsh)"
-
-export PATH="$PATH:./node_modules/.bin"
-
 eval "$(sheldon source)"
 
 # Console editor
 export EDITOR=micro
 
-
 # fnm
 eval "$(fnm env --use-on-cd --shell zsh)"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-export NIX_INSTALL="$HOME/.nix-profile"
-export PATH="$NIX_INSTALL/bin:$PATH"
 
 # source "$HOME/.rye/env"
