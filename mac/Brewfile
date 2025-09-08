@@ -31,12 +31,13 @@ cask "hammerspoon"
 cask "karabiner-elements"
 cask "alt-tab"
 cask "little-snitch"
-cask "jordanbaird-ice" # bar
+cask "jordanbaird-ice" # Hides menu bar icons
 cask "contexts"
 cask "little-snitch" # network monitoring
+brew "mas" # Mac App Store command line interface
 
 # git
-brew "git"
+brew "git" # fresh and faster than default installed
 brew "difftastic"
 brew "gh"
 brew "git-quick-stats"
@@ -56,6 +57,7 @@ brew "stow"
 brew "curl"
 brew "fd"
 brew "jq"
+brew "zoxide"
 cask "session-manager-plugin"
 brew "starship"
 brew "fastfetch"
@@ -66,6 +68,7 @@ cask "eagle"
 cask "zoom"
 cask "vlc"
 cask "qview"
+cask "pika" # colour picker
 
 # audio
 cask "spotify"
@@ -156,3 +159,12 @@ vscode "qwtel.sqlite-viewer"
 vscode "bruno-api-client.bruno"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "usernamehw.errorlens"
+
+# ------------------------------------------------------------------------------
+# App Store applications
+# ------------------------------------------------------------------------------
+mas "Home Assistant", id: 1099568401
+mas "rcmd", id: 1596283165 # Switch apps instantly using the ⌘ Right Command key
+mas "Velja", id: 1607635845 # browser picker
+mas "Magnet", id: 441258766
+mas "DaisyDisk", id: 411643860

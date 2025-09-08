@@ -6,6 +6,7 @@ Goal: reproduce environment on new machine as fast as possible, share daily used
 
 - [ ] list of vs code extensions
 - [ ] setup pre commit for secrets check
+- [ ] [I automated my macOS setup, including Chrome extensions : r/MacOS](https://www.reddit.com/r/MacOS/comments/1elsh2q/i_automated_my_macos_setup_including_chrome/)
 
 
 ## links

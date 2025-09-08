@@ -23,6 +23,7 @@ source ~/secrets.zsh;
 source ~/os-specific.zsh;
 
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 eval "$(sheldon source)"
 
 # Console editor
