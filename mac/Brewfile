@@ -9,27 +9,24 @@ cask "font-martian-mono"
 cask "font-monaspace"
 
 # languages and tools
-brew "tokei"
-brew "fnm"
-brew "nvm"
+brew "tokei" # show the number of files, total lines within those files and code, comments
+brew "fnm" # Node.js version manager (installs prebuild binary)
 brew "go"
-brew "maven"
-brew "pyenv"
+brew "maven" # for work
+brew "pyenv" # Python version management
 brew "coreutils"
 
 # chat
-cask "signal"
 cask "telegram"
 cask "viber"
 
 # mac specific
-cask "rectangle"
-cask "stats"
+cask "rectangle" # Move and resize windows in macOS using keyboard shortcuts or snap areas
+cask "stats" # system monitor in your menu bar
 cask "lunar" # displays brightness
 cask "trex" # OCR
-cask "hammerspoon"
-cask "karabiner-elements"
-cask "alt-tab"
+cask "hammerspoon" # automation of macOS (required by rcmd)
+cask "karabiner-elements" # keyboard customizer
 cask "little-snitch"
 cask "jordanbaird-ice" # Hides menu bar icons
 cask "contexts"
@@ -77,7 +74,7 @@ cask "soundsource"
 cask "audio-hijack"
 brew "cava"
 
-# files
+# files, notes
 cask "commander-one"
 brew "rclone"
 brew "rsync"
@@ -166,5 +163,4 @@ vscode "usernamehw.errorlens"
 mas "Home Assistant", id: 1099568401
 mas "rcmd", id: 1596283165 # Switch apps instantly using the ⌘ Right Command key
 mas "Velja", id: 1607635845 # browser picker
-mas "Magnet", id: 441258766
 mas "DaisyDisk", id: 411643860
