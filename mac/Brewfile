@@ -46,57 +46,55 @@ cask "iterm2" # main terminal
 cask "ghostty" # fast but i need search
 
 # terminal cli
-brew "stow"
+brew "stow" # symlink farm manager
 brew "curl"
-brew "fd"
-brew "jq"
-brew "zoxide"
-cask "session-manager-plugin"
-brew "starship"
-brew "fastfetch"
+brew "jq" # command-line JSON processor
+brew "zoxide" # a smarter cd command
+cask "session-manager-plugin" # aws
+brew "starship" # prompt for shel
+brew "fastfetch" # neofetch like system information tool
 
 # media
 cask "obs"
-cask "eagle"
+cask "eagle" # organize photos
 cask "zoom"
 cask "vlc"
-cask "qview"
 cask "pika" # colour picker
 
 # audio
 cask "spotify"
-cask "loopback"
-cask "soundsource"
-cask "audio-hijack"
-brew "cava"
+cask "loopback" # Cable-free audio routing
+cask "soundsource" # sound control per app
+cask "audio-hijack" # recording
+brew "cava" # cross-platform audio visualizer
 
 # files, notes
-cask "commander-one"
-brew "rclone"
-brew "rsync"
-cask "insync"
+cask "commander-one" # file manager with dual-pane interface
+brew "rsync" # file copying tool for both remote and local files
+cask "insync" # Google Drive, OneDrive, and Dropbox sync
 cask "sublime-merge"
 cask "sublime-text"
 cask "visual-studio-code"
-cask "obsidian"
+cask "obsidian" # personal notes, journaling, knowledge bases, and project management,
 
 
-## database
+# database
 brew "redis"
 brew "sqlite"
 cask "another-redis-desktop-manager"
-cask "dbeaver-community"
-cask "tableplus"
+cask "dbeaver-community" # cross-platform database tool
+cask "tableplus" # database management
 cask "db-browser-for-sqlite"
 
+# browsers
+cask "vivaldi"
+
 # misc
-cask "espanso"
+cask "espanso" # text expander
 brew "nginx", restart_service: true
 brew "postgresql@14"
-brew "scrcpy"
-cask "switchhosts"
-cask "vivaldi"
-cask "wkhtmltopdf"
+brew "scrcpy" # display and control your Android device
+cask "wkhtmltopdf" # for work
 cask "raspberry-pi-imager"
 
 # git
@@ -140,9 +138,9 @@ vscode "bierner.markdown-yaml-preamble"
 vscode "bierner.markdown-footnotes"
 vscode "bierner.markdown-checkbox"
 vscode "takumii.markdowntable"
-vscode "renathossain.markdown-runner"
+vscode "renathossain.markdown-runner" # run js in markdown
 vscode "unifiedjs.vscode-mdx"
-vscode "stateful.runme"
+vscode "stateful.runme" # run js in markdown like in Notebooks
 # misc
 vscode "astro-build.astro-vscode"
 vscode "gruntfuggly.todo-tree"
