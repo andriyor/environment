@@ -9,7 +9,6 @@ cask "font-martian-mono"
 cask "font-monaspace"
 
 # languages and tools
-brew "tokei" # show the number of files, total lines within those files and code, comments
 brew "fnm" # Node.js version manager (installs prebuild binary)
 brew "go"
 brew "maven" # for work
@@ -26,22 +25,20 @@ cask "stats" # system monitor in your menu bar
 cask "lunar" # displays brightness
 cask "trex" # OCR
 cask "hammerspoon" # automation of macOS (required by rcmd)
-cask "little-snitch"
 cask "jordanbaird-ice" # Hides menu bar icons
-cask "contexts"
+cask "contexts" # better Command-Tab
 cask "little-snitch" # network monitoring
 brew "mas" # Mac App Store command line interface
 
 # git
 brew "git" # fresh and faster than default installed
-brew "difftastic"
-brew "gh"
-brew "git-quick-stats"
-brew "onefetch"
+brew "gh" # github cli
+brew "difftastic" # a structural diff that understands syntax
+brew "git-quick-stats" # access various statistics in git repository
+brew "tokei" # show the number of files, total lines within those files and code, comments
 
 # api
-brew "hurl"
-cask "bruno"
+cask "bruno" # local first API testing
 cask "postman"
 
 # terminal
