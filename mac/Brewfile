@@ -26,7 +26,6 @@ cask "stats" # system monitor in your menu bar
 cask "lunar" # displays brightness
 cask "trex" # OCR
 cask "hammerspoon" # automation of macOS (required by rcmd)
-cask "karabiner-elements" # keyboard customizer
 cask "little-snitch"
 cask "jordanbaird-ice" # Hides menu bar icons
 cask "contexts"
