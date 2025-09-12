@@ -42,7 +42,7 @@ cask "bruno" # local first API testing
 cask "postman"
 
 # terminal
-cask "iterm2" # main terminal
+cask "iterm2" # main terminal (supports nerd fonts unlike default mac terminal)
 cask "ghostty" # fast but i need search
 
 # terminal cli
@@ -60,6 +60,7 @@ cask "eagle" # organize photos
 cask "zoom"
 cask "vlc"
 cask "pika" # colour picker
+cask "cleanshot" # screenshot tool with self-timer and ocr
 
 # audio
 cask "spotify"
@@ -150,6 +151,7 @@ vscode "qwtel.sqlite-viewer"
 vscode "bruno-api-client.bruno"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "usernamehw.errorlens"
+vscode "pomdtr.excalidraw-editor"
 
 # ------------------------------------------------------------------------------
 # App Store applications
