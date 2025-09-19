@@ -25,9 +25,9 @@ alias nr='npm run'
 alias nrl='npm run lint'
 alias nrt='npm run typecheck'
 
-alias nrcw=   'ln -s ~/git/work/.npmrc-fixed ~/.npmrc'
-alias nrcwci= 'ln -s ~/git/work/.npmrc-ci ~/.npmrc'
-alias nrcp=   'rm ~/.npmrc;ln -s ~/git/personal/.npmrc ~/.npmrc'
+alias nrcw='ln -s ~/git/work/.npmrc-fixed ~/.npmrc'
+alias nrcwci='ln -s ~/git/work/.npmrc-ci ~/.npmrc'
+alias nrcp='rm ~/.npmrc;ln -s ~/git/personal/.npmrc ~/.npmrc'
 alias rmnpmrc='rm ~/.npmrc'
 
 alias pi='pnpm i'

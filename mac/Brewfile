@@ -29,6 +29,7 @@ cask "jordanbaird-ice" # Hides menu bar icons
 cask "contexts" # better Command-Tab
 cask "little-snitch" # network monitoring
 brew "mas" # Mac App Store command line interface
+cask "processspy" # aggregate memory usages by process
 
 # git
 brew "git" # fresh and faster than default installed
