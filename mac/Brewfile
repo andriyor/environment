@@ -15,10 +15,6 @@ brew "maven" # for work
 brew "pyenv" # Python version management
 brew "coreutils"
 
-# chat
-cask "telegram"
-cask "viber"
-
 # mac specific
 cask "rectangle" # Move and resize windows in macOS using keyboard shortcuts or snap areas
 cask "stats" # system monitor in your menu bar
@@ -79,7 +75,6 @@ cask "sublime-text"
 cask "visual-studio-code"
 cask "obsidian" # personal notes, journaling, knowledge bases, and project management,
 
-
 # database
 brew "redis"
 brew "sqlite"
@@ -91,6 +86,10 @@ cask "db-browser-for-sqlite"
 # browsers
 cask "vivaldi"
 cask "microsoft-edge" # with pinned tabs not being scrollable in vertical view
+
+# chat
+cask "telegram"
+cask "viber"
 
 # misc
 cask "espanso" # text expander
