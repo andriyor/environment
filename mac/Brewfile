@@ -49,6 +49,7 @@ cask "ghostty" # fast but i need search
 # terminal cli
 brew "stow" # symlink farm manager
 brew "curl"
+brew "yt-dlp" # command-line audio/video downloader
 brew "jq" # command-line JSON processor
 brew "zoxide" # a smarter cd command
 cask "session-manager-plugin" # aws
@@ -90,6 +91,7 @@ cask "db-browser-for-sqlite"
 
 # browsers
 cask "vivaldi"
+cask "microsoft-edge" # with pinned tabs not being scrollable in vertical view
 
 # misc
 cask "espanso" # text expander
