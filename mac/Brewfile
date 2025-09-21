@@ -23,7 +23,6 @@ cask "viber"
 cask "rectangle" # Move and resize windows in macOS using keyboard shortcuts or snap areas
 cask "stats" # system monitor in your menu bar
 cask "lunar" # displays brightness
-cask "trex" # OCR
 cask "hammerspoon" # automation of macOS (required by rcmd)
 cask "jordanbaird-ice" # Hides menu bar icons
 cask "contexts" # better Command-Tab
