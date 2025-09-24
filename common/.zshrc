@@ -3,6 +3,7 @@
 HISTFILE=$HOME/.zsh_history
 export HISTSIZE=1000000   # the number of items for the internal history list
 export SAVEHIST=1000000   # maximum number of items for the history file
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 # The meaning of these options can be found in man page of `zshoptions`.
 setopt HIST_IGNORE_ALL_DUPS  # do not put duplicated command into history list
