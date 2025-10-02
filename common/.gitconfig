@@ -1,3 +1,4 @@
+; https://github.com/ai/environment/blob/main/gitconfig
 [alias]
   current-branch = "!git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/'"
   a  = "!git add . && git s"
@@ -10,7 +11,7 @@
   f  = fetch
   d  = diff
   ds = diff --shortstat --cached
-  l  = "!git pull origin $(git current-branch)"
+  l  = "!git pull origin $(git current-branch) --rebase"
   h  = "!git push origin $(git current-branch)"
   lh = "!git l && git h"
   rm  = "!git rm $(git ls-files --deleted) && git status"
