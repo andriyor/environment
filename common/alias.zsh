@@ -59,8 +59,24 @@ alias psmem='function _psmem() { ps -o rss= -p $(pgrep -g $1) | awk "{sum += \$1
 # top files by line count `tl md 20`
 alias tl='f() { [ -n "$1" ] && find . -type f -name "*.$1" -print0 | xargs -0 wc -l | sort -nr | head -n "${2:-10}"; }; f'
 
+# git statistic changes per day
 gsm() {
    git log --since="30 days ago" --pretty=format:"%ad|%H" --date=short --numstat |
    awk 'BEGIN{FS="|"} /\|/ {date=$1; next} /^[0-9]/ {added[date]+=$1} END {for(d in added) print d, added[d]}' | 
    sort > ~/gbm.dat | termgraph ~/gbm.dat --color blue
+}
+
+
+# uptime of process
+# ps -p $(pgrep firefox) -o etime
+app-uptime() {
+  local pid
+  pid=$(pgrep "$1" | head -n 1)
+  if [ -n "$pid" ]; then
+    etime=$(ps -p "$pid" -o etime= | tr -d ' ')
+    seconds=$(echo "$etime" | awk -F '[-:]' '{sec=$NF; min=$(NF-1); hr=$(NF-2); day=($1~/-/?$1:0); print day*86400+hr*3600+min*60+sec}')
+    date -u -r "$seconds" +"%Hh %Mm %Ss"
+  else
+    echo "Process '$1' not found"
+  fi
 }
