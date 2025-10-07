@@ -31,7 +31,7 @@ eval "$(sheldon source)"
 export EDITOR=micro
 
 # fnm
-eval "$(fnm env --use-on-cd --shell zsh)"
+# eval "$(fnm env --use-on-cd --shell zsh)"
 
 # source "$HOME/.rye/env"
 

@@ -10,6 +10,7 @@ cask "font-monaspace"
 
 # languages and tools
 brew "fnm" # Node.js version manager (installs prebuild binary)
+brew "nvm" # for work
 brew "go"
 brew "maven" # for work
 brew "pyenv" # Python version management
@@ -42,6 +43,7 @@ cask "iterm2" # main terminal (supports nerd fonts unlike default mac terminal)
 cask "ghostty" # fast but i need search
 
 # terminal cli
+brew "sheldon" # shell plugin manager
 brew "stow" # symlink farm manager
 brew "curl"
 brew "yt-dlp" # command-line audio/video downloader

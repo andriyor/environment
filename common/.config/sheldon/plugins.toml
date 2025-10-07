@@ -25,3 +25,8 @@ github = 'zsh-users/zsh-completions'
 
 [plugins.zsh-history-substring-search]
 github = 'zsh-users/zsh-history-substring-search'
+
+# https://github.com/jimhester/per-directory-history
+[plugins.per-directory-history]
+github = "jimhester/per-directory-history"
+

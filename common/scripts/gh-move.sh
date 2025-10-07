@@ -1,3 +1,5 @@
+# https://github.com/cli/cli/issues/5292
+
 OWNER="$1"
 NEW_OWNER="${2:-andriyor}"
 
