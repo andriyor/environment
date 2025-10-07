@@ -26,6 +26,7 @@ cask "contexts" # better Command-Tab
 cask "little-snitch" # network monitoring
 brew "mas" # Mac App Store command line interface
 cask "processspy" # aggregate memory usages by process
+cask "pearcleaner" # app cleaner
 
 # git
 brew "git" # fresh and faster than default installed
@@ -86,6 +87,7 @@ cask "tableplus" # database management
 cask "db-browser-for-sqlite"
 
 # browsers
+cask "google-chrome" # for work
 cask "microsoft-edge" # personal browser with pinned tabs not being scrollable in vertical view
 cask "vivaldi" # emoji doesn't woks
 cask "firefox@developer-edition" # use sometimes with sidebery
