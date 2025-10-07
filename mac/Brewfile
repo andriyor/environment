@@ -86,8 +86,9 @@ cask "tableplus" # database management
 cask "db-browser-for-sqlite"
 
 # browsers
-cask "vivaldi"
-cask "microsoft-edge" # with pinned tabs not being scrollable in vertical view
+cask "microsoft-edge" # personal browser with pinned tabs not being scrollable in vertical view
+cask "vivaldi" # emoji doesn't woks
+cask "firefox@developer-edition" # use sometimes with sidebery
 
 # chat
 cask "telegram"
