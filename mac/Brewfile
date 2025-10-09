@@ -27,6 +27,7 @@ cask "little-snitch" # network monitoring
 brew "mas" # Mac App Store command line interface
 cask "processspy" # aggregate memory usages by process
 cask "pearcleaner" # app cleaner
+cask "karabiner-elements" # keyboard customizer for tilda in EU magic keyboard
 
 # git
 brew "git" # fresh and faster than default installed
