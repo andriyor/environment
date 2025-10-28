@@ -22,6 +22,7 @@ path=(
   /usr/local/bin
   /run/current-system/sw/bin
   $HOME/.bun/bin
+  $HOME/.local/bin
   $HOME/Library/pnpm
   $HOME/.cargo/bin
   $HOME/go/bin

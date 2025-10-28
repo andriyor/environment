@@ -7,6 +7,8 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "theme": "Catppuccin Macchiato",
+  "autosave": "on_focus_change",
   "icon_theme": "Catppuccin Frappé",
   "tabs": {
     "file_icons": true

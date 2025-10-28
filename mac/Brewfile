@@ -7,6 +7,8 @@ cask "font-hack-nerd-font"
 cask "font-fira-code"
 cask "font-martian-mono"
 cask "font-monaspace"
+cask "font-jetbrains-mono"
+cask "font-cascadia-code"
 
 # languages and tools
 brew "fnm" # Node.js version manager (installs prebuild binary)
