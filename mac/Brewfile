@@ -48,6 +48,11 @@ cask "iterm2" # main terminal (supports nerd fonts unlike default mac terminal)
 cask "ghostty" # fast but i need search
 
 # terminal cli
+brew "fzf" # fuzzy finder (use **<TAB> for completion)
+brew "neovim"
+brew "micro" # editor
+brew "bat" # cat alternative
+brew "eza" # ls alternative
 brew "sheldon" # shell plugin manager
 brew "stow" # symlink farm manager
 brew "curl"
@@ -102,6 +107,7 @@ cask "viber"
 
 # misc
 cask "espanso" # text expander
+cask "typinator" # espanso stoped working
 brew "nginx", restart_service: true
 brew "postgresql@14"
 brew "scrcpy" # display and control your Android device

@@ -9,6 +9,8 @@
 {
   "theme": "Catppuccin Macchiato",
   "autosave": "on_focus_change",
+  "format_on_save": "off",
+  "remove_trailing_whitespace_on_save": false,
   "icon_theme": "Catppuccin Frappé",
   "tabs": {
     "file_icons": true
