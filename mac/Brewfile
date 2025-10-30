@@ -50,6 +50,7 @@ cask "ghostty" # fast but i need search
 # terminal cli
 brew "fzf" # fuzzy finder (use **<TAB> for completion)
 brew "neovim"
+brew "neovide" # Neovim GPU Client (smooth, animation)
 brew "micro" # editor
 brew "bat" # cat alternative
 brew "eza" # ls alternative
