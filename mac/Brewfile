@@ -166,7 +166,7 @@ vscode "humao.rest-client"
 vscode "wakatime.vscode-wakatime"
 vscode "qwtel.sqlite-viewer"
 vscode "bruno-api-client.bruno"
-vscode "streetsidesoftware.code-spell-checker"
+# vscode "streetsidesoftware.code-spell-checker"
 vscode "usernamehw.errorlens"
 vscode "pomdtr.excalidraw-editor"
 

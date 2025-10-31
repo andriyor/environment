@@ -51,13 +51,6 @@
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
 
-  "[markdown]": {
-    "editor.wordWrap": "off"
-  },
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
-  },
-
   "jest.autoRun": "off",
   "jest.showCoverageOnLoad": true,
 
@@ -68,9 +61,6 @@
   "security.promptForLocalFileProtocolHandling": false,
   "security.workspace.trust.untrustedFiles": "open",
   "diffEditor.ignoreTrimWhitespace": false,
-  "[svg]": {
-    "editor.defaultFormatter": "jock.svg"
-  },
 
   "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
   "python.languageServer": "None",
@@ -83,5 +73,18 @@
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
 
   "docker.extension.enableComposeLanguageServer": false,
-  "scm.defaultViewMode": "tree"
+  "scm.defaultViewMode": "tree",
+
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  },
+  "[lua]": {
+    "editor.defaultFormatter": "yinfei.luahelper"
+  },
+  "[markdown]": {
+    "editor.wordWrap": "off"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  }
 }
