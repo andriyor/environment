@@ -52,7 +52,7 @@ cask "ghostty" # fast but i need search
 brew "fzf" # fuzzy finder (use **<TAB> for completion)
 brew "neovim"
 brew "lazygit" # terminal UI for git
-# brew "neovide" # Neovim GPU Client (smooth, animation)
+# brew "neovide" # Neovim GPU Client (smooth, animation) (miss app in application folder)
 brew "micro" # editor
 brew "bat" # cat alternative
 brew "eza" # ls alternative

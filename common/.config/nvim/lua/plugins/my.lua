@@ -10,5 +10,6 @@
 -- * override the configuration of LazyVim plugins
 return {
   -- add gruvbox
-  { "sindrets/diffview.nvim" }
+{ import = "lazyvim.plugins.extras.lang.typescript" },
+{ "sindrets/diffview.nvim" },
 }
