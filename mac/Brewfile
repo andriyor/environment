@@ -3,11 +3,12 @@ tap "buo/cask-upgrade"
 tap "koekeishiya/formulae"
 
 # fonts
-cask "font-hack-nerd-font"
+cask "font-jetbrains-mono" # used in obsidian
+cask "font-jetbrains-mono-nerd-font" # used in iterm2 form icons
+cask "font-hack-nerd-font" # used in vscode terminal
 cask "font-fira-code"
 cask "font-martian-mono"
 cask "font-monaspace"
-cask "font-jetbrains-mono"
 cask "font-cascadia-code"
 
 # languages and tools
@@ -50,7 +51,8 @@ cask "ghostty" # fast but i need search
 # terminal cli
 brew "fzf" # fuzzy finder (use **<TAB> for completion)
 brew "neovim"
-brew "neovide" # Neovim GPU Client (smooth, animation)
+brew "lazygit" # terminal UI for git
+# brew "neovide" # Neovim GPU Client (smooth, animation)
 brew "micro" # editor
 brew "bat" # cat alternative
 brew "eza" # ls alternative
