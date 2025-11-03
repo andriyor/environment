@@ -55,7 +55,7 @@ services:
   blog:
     container_name: blog
     build:
-      context: https://github.com/andriyor/blog.git
+      context: https://github.com/andriyor/blog.git#ceeb7fecd06c3539f984b852df43cfb60eb1ea1a
     ports:
       - "8080:80"
     restart: unless-stopped
