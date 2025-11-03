@@ -7,6 +7,7 @@
 
   "editor.fontFamily": "Fira Code",
   "editor.fontSize": 14,
+  "window.zoomLevel": 0.2,
   "editor.fontLigatures": true,
 
   "editor.accessibilitySupport": "off",
@@ -57,6 +58,7 @@
   "typescript.preferences.includePackageJsonAutoImports": "on",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.suggest.autoImports": true,
+  "typescript.experimental.expandableHover": true,
 
   "security.promptForLocalFileProtocolHandling": false,
   "security.workspace.trust.untrustedFiles": "open",

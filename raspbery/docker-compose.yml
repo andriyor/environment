@@ -12,8 +12,7 @@ services:
 
   gatus:
     container_name: gatus
-    build:
-      context: https://github.com/andriyor/blog.git#chore/allow-to-pass-link-in-telegram-message
+    image: twinproduction/gatus
     ports:
       - "8090:8080"
     volumes:

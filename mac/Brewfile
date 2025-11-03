@@ -32,6 +32,7 @@ cask "processspy" # aggregate memory usages by process
 cask "pearcleaner" # app cleaner
 cask "karabiner-elements" # keyboard customizer for tilda in EU magic keyboard
 cask "logi-options+" # to set smooth scroll for mx master mouse
+cask "orbstack" # docker client
 
 # git
 brew "git" # fresh and faster than default installed
