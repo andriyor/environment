@@ -7,6 +7,24 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "ssh_connections": [
+    {
+      "host": "192.168.0.162",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/aoriekhov"
+          ]
+        },
+        {
+          "paths": [
+            "/home/aoriekhov/apps/environment"
+          ]
+        }
+      ]
+    }
+  ],
   "theme": "Catppuccin Macchiato",
   "autosave": "on_focus_change",
   "format_on_save": "off",
