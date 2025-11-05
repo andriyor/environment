@@ -1,17 +1,29 @@
-- id: '1762294041893'
-  alias: button automation
-  description: ''
+#- id: '1762294041893'
+#  alias: button automation
+#  description: ''
+#  triggers:
+#  - device_id: 27614febc37cf0912fe40ba39705a3bf
+#    domain: zha
+#    type: remote_button_short_press
+#    subtype: button
+#    trigger: device
+#  conditions: []
+#  actions:
+#  - action: light.toggle
+#    metadata: {}
+#    data: {}
+#    target:
+#      device_id: bf3dbbd639fff986937c1142ae387642
+#  mode: single
+
+- alias: Log Sonoff Button Press
+  description: "Send a record to Airtable when Sonoff button is pressed"
   triggers:
-  - device_id: 27614febc37cf0912fe40ba39705a3bf
-    domain: zha
-    type: remote_button_short_press
-    subtype: button
-    trigger: device
-  conditions: []
-  actions:
-  - action: light.toggle
-    metadata: {}
-    data: {}
-    target:
-      device_id: bf3dbbd639fff986937c1142ae387642
+    - device_id: 27614febc37cf0912fe40ba39705a3bf
+      domain: zha
+      type: remote_button_short_press
+      subtype: button
+      trigger: device
+  action:
+    - service: rest_command.airtable_log
   mode: single

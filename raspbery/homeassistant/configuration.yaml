@@ -9,3 +9,13 @@ frontend:
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
+
+rest_command:
+  airtable_log:
+    url: "https://api.airtable.com/v0/appeuWmWqkkoGjuQL/tblZGNXgyVU8ieHCo"
+    method: POST
+    headers:
+      Authorization: !secret airtable_token
+      Content-Type: "application/json"
+    payload: >
+      {"fields": {"Name": "Union Square", "date": "{{ now() }}"}}
