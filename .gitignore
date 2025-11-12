@@ -4,3 +4,4 @@ common/secrets.zsh
 node_modules
 raspbery/config.yaml
 raspbery/config.js
+raspbery/elasticsearch-example/node_modules

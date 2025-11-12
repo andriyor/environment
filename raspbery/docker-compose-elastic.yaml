@@ -6,6 +6,7 @@ services:
     environment:
       - discovery.type=single-node
       - xpack.security.enabled=false
+      - ES_JAVA_OPTS=-Xms2g -Xmx2g
     ports:
       - "9200:9200"
 
@@ -15,5 +16,26 @@ services:
       - "5601:5601"
     environment:
       - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
+      
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:8.15.0-arm64
+    user: root
+    volumes:
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+    depends_on:
+      - elasticsearch
+  
+  node-app:
+    build: ./elasticsearch-example
+    image: node-app:local
+    container_name: node-app
+    command: ["node", "index.js"]
+    # default logging driver is json-file (perfect for Filebeat)
+    labels:
+      - "co.elastic.logs/module=node"
     depends_on:
       - elasticsearch
