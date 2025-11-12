@@ -118,6 +118,9 @@ brew "scrcpy" # display and control your Android device
 cask "wkhtmltopdf" # for work
 cask "raspberry-pi-imager"
 
+# ------------------------------------------------------------------------------
+#  VSCode extensions
+# ------------------------------------------------------------------------------
 # git
 vscode "eamodio.gitlens"
 vscode "quentinguidee.gitignore-ultimate"
@@ -163,6 +166,7 @@ vscode "renathossain.markdown-runner" # run js in markdown
 vscode "unifiedjs.vscode-mdx"
 vscode "stateful.runme" # run js in markdown like in Notebooks
 # misc
+vscode "ms-vscode-remote.remote-ssh" # remote Development via ssh
 vscode "astro-build.astro-vscode"
 vscode "gruntfuggly.todo-tree"
 vscode "humao.rest-client"
