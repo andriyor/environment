@@ -24,7 +24,7 @@ cask "rectangle" # Move and resize windows in macOS using keyboard shortcuts or 
 cask "stats" # system monitor in your menu bar
 cask "lunar" # displays brightness
 cask "hammerspoon" # automation of macOS (required by rcmd)
-cask "jordanbaird-ice" # Hides menu bar icons
+cask "jordanbaird-ice" # Hides menu bar icons https://github.com/andriyor/environment/issues/3
 cask "contexts" # better Command-Tab
 cask "little-snitch" # network monitoring
 brew "mas" # Mac App Store command line interface
