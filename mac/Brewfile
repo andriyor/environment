@@ -51,6 +51,7 @@ cask "ghostty" # fast but i need search
 
 # terminal cli
 brew "fzf" # fuzzy finder (use **<TAB> for completion)
+brew "ripgrep" # searches for text inside files across directories
 brew "neovim"
 brew "lazygit" # terminal UI for git
 # brew "neovide" # Neovim GPU Client (smooth, animation) (miss app in application folder)

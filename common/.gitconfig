@@ -31,11 +31,6 @@
 ; 	# Cache untracked file info (big speedup in repos with many untracked files)
 	untrackedCache = true
 
-[url "ssh://git@github.com/"]
-  insteadOf = https://github.com/
-[credential "https://github.com"]
-    helper = store
-
 [diff]
     external = difft
 
