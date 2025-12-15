@@ -174,3 +174,7 @@ https://addons.mozilla.org/en-US/firefox/addon/firefox-color/
 ## Multi-Account Containers
 
 https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/
+
+## Bookmark Sync
+
+https://chromewebstore.google.com/detail/floccus-bookmarks-sync/fnaicdffflnofjppbagibeoednhnbjhg
