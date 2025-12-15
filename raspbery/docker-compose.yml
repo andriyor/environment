@@ -3,7 +3,7 @@ services:
     image: adguard/adguardhome:latest
     container_name: adguardhome
     restart: unless-stopped
-    network_mode: host   # Recommended for DNS to work reliably
+    network_mode: host # Recommended for DNS to work reliably
     volumes:
       - ./adguard/work:/opt/adguardhome/work
       - ./adguard/conf:/opt/adguardhome/conf
@@ -21,7 +21,7 @@ services:
     environment:
       - GATUS_CONFIG_PATH=/config/config.yaml
     restart: unless-stopped
-  
+
   portainer:
     image: portainer/portainer-ce
     container_name: portainer
@@ -72,8 +72,17 @@ services:
     environment:
       - AIRTABLE_API=${AIRTABLE_API}
     restart: unless-stopped
-
+  
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    ports:
+      - "3000:8080"
+    volumes:
+      - open-webui:/app/backend/data
+    restart: always
 
 volumes:
   portainer_data:
   adguard:
+  open-webui:
