@@ -23,6 +23,12 @@
           ]
         }
       ]
+    },
+    {
+      "host": "192.168.0.162",
+      "username": "aoriekhov",
+      "args": [],
+      "projects": []
     }
   ],
   "theme": "Catppuccin Macchiato",
