@@ -110,6 +110,7 @@ cask "firefox@developer-edition" # use sometimes with sidebery
 # chat
 cask "telegram"
 cask "viber"
+cask "signal"
 
 # misc
 cask "espanso" # text expander
