@@ -35,6 +35,8 @@ services:
   homeassistant:
     container_name: homeassistant
     image: ghcr.io/home-assistant/home-assistant:stable
+    ports:
+      - "8123:8123"
     volumes:
       - ./homeassistant:/config
       - /etc/localtime:/etc/localtime:ro
@@ -72,17 +74,41 @@ services:
     environment:
       - AIRTABLE_API=${AIRTABLE_API}
     restart: unless-stopped
-  
-  open-webui:
-    image: ghcr.io/open-webui/open-webui:main
-    container_name: open-webui
-    ports:
-      - "3000:8080"
+
+  db:
+    image: mariadb:lts
+    restart: unless-stopped
+    command: --transaction-isolation=READ-COMMITTED
     volumes:
-      - open-webui:/app/backend/data
-    restart: always
+      - db:/var/lib/mysql
+    environment:
+        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+        MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+        MYSQL_DATABASE: ${MYSQL_DATABASE}
+        MYSQL_USER: ${MYSQL_USER}
+
+  redis:
+    image: redis:alpine
+    restart: unless-stopped
+
+  nextcloud:
+    image: nextcloud
+    restart: unless-stopped
+    ports:
+      - 8085:80
+    depends_on:
+      - redis
+      - db
+    volumes:
+      - nextcloud:/var/www/html
+    environment:
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_HOST: db
 
 volumes:
   portainer_data:
   adguard:
-  open-webui:
+  nextcloud:
+  db:
