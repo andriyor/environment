@@ -59,6 +59,13 @@ alias psmem='function _psmem() { ps -o rss= -p $(pgrep -g $1) | awk "{sum += \$1
 # top files by line count `tl md 20`
 alias tl='f() { [ -n "$1" ] && find . -type f -name "*.$1" -print0 | xargs -0 wc -l | sort -nr | head -n "${2:-10}"; }; f'
 
+# top changed files
+tcf() {
+  local count=${1:-20}
+  local timeframe=${2:-"1 month ago"}
+  git log --format=format: --name-only --since="$timeframe" | grep -v '^$' | sort | uniq -c | sort -nr | head -$count
+}
+
 # git statistic changes per day
 gsm() {
    git log --since="30 days ago" --pretty=format:"%ad|%H" --date=short --numstat |

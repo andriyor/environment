@@ -25,7 +25,7 @@ cask "rectangle" # Move and resize windows in macOS using keyboard shortcuts or 
 cask "stats" # system monitor in your menu bar
 cask "lunar" # displays brightness
 cask "hammerspoon" # automation of macOS (required by rcmd)
-cask "jordanbaird-ice" # Hides menu bar icons https://github.com/andriyor/environment/issues/3
+cask "bartender" # Hides menu bar icons
 cask "contexts" # better Command-Tab
 cask "little-snitch" # network monitoring
 brew "mas" # Mac App Store command line interface
@@ -187,3 +187,4 @@ mas "Home Assistant", id: 1099568401
 mas "rcmd", id: 1596283165 # Switch apps instantly using the ⌘ Right Command key
 mas "Velja", id: 1607635845 # browser picker
 mas "DaisyDisk", id: 411643860
+mas "Dato", id: 1470584107 # time zone travel

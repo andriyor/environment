@@ -7,6 +7,16 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "edit_predictions": {
+    "mode": "eager"
+  },
+  "agent": {
+    "default_model": {
+      "provider": "gcode",
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    "model_parameters": []
+  },
   "ssh_connections": [
     {
       "host": "192.168.0.162",
