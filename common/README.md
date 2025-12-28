@@ -1,3 +1,13 @@
+## shell
+
+zsh
+
+```shell
+stow -t "$HOME" common
+sheldon lock
+```
+
+
 ## Browser
 
 ### Firefox
@@ -156,14 +166,7 @@ chmod 700 ~/.ssh
 chmod 600 ~/.ssh/*
 ```
 
-## shell
 
-zsh
-
-```shell
-stow -t "$HOME" common
-sheldon lock
-```
 
 
 ## ZSH prompt

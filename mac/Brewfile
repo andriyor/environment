@@ -52,7 +52,10 @@ cask "ghostty" # fast but i need search
 
 # terminal cli
 brew "fzf" # fuzzy finder (use **<TAB> for completion)
+brew "fd" # fd is a program to find entries in your filesystem
 brew "ripgrep" # searches for text inside files across directories
+brew "television" # fuzzy finder for the terminal
+
 brew "neovim"
 brew "lazygit" # terminal UI for git
 # brew "neovide" # Neovim GPU Client (smooth, animation) (miss app in application folder)
