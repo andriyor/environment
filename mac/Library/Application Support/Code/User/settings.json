@@ -53,6 +53,10 @@
 
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
+  "git.blame.ignoreWhitespace": true,
+  
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
 
   "jest.autoRun": "off",
   "jest.showCoverageOnLoad": true,
@@ -76,9 +80,6 @@
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.value": 7,
   "workbench.editor.enablePreview": false,
-
-  "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
 
   "docker.extension.enableComposeLanguageServer": false,
   "scm.defaultViewMode": "tree",
