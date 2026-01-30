@@ -21,6 +21,8 @@ brew "pyenv" # Python version management
 brew "coreutils"
 
 # mac specific
+brew "swiftbar" # custom menu bar programs
+brew "mas" # Mac App Store command line interface
 cask "rectangle" # Move and resize windows in macOS using keyboard shortcuts or snap areas
 cask "stats" # system monitor in your menu bar
 cask "lunar" # displays brightness
@@ -28,7 +30,6 @@ cask "hammerspoon" # automation of macOS (required by rcmd)
 cask "bartender" # Hides menu bar icons
 cask "contexts" # better Command-Tab
 cask "little-snitch" # network monitoring
-brew "mas" # Mac App Store command line interface
 cask "processspy" # aggregate memory usages by process
 cask "pearcleaner" # app cleaner
 cask "karabiner-elements" # keyboard customizer for tilda in EU magic keyboard
