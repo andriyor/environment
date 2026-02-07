@@ -106,6 +106,39 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_HOST: db
+      
+      
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Kyiv
+    volumes:
+      - ./config:/config
+      - /media/aoriekhov/1.42.6-9346:/media
+    ports:
+      - 8096:8096
+    restart: unless-stopped
+    
+  qbittorrent:
+      image: lscr.io/linuxserver/qbittorrent:latest
+      container_name: qbittorrent
+      environment:
+        - PUID=1000 # Run 'id' in terminal to check your UID
+        - PGID=1000 # Run 'id' in terminal to check your GID
+        - TZ=Etc/UTC
+        - WEBUI_PORT=8080
+        - TORRENTING_PORT=6881
+      volumes:
+        - ./qbittorrent-config:/config
+        - /media/aoriekhov/1.42.6-9346/downloads:/downloads
+      ports:
+        - 8095:8080
+        - 6881:6881
+        - 6881:6881/udp
+      restart: unless-stopped
 
 volumes:
   portainer_data:
