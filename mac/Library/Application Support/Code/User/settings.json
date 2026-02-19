@@ -92,5 +92,6 @@
   },
   "[markdown]": {
     "editor.wordWrap": "off"
-  }
+  },
+  "chat.viewSessions.orientation": "stacked"
 }
