@@ -1,29 +1,92 @@
-#- id: '1762294041893'
-#  alias: button automation
-#  description: ''
-#  triggers:
-#  - device_id: 27614febc37cf0912fe40ba39705a3bf
-#    domain: zha
-#    type: remote_button_short_press
-#    subtype: button
-#    trigger: device
-#  conditions: []
-#  actions:
-#  - action: light.toggle
-#    metadata: {}
-#    data: {}
-#    target:
-#      device_id: bf3dbbd639fff986937c1142ae387642
-#  mode: single
-
 - alias: Log Sonoff Button Press
-  description: "Send a record to Airtable when Sonoff button is pressed"
+  description: Send a record to Airtable when Sonoff button is pressed
   triggers:
-    - device_id: 27614febc37cf0912fe40ba39705a3bf
-      domain: zha
-      type: remote_button_short_press
-      subtype: button
-      trigger: device
+  - device_id: 27614febc37cf0912fe40ba39705a3bf
+    domain: zha
+    type: remote_button_short_press
+    subtype: button
+    trigger: device
   action:
-    - service: rest_command.airtable_log
+  - service: rest_command.airtable_log
+  mode: single
+  id: dca5c4cb034d4ed3800ff3d68494d597
+- id: '1773074032345'
+  alias: New automation
+  description: ''
+  triggers:
+  - device_id: 20dd7485243e06ec0fe35491d2adcdb2
+    domain: zha
+    type: remote_button_short_press
+    subtype: button
+    trigger: device
+  conditions: []
+  actions:
+  - target:
+      entity_id: input_select.energy_state
+    data:
+      option: active
+    action: input_select.select_option
+  - target:
+      device_id:
+      - 19723ff4d5ef2a752ab2a3c15b87db7a
+    data:
+      brightness_pct: 10
+      rgb_color:
+      - 157
+      - 240
+      - 127
+    action: light.turn_on
+  mode: single
+- id: '1773096554103'
+  alias: Sleep
+  description: ''
+  triggers:
+  - device_id: 0f9be445625e9e9a1e1b618a80221c43
+    domain: zha
+    type: remote_button_short_press
+    subtype: button
+    trigger: device
+  conditions: []
+  actions:
+  - target:
+      entity_id: input_select.energy_state
+    data:
+      option: sleep
+    action: input_select.select_option
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      device_id:
+      - 1465921da09d38a4af8b966f33395776
+      - bf3dbbd639fff986937c1142ae387642
+      - 176d32f5ad384423424bc51863d1a356
+      - 19723ff4d5ef2a752ab2a3c15b87db7a
+  mode: single
+- id: '1773097814424'
+  alias: ButtonTired
+  description: ''
+  triggers:
+  - device_id: 5694ac4f04828031fcaa87b0600f67eb
+    domain: zha
+    type: remote_button_short_press
+    subtype: button
+    trigger: device
+  conditions: []
+  actions:
+  - target:
+      entity_id: input_select.energy_state
+    data:
+      option: sleepy
+    action: input_select.select_option
+  - action: light.turn_on
+    metadata: {}
+    data:
+      rgb_color:
+      - 215
+      - 106
+      - 106
+      brightness_pct: 20
+    target:
+      device_id: 19723ff4d5ef2a752ab2a3c15b87db7a
   mode: single

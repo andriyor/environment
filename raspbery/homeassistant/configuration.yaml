@@ -19,3 +19,11 @@ rest_command:
       Content-Type: "application/json"
     payload: >
       {"fields": {"Name": "Union Square", "date": "{{ now() }}"}}
+
+input_select:
+  energy_state:
+    name: Energy state
+    options:
+      - active
+      - sleepy
+      - sleep
