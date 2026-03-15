@@ -181,16 +181,63 @@ services:
         ## Where to store generated content (screenshots,previews,transcodes,sprites)
         - ./generated:/generated
 
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - ./radarr/data:/config
+      - /media/aoriekhov/STORAGE2/movies:/movies
+      - /media/aoriekhov/STORAGE2/downloads:/downloads
+    ports:
+      - 7878:7878
+    restart: unless-stopped
+    
+  prowlarr:
+    image: lscr.io/linuxserver/prowlarr:latest
+    container_name: prowlarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - ./prowlarr-config:/config
+    ports:
+      - 9696:9696
+    restart: unless-stopped
+
   filebrowser:
     image: filebrowser/filebrowser:latest
     container_name: filebrowser
     ports:
-      - "9090:80"
+      - 9090:80
     volumes:
       - /:/srv
       - filebrowser_database:/database
       - filebrowser_config:/config
     restart: unless-stopped
+      
+  seerr:
+      image: ghcr.io/seerr-team/seerr:latest
+      container_name: seerr
+      environment:
+        - LOG_LEVEL=debug
+        - TZ=Asia/Tashkent
+        - PORT=5055 #optional
+      ports:
+        - 5055:5055
+      volumes:
+        - ./seerr:/app/config
+      healthcheck:
+        test: wget --no-verbose --tries=1 --spider http://localhost:5055/api/v1/status || exit 1
+        start_period: 20s
+        timeout: 3s
+        interval: 15s
+        retries: 3
+      restart: unless-stopped
 
 volumes:
   portainer_data:
