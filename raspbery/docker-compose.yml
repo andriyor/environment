@@ -82,10 +82,10 @@ services:
     volumes:
       - db:/var/lib/mysql
     environment:
-        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-        MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-        MYSQL_DATABASE: ${MYSQL_DATABASE}
-        MYSQL_USER: ${MYSQL_USER}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
 
   redis:
     image: redis:alpine
@@ -106,8 +106,7 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_HOST: db
-      
-      
+
   jellyfin:
     image: jellyfin/jellyfin:latest
     container_name: jellyfin
@@ -121,65 +120,65 @@ services:
     ports:
       - 8096:8096
     restart: unless-stopped
-    
+
   qbittorrent:
-      image: lscr.io/linuxserver/qbittorrent:latest
-      container_name: qbittorrent
-      environment:
-        - PUID=1000 # Run 'id' in terminal to check your UID
-        - PGID=1000 # Run 'id' in terminal to check your GID
-        - TZ=Etc/UTC
-        - WEBUI_PORT=8080
-        - TORRENTING_PORT=6881
-      volumes:
-        - ./qbittorrent-config:/config
-        - /media/aoriekhov/STORAGE2/downloads:/downloads
-      ports:
-        - 8095:8080
-        - 6881:6881
-        - 6881:6881/udp
-      restart: unless-stopped
-      
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    environment:
+      - PUID=1000 # Run 'id' in terminal to check your UID
+      - PGID=1000 # Run 'id' in terminal to check your GID
+      - TZ=Etc/UTC
+      - WEBUI_PORT=8080
+      - TORRENTING_PORT=6881
+    volumes:
+      - ./qbittorrent-config:/config
+      - /media/aoriekhov/STORAGE2/downloads:/downloads
+    ports:
+      - 8095:8080
+      - 6881:6881
+      - 6881:6881/udp
+    restart: unless-stopped
+
   stash:
-      image: stashapp/stash:latest
-      container_name: stash
-      restart: unless-stopped
-      ## the container's port must be the same with the STASH_PORT in the environment section
-      ports:
-        - "9999:9999"
-      ## If you intend to use stash's DLNA functionality uncomment the below network mode and comment out the above ports section
-      # network_mode: host
-      logging:
-        driver: "json-file"
-        options:
-          max-file: "10"
-          max-size: "2m"
-      environment:
-        - STASH_STASH=/data/
-        - STASH_GENERATED=/generated/
-        - STASH_METADATA=/metadata/
-        - STASH_CACHE=/cache/
-        ## Adjust below to change default port (9999)
-        - STASH_PORT=9999
-      volumes:
-        - /etc/localtime:/etc/localtime:ro
-        ## Adjust below paths (the left part) to your liking.
-        ## E.g. you can change ./config:/root/.stash to ./stash:/root/.stash
-        ## The left part is the path on your host, the right part is the path in the stash container.
-  
-        ## Keep configs, scrapers, and plugins here.
-        - ./config:/root/.stash
-        ## Point this at your collection.
-        ## The left side is where your collection is on your host, the right side is where it will be in stash.
-        - /media/aoriekhov/STORAGE2/downloads:/data
-        ## This is where your stash's metadata lives
-        - ./metadata:/metadata
-        ## Any other cache content.
-        - ./cache:/cache
-        ## Where to store binary blob data (scene covers, images)
-        - ./blobs:/blobs
-        ## Where to store generated content (screenshots,previews,transcodes,sprites)
-        - ./generated:/generated
+    image: stashapp/stash:latest
+    container_name: stash
+    restart: unless-stopped
+    ## the container's port must be the same with the STASH_PORT in the environment section
+    ports:
+      - "9999:9999"
+    ## If you intend to use stash's DLNA functionality uncomment the below network mode and comment out the above ports section
+    # network_mode: host
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "10"
+        max-size: "2m"
+    environment:
+      - STASH_STASH=/data/
+      - STASH_GENERATED=/generated/
+      - STASH_METADATA=/metadata/
+      - STASH_CACHE=/cache/
+      ## Adjust below to change default port (9999)
+      - STASH_PORT=9999
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      ## Adjust below paths (the left part) to your liking.
+      ## E.g. you can change ./config:/root/.stash to ./stash:/root/.stash
+      ## The left part is the path on your host, the right part is the path in the stash container.
+
+      ## Keep configs, scrapers, and plugins here.
+      - ./config:/root/.stash
+      ## Point this at your collection.
+      ## The left side is where your collection is on your host, the right side is where it will be in stash.
+      - /media/aoriekhov/STORAGE2/downloads:/data
+      ## This is where your stash's metadata lives
+      - ./metadata:/metadata
+      ## Any other cache content.
+      - ./cache:/cache
+      ## Where to store binary blob data (scene covers, images)
+      - ./blobs:/blobs
+      ## Where to store generated content (screenshots,previews,transcodes,sprites)
+      - ./generated:/generated
 
   radarr:
     image: lscr.io/linuxserver/radarr:latest
@@ -195,7 +194,7 @@ services:
     ports:
       - 7878:7878
     restart: unless-stopped
-    
+
   prowlarr:
     image: lscr.io/linuxserver/prowlarr:latest
     container_name: prowlarr
@@ -219,25 +218,25 @@ services:
       - filebrowser_database:/database
       - filebrowser_config:/config
     restart: unless-stopped
-      
+
   seerr:
-      image: ghcr.io/seerr-team/seerr:latest
-      container_name: seerr
-      environment:
-        - LOG_LEVEL=debug
-        - TZ=Asia/Tashkent
-        - PORT=5055 #optional
-      ports:
-        - 5055:5055
-      volumes:
-        - ./seerr:/app/config
-      healthcheck:
-        test: wget --no-verbose --tries=1 --spider http://localhost:5055/api/v1/status || exit 1
-        start_period: 20s
-        timeout: 3s
-        interval: 15s
-        retries: 3
-      restart: unless-stopped
+    image: ghcr.io/seerr-team/seerr:latest
+    container_name: seerr
+    environment:
+      - LOG_LEVEL=debug
+      - TZ=Asia/Tashkent
+      - PORT=5055 #optional
+    ports:
+      - 5055:5055
+    volumes:
+      - ./seerr:/app/config
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://localhost:5055/api/v1/status || exit 1
+      start_period: 20s
+      timeout: 3s
+      interval: 15s
+      retries: 3
+    restart: unless-stopped
 
   shelfmark:
     image: ghcr.io/calibrain/shelfmark:latest
