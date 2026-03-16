@@ -1,0 +1,11 @@
+import:
+  write: yes
+
+plugins: lyrics musicbrainz inline convert duplicates
+
+lyrics:
+  auto: yes
+  synced: yes
+  sources: [lrclib]
+  
+directory: /media/aoriekhov/STORAGE2/music
