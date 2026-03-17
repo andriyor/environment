@@ -1,0 +1,36 @@
+services:
+  db:
+    image: mariadb:lts
+    restart: unless-stopped
+    command: --transaction-isolation=READ-COMMITTED
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+
+  redis:
+    image: redis:alpine
+    restart: unless-stopped
+
+  nextcloud:
+    image: nextcloud
+    restart: unless-stopped
+    ports:
+      - 8085:80
+    depends_on:
+      - redis
+      - db
+    volumes:
+      - nextcloud:/var/www/html
+    environment:
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_HOST: db
+
+volumes:
+  nextcloud:
+  db:

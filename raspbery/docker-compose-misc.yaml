@@ -8,6 +8,25 @@ services:
       - open-webui:/app/backend/data
     restart: always
 
+  nocodb:
+    image: nocodb/nocodb:latest
+    container_name: nocodb
+    ports:
+      - "9100:8080"
+    volumes:
+      - ./nocodb:/usr/app/data
+    restart: unless-stopped
+
+  portainer:
+    image: portainer/portainer-ce
+    container_name: portainer
+    ports:
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    restart: unless-stopped
+
 volumes:
   portainer_data:
   adguard:
