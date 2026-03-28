@@ -65,7 +65,7 @@ services:
       - TZ=Europe/Kyiv
     volumes:
       - ./config:/config
-      - /media/aoriekhov/STORAGE2:/media
+      - /mnt/storage:/media
     ports:
       - 8096:8096
     restart: unless-stopped
@@ -81,7 +81,7 @@ services:
       - TORRENTING_PORT=6881
     volumes:
       - ./qbittorrent-config:/config
-      - /media/aoriekhov/STORAGE2/downloads:/downloads
+      - /mnt/storage/downloads:/downloads
     ports:
       - 8095:8080
       - 6881:6881
@@ -119,7 +119,7 @@ services:
       - ./config:/root/.stash
       ## Point this at your collection.
       ## The left side is where your collection is on your host, the right side is where it will be in stash.
-      - /media/aoriekhov/STORAGE2/downloads:/data
+      - /mnt/storage/downloads:/data
       ## This is where your stash's metadata lives
       - ./metadata:/metadata
       ## Any other cache content.
@@ -138,8 +138,8 @@ services:
       - TZ=Etc/UTC
     volumes:
       - ./radarr/data:/config
-      - /media/aoriekhov/STORAGE2/movies:/movies
-      - /media/aoriekhov/STORAGE2/downloads:/downloads
+      - /mnt/storage/movies:/movies
+      - /mnt/storage/downloads:/downloads
     ports:
       - 7878:7878
     restart: unless-stopped
@@ -197,7 +197,7 @@ services:
       - 8084:8084
     restart: unless-stopped
     volumes:
-      - /media/aoriekhov/STORAGE2/books:/books # Default destination for book downloads
+      - /mnt/storage/books:/books # Default destination for book downloads
       - /shelfmark:/config # App configuration
       # Required for torrent / usenet - path must match your download client'
 
@@ -205,10 +205,12 @@ services:
     image: henrygd/beszel:latest
     container_name: beszel
     restart: unless-stopped
+    environment:
+      - APP_URL=http://localhost:9099
     ports:
       - "9099:8090"
     volumes:
-      - ./beszel_data:/data
+      - ./beszel_data:/beszel_data
 
   beszel-agent:
     image: henrygd/beszel-agent
@@ -223,7 +225,7 @@ services:
     environment:
       LISTEN: 45876
       KEY: ${BESZEL_KEY}
-      TOKEN: ${TOKEN_KEY}
+      TOKEN: ${BESZEL_TOKEN}
       HUB_URL: http://localhost:9099
 
   kavita:
@@ -232,7 +234,7 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - /media/aoriekhov/STORAGE2/books:/manga
+      - /mnt/storage/books:/manga
       - ./kavita:/kavita/config
     environment:
       - TZ=Your/Timezone
