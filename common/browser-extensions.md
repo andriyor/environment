@@ -74,6 +74,9 @@ https://chrome.google.com/webstore/detail/youtube-playlist-duration/pijbakhgmhha
 
 https://addons.mozilla.org/en-US/firefox/addon/youtube-playlist-duration-calc/
 
+Seek Subtitles for YouTube
+
+https://chromewebstore.google.com/detail/seek-subtitles-for-youtub/ghjmdgljbfiiaginabfnaopnocgafffb
 
 ## twitter 
 

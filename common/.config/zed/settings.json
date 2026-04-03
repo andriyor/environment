@@ -7,13 +7,18 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "git_panel": {
+    "tree_view": true
+  },
   "edit_predictions": {
     "mode": "eager"
   },
   "agent": {
     "default_model": {
-      "provider": "anthropic",
-      "model": "claude-sonnet-4-5-latest"
+      "effort": "medium",
+      "enable_thinking": true,
+      "provider": "zed.dev",
+      "model": "gpt-5.4"
     },
     "model_parameters": []
   },
@@ -21,24 +26,36 @@
     {
       "host": "192.168.0.162",
       "args": [],
-      "projects": [
-        {
-          "paths": [
-            "/home/aoriekhov"
-          ]
-        },
-        {
-          "paths": [
-            "/home/aoriekhov/apps/environment"
-          ]
-        }
-      ]
+      "projects": []
     },
     {
       "host": "192.168.0.162",
       "username": "aoriekhov",
       "args": [],
       "projects": []
+    },
+    {
+      "host": "raspberrypi",
+      "username": "aoriekhov",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/aoriekhov"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "192.168.1.65",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/aoriekhov"
+          ]
+        }
+      ]
     }
   ],
   "theme": "Catppuccin Macchiato",
