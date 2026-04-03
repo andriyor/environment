@@ -111,6 +111,7 @@ cask "db-browser-for-sqlite"
 cask "google-chrome" # for work
 cask "microsoft-edge" # personal browser with pinned tabs not being scrollable in vertical view
 cask "vivaldi" # emoji doesn't woks
+cask "firefox"
 cask "firefox@developer-edition" # use sometimes with sidebery
 
 # chat
@@ -125,7 +126,7 @@ brew "nginx", restart_service: true
 brew "postgresql@14"
 brew "scrcpy" # display and control your Android device
 cask "wkhtmltopdf" # for work
-cask "raspberry-pi-imager"
+# cask "raspberry-pi-imager"
 
 # ------------------------------------------------------------------------------
 #  VSCode extensions
