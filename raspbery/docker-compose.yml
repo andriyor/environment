@@ -64,7 +64,7 @@ services:
       - PGID=1000
       - TZ=Europe/Kyiv
     volumes:
-      - ./config:/config
+      - ./jellyfin-config:/config
       - /mnt/storage:/media
     ports:
       - 8096:8096
@@ -116,7 +116,7 @@ services:
       ## The left part is the path on your host, the right part is the path in the stash container.
 
       ## Keep configs, scrapers, and plugins here.
-      - ./config:/root/.stash
+      - ./stash-config:/root/.stash
       ## Point this at your collection.
       ## The left side is where your collection is on your host, the right side is where it will be in stash.
       - /mnt/storage/downloads:/data
@@ -127,7 +127,7 @@ services:
       ## Where to store binary blob data (scene covers, images)
       - ./blobs:/blobs
       ## Where to store generated content (screenshots,previews,transcodes,sprites)
-      - ./generated:/generated
+      - ./stash-generated:/generated
 
   radarr:
     image: lscr.io/linuxserver/radarr:latest
