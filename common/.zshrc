@@ -36,8 +36,8 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 # source "$HOME/.rye/env"
 
 # pyenv (required for okta)
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init --path)"
 
 source <(fzf --zsh)
