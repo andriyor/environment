@@ -181,3 +181,23 @@ https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/
 ## Bookmark Sync
 
 https://chromewebstore.google.com/detail/floccus-bookmarks-sync/fnaicdffflnofjppbagibeoednhnbjhg
+
+
+## Uer styles
+
+https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne
+
+For slack:
+
+```css
+@-moz-document domain("slack.com") {
+    /* Insert code here... */
+    .p-view_header,
+    .c-message_kit__gutter__right,
+    .c-message_kit__actions,
+    .c-message_kit__gutter__left,
+    .c-virtual_list__item {
+        background-color: #fbf6e6;
+    }
+}
+```
