@@ -269,9 +269,21 @@ services:
       - /var/lib/flaresolver:/config
     restart: unless-stopped
 
+  mtproto-proxy:
+    image: ghcr.io/telemt/telemt:latest
+    restart: unless-stopped
+    ports:
+      - "3128:3128"
+    volumes:
+      - ./config.toml:/app/config.toml
+      - telemt-data:/app
+    command: ["/app/config.toml"]
+    
+
 volumes:
   portainer_data:
   adguard:
   filebrowser_database:
   filebrowser_config:
   rreading_glasses_data:
+  telemt-data:
