@@ -1,4 +1,5 @@
-- alias: Log Sonoff Button Press
+- id: dca5c4cb034d4ed3800ff3d68494d597
+  alias: Log Sonoff Button Press
   description: Send a record to Airtable when Sonoff button is pressed
   triggers:
   - device_id: 27614febc37cf0912fe40ba39705a3bf
@@ -6,10 +7,16 @@
     type: remote_button_short_press
     subtype: button
     trigger: device
-  action:
-  - service: rest_command.airtable_log
+  actions:
+  - action: rest_command.airtable_log
+  - action: google_sheets.append_sheet
+    metadata: {}
+    data:
+      add_created_column: true
+      data:
+        source: button
+      config_entry: 01KQW920J1C6G83BZ17PTAKRMB
   mode: single
-  id: dca5c4cb034d4ed3800ff3d68494d597
 - id: '1773074032345'
   alias: New automation
   description: ''
