@@ -1,0 +1,305 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "links": [],
+  "panels": [
+    {
+      "datasource": { "type": "influxdb", "uid": "influxdb-ha" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "fixed" },
+          "custom": { "hideFrom": { "legend": false, "tooltip": false, "viz": false } },
+          "decimals": 1,
+          "mappings": [],
+          "thresholds": { "mode": "absolute", "steps": [{ "color": "green", "value": null }] },
+          "unit": "h"
+        },
+        "overrides": [
+          {
+            "matcher": { "id": "byName", "options": "active" },
+            "properties": [
+              { "id": "color", "value": { "fixedColor": "#73BF69", "mode": "fixed" } },
+              { "id": "displayName", "value": "Active" }
+            ]
+          },
+          {
+            "matcher": { "id": "byName", "options": "sleepy" },
+            "properties": [
+              { "id": "color", "value": { "fixedColor": "#F2CC0C", "mode": "fixed" } },
+              { "id": "displayName", "value": "Sleepy" }
+            ]
+          },
+          {
+            "matcher": { "id": "byName", "options": "sleep" },
+            "properties": [
+              { "id": "color", "value": { "fixedColor": "#5794F2", "mode": "fixed" } },
+              { "id": "displayName", "value": "Sleep" }
+            ]
+          }
+        ]
+      },
+      "gridPos": { "h": 6, "w": 12, "x": 0, "y": 0 },
+      "id": 1,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "horizontal",
+        "reduceOptions": { "calcs": ["lastNotNull"], "fields": "", "values": false },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "targets": [
+        {
+          "datasource": { "type": "influxdb", "uid": "influxdb-ha" },
+          "query": "from(bucket: \"homeassistant\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"input_select.energy_state\")\n  |> filter(fn: (r) => r[\"_field\"] == \"state\")\n  |> aggregateWindow(every: 1m, fn: last, createEmpty: true)\n  |> fill(usePrevious: true)\n  |> filter(fn: (r) => exists r._value)\n  |> map(fn: (r) => ({_time: r._time, _value: 1.0 / 60.0, state: r._value}))\n  |> group(columns: [\"state\"])\n  |> sum(column: \"_value\")\n  |> map(fn: (r) => ({_time: now(), _field: r.state, _value: r._value, _measurement: \"hours\"}))\n  |> group(columns: [\"_field\", \"_measurement\"])",
+          "refId": "A"
+        }
+      ],
+      "title": "Energy — Time Spent per State",
+      "type": "stat"
+    },
+    {
+      "datasource": { "type": "influxdb", "uid": "influxdb-ha" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "fixed" },
+          "custom": { "hideFrom": { "legend": false, "tooltip": false, "viz": false } },
+          "decimals": 1,
+          "mappings": [],
+          "thresholds": { "mode": "absolute", "steps": [{ "color": "green", "value": null }] },
+          "unit": "h"
+        },
+        "overrides": [
+          {
+            "matcher": { "id": "byName", "options": "good" },
+            "properties": [
+              { "id": "color", "value": { "fixedColor": "#73BF69", "mode": "fixed" } },
+              { "id": "displayName", "value": "Good" }
+            ]
+          },
+          {
+            "matcher": { "id": "byName", "options": "slightly" },
+            "properties": [
+              { "id": "color", "value": { "fixedColor": "#F2CC0C", "mode": "fixed" } },
+              { "id": "displayName", "value": "Slightly" }
+            ]
+          },
+          {
+            "matcher": { "id": "byName", "options": "unbearable" },
+            "properties": [
+              { "id": "color", "value": { "fixedColor": "#F2495C", "mode": "fixed" } },
+              { "id": "displayName", "value": "Unbearable" }
+            ]
+          }
+        ]
+      },
+      "gridPos": { "h": 6, "w": 12, "x": 12, "y": 0 },
+      "id": 4,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "horizontal",
+        "reduceOptions": { "calcs": ["lastNotNull"], "fields": "", "values": false },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "targets": [
+        {
+          "datasource": { "type": "influxdb", "uid": "influxdb-ha" },
+          "query": "from(bucket: \"homeassistant\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"input_select.neck_pain\")\n  |> filter(fn: (r) => r[\"_field\"] == \"state\")\n  |> aggregateWindow(every: 1m, fn: last, createEmpty: true)\n  |> fill(usePrevious: true)\n  |> filter(fn: (r) => exists r._value)\n  |> map(fn: (r) => ({_time: r._time, _value: 1.0 / 60.0, state: r._value}))\n  |> group(columns: [\"state\"])\n  |> sum(column: \"_value\")\n  |> map(fn: (r) => ({_time: now(), _field: r.state, _value: r._value, _measurement: \"hours\"}))\n  |> group(columns: [\"_field\", \"_measurement\"])",
+          "refId": "A"
+        }
+      ],
+      "title": "Neck Pain — Time Spent per State",
+      "type": "stat"
+    },
+    {
+      "datasource": { "type": "influxdb", "uid": "influxdb-ha" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "thresholds" },
+          "custom": { "align": "auto", "cellOptions": { "type": "color-text" }, "inspect": false },
+          "mappings": [
+            {
+              "type": "value",
+              "options": {
+                "Active": { "color": "green",  "index": 0 },
+                "Sleepy": { "color": "yellow", "index": 1 },
+                "Sleep":  { "color": "blue",   "index": 2 }
+              }
+            }
+          ],
+          "thresholds": { "mode": "absolute", "steps": [{ "color": "green", "value": null }] }
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 9, "w": 12, "x": 0, "y": 6 },
+      "id": 2,
+      "options": {
+        "cellHeight": "sm",
+        "footer": { "countRows": false, "fields": "", "reducer": ["sum"], "show": false },
+        "showHeader": true,
+        "sortBy": [{ "desc": true, "displayName": "Time" }]
+      },
+      "targets": [
+        {
+          "datasource": { "type": "influxdb", "uid": "influxdb-ha" },
+          "query": "from(bucket: \"homeassistant\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"input_select.energy_state\")\n  |> filter(fn: (r) => r[\"_field\"] == \"state\")\n  |> keep(columns: [\"_time\", \"_value\"])\n  |> sort(columns: [\"_time\"], desc: true)",
+          "refId": "A"
+        }
+      ],
+      "title": "Energy — State Changes",
+      "transformations": [
+        { "id": "organize", "options": { "renameByName": { "_time": "Time", "_value": "State" } } }
+      ],
+      "type": "table"
+    },
+    {
+      "datasource": { "type": "influxdb", "uid": "influxdb-ha" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "thresholds" },
+          "custom": { "align": "auto", "cellOptions": { "type": "color-text" }, "inspect": false },
+          "mappings": [
+            {
+              "type": "value",
+              "options": {
+                "good":       { "color": "green",  "index": 0 },
+                "slightly":   { "color": "yellow", "index": 1 },
+                "unbearable": { "color": "red",    "index": 2 }
+              }
+            }
+          ],
+          "thresholds": { "mode": "absolute", "steps": [{ "color": "green", "value": null }] }
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 9, "w": 12, "x": 12, "y": 6 },
+      "id": 5,
+      "options": {
+        "cellHeight": "sm",
+        "footer": { "countRows": false, "fields": "", "reducer": ["sum"], "show": false },
+        "showHeader": true,
+        "sortBy": [{ "desc": true, "displayName": "Time" }]
+      },
+      "targets": [
+        {
+          "datasource": { "type": "influxdb", "uid": "influxdb-ha" },
+          "query": "from(bucket: \"homeassistant\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"input_select.neck_pain\")\n  |> filter(fn: (r) => r[\"_field\"] == \"state\")\n  |> keep(columns: [\"_time\", \"_value\"])\n  |> sort(columns: [\"_time\"], desc: true)",
+          "refId": "A"
+        }
+      ],
+      "title": "Neck Pain — State Changes",
+      "transformations": [
+        { "id": "organize", "options": { "renameByName": { "_time": "Time", "_value": "State" } } }
+      ],
+      "type": "table"
+    },
+    {
+      "datasource": { "type": "influxdb", "uid": "influxdb-ha" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "fixed", "fixedColor": "green" },
+          "custom": {
+            "fillOpacity": 80,
+            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+            "insertNulls": false,
+            "lineWidth": 0,
+            "spanNulls": false
+          },
+          "mappings": [
+            {
+              "type": "value",
+              "options": {
+                "active": { "color": "#73BF69", "index": 0, "text": "Active" },
+                "sleepy": { "color": "#F2CC0C", "index": 1, "text": "Sleepy" },
+                "sleep":  { "color": "#5794F2", "index": 2, "text": "Sleep"  }
+              }
+            }
+          ],
+          "thresholds": { "mode": "absolute", "steps": [{ "color": "green", "value": null }] }
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 9, "w": 12, "x": 0, "y": 15 },
+      "id": 3,
+      "options": {
+        "alignValue": "left",
+        "legend": { "displayMode": "list", "placement": "bottom", "showLegend": true },
+        "mergeValues": true,
+        "rowHeight": 0.9,
+        "showValue": "always",
+        "tooltip": { "mode": "single", "sort": "none" }
+      },
+      "targets": [
+        {
+          "datasource": { "type": "influxdb", "uid": "influxdb-ha" },
+          "query": "from(bucket: \"homeassistant\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"input_select.energy_state\")\n  |> filter(fn: (r) => r[\"_field\"] == \"state\")\n  |> keep(columns: [\"_time\", \"_value\"])",
+          "refId": "A"
+        }
+      ],
+      "title": "Energy — Timeline",
+      "type": "state-timeline"
+    },
+    {
+      "datasource": { "type": "influxdb", "uid": "influxdb-ha" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "fixed", "fixedColor": "green" },
+          "custom": {
+            "fillOpacity": 80,
+            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+            "insertNulls": false,
+            "lineWidth": 0,
+            "spanNulls": false
+          },
+          "mappings": [
+            {
+              "type": "value",
+              "options": {
+                "good":       { "color": "#73BF69", "index": 0, "text": "Good"       },
+                "slightly":   { "color": "#F2CC0C", "index": 1, "text": "Slightly"   },
+                "unbearable": { "color": "#F2495C", "index": 2, "text": "Unbearable" }
+              }
+            }
+          ],
+          "thresholds": { "mode": "absolute", "steps": [{ "color": "green", "value": null }] }
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 9, "w": 12, "x": 12, "y": 15 },
+      "id": 6,
+      "options": {
+        "alignValue": "left",
+        "legend": { "displayMode": "list", "placement": "bottom", "showLegend": true },
+        "mergeValues": true,
+        "rowHeight": 0.9,
+        "showValue": "always",
+        "tooltip": { "mode": "single", "sort": "none" }
+      },
+      "targets": [
+        {
+          "datasource": { "type": "influxdb", "uid": "influxdb-ha" },
+          "query": "from(bucket: \"homeassistant\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"input_select.neck_pain\")\n  |> filter(fn: (r) => r[\"_field\"] == \"state\")\n  |> keep(columns: [\"_time\", \"_value\"])",
+          "refId": "A"
+        }
+      ],
+      "title": "Neck Pain — Timeline",
+      "type": "state-timeline"
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 38,
+  "tags": ["homeassistant", "energy"],
+  "templating": { "list": [] },
+  "time": { "from": "now/d", "to": "now" },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Energy State",
+  "uid": "energy-state-ha",
+  "version": 6
+}
