@@ -275,7 +275,7 @@ services:
     ports:
       - "3128:3128"
     volumes:
-      - ./config.toml:/app/config.toml
+      - ./telemt-config.toml:/app/config.toml
       - telemt-data:/app
     command: ["/app/config.toml"]
 
