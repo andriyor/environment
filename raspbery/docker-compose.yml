@@ -310,6 +310,21 @@ services:
       - INFLUXDB_ADMIN_TOKEN=${INFLUXDB_ADMIN_TOKEN}
     restart: unless-stopped
 
+  lidarr:
+    image: linuxserver/lidarr:latest
+    container_name: lidarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Kyiv
+    volumes:
+      - ./lidarr-config:/config
+      - /mnt/storage/music:/music
+      - /mnt/storage/downloads:/downloads
+    ports:
+      - 8686:8686
+    restart: unless-stopped
+
 volumes:
   portainer_data:
   adguard:
