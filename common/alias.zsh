@@ -5,7 +5,7 @@ alias gl="git pull && (git diff --name-only HEAD@{1} HEAD | grep -qE 'package(-l
 # ------------------------------------------------------------------------------
 # basic
 # ------------------------------------------------------------------------------
-alias cd='z'
+#alias cd='z'
 alias cat='bat'
 alias l='eza --all --icons'
 alias ll='eza --long --all --git --icons'
