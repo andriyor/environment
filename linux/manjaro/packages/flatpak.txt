@@ -1,16 +1,26 @@
 Zen
-Dropbox
+Tauon
+TIDAL Hi-Fi
 Extension Manager
+Microsoft Edge
+Proton VPN
+Sayonara
 Spotify
 Sublime Merge
 Visual Studio Code
+Amberol
 DBeaver Community
 Warehouse
+ncspot
 Bazaar
+Drum Machine
 Obsidian
 Chromium Web Browser
 Flameshot
+fooyin
 Bustle
 Image Viewer
+Elisa
 Clock
+Mozilla VPN
 Telegram
