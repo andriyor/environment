@@ -7,13 +7,25 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "diff_view_style": "split",
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
   "git_panel": {
+    "dock": "left",
     "tree_view": true
   },
   "edit_predictions": {
     "mode": "eager"
   },
   "agent": {
+    "dock": "right",
     "default_model": {
       "effort": "medium",
       "enable_thinking": true,
@@ -58,11 +70,19 @@
       ]
     }
   ],
-  "theme": "Catppuccin Macchiato",
+  "theme": {
+    "mode": "dark",
+    "light": "Gruvbox Light Hard",
+    "dark": "Catppuccin Mocha - No Italics"
+  },
   "autosave": "on_focus_change",
   "format_on_save": "off",
   "remove_trailing_whitespace_on_save": false,
-  "icon_theme": "Catppuccin Frappé",
+  "icon_theme": {
+    "mode": "light",
+    "light": "Catppuccin Frappé",
+    "dark": "Catppuccin Frappé"
+  },
   "tabs": {
     "file_icons": true
   },

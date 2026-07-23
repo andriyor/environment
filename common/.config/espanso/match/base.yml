@@ -23,7 +23,8 @@ matches:
       - name: mydate
         type: date
         params:
-          format: "%d/%m/%Y"
+#          format: "%d/%m/%Y"
+          format: "%Y/%m/%d"
 
   # Print the current time
   - trigger: ":time"

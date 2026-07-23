@@ -24,7 +24,7 @@ source ~/secrets.zsh;
 source ~/os-specific.zsh;
 
 eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
 eval "$(sheldon source)"
 
 # Console editor
@@ -41,3 +41,6 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 # eval "$(pyenv init --path)"
 
 source <(fzf --zsh)
+
+export CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1
+eval "$(zoxide init zsh)"
