@@ -1,8 +1,4 @@
 {
-  "theme": "dark",
-  "enabledPlugins": {
-    "swift-lsp@claude-plugins-official": true
-  },
   "permissions": {
     "allow": [
       "Bash(ls:*)",
@@ -30,6 +26,19 @@
       "Bash(git log:*)",
       "Bash(git show:*)",
       "Bash(git branch:*)"
+    ],
+    "ask": [
+      "Edit",
+      "Write",
+      "NotebookEdit"
     ]
-  }
+  },
+  "enabledPlugins": {
+    "swift-lsp@claude-plugins-official": true
+  },
+  "enabledMcpjsonServers": [
+    "atlassian"
+  ],
+  "theme": "dark",
+  "model": "sonnet"
 }
