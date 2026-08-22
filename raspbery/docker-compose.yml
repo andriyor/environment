@@ -35,6 +35,17 @@ services:
     network_mode: host
     privileged: true
 
+  matter-server:
+    container_name: matter-server
+    image: ghcr.io/home-assistant-libs/python-matter-server:stable
+    network_mode: host
+    restart: unless-stopped
+    security_opt:
+      - apparmor:unconfined
+    volumes:
+      - ./matter:/data
+    command: --primary-interface eth0
+
   blog:
     container_name: blog
     build:
@@ -81,7 +92,7 @@ services:
       - TORRENTING_PORT=6881
     volumes:
       - ./qbittorrent-config:/config
-      - /mnt/storage/downloads:/downloads
+      - /mnt/storage:/data
     ports:
       - 8095:8080
       - 6881:6881
@@ -138,8 +149,7 @@ services:
       - TZ=Etc/UTC
     volumes:
       - ./radarr/data:/config
-      - /mnt/storage/movies:/movies
-      - /mnt/storage/downloads:/downloads
+      - /mnt/storage:/data
     ports:
       - 7878:7878
     restart: unless-stopped
@@ -249,7 +259,7 @@ services:
       - TZ=Etc/UTC
     volumes:
       - ./bazarr-config:/config
-      - /mnt/storage/movies:/movies
+      - /mnt/storage/movies:/data/movies
     ports:
       - 6767:6767
     restart: unless-stopped
