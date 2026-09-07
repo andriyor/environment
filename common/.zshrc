@@ -36,11 +36,21 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 # source "$HOME/.rye/env"
 
 # pyenv (required for okta)
-# export PYENV_ROOT="$HOME/.pyenv"
-# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init --path)"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 
 source <(fzf --zsh)
 
+eval "$(direnv hook zsh)"
+
 export CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1
 eval "$(zoxide init zsh)"
+
+# pnpm
+export PNPM_HOME='/Users/aoriekhov/Library/pnpm'
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end

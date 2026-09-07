@@ -54,9 +54,6 @@
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.blame.ignoreWhitespace": true,
-  
-  "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
 
   "jest.autoRun": "off",
   "jest.showCoverageOnLoad": true,

@@ -33,12 +33,23 @@
       "NotebookEdit"
     ]
   },
-  "enabledPlugins": {
-    "swift-lsp@claude-plugins-official": true
-  },
+  "model": "opus[1m]",
   "enabledMcpjsonServers": [
     "atlassian"
   ],
+  "enabledPlugins": {
+    "swift-lsp@claude-plugins-official": true,
+    "ponytail@ponytail": true
+  },
+  "extraKnownMarketplaces": {
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
+    }
+  },
+  "tui": "fullscreen",
   "theme": "dark",
-  "model": "sonnet"
+  "verbose": false
 }
