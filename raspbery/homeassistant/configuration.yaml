@@ -27,3 +27,15 @@ input_select:
       - active
       - sleepy
       - sleep
+  neck_pain:
+    name: Neck pain
+    options:
+      - good
+      - slightly
+      - unbearable
+
+sensor:
+  - platform: waveshare_ups_hat
+    model: e                     # Waveshare UPS HAT (E), MCU @ 0x2d
+    name: UPS                    # Optional
+    unique_id: waveshare_ups     # Optional

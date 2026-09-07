@@ -8,7 +8,6 @@
     subtype: button
     trigger: device
   actions:
-  - action: rest_command.airtable_log
   - action: google_sheets.append_sheet
     metadata: {}
     data:
@@ -37,12 +36,22 @@
       device_id:
       - 19723ff4d5ef2a752ab2a3c15b87db7a
     data:
-      brightness_pct: 10
+      brightness_pct: 39
       rgb_color:
       - 157
       - 240
       - 127
     action: light.turn_on
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.hue_play_4
+    data:
+      brightness_pct: 39
+      rgb_color:
+      - 157
+      - 240
+      - 127
   mode: single
 - id: '1773096554103'
   alias: Sleep
@@ -93,7 +102,167 @@
       - 215
       - 106
       - 106
-      brightness_pct: 20
+      brightness_pct: 34
     target:
       device_id: 19723ff4d5ef2a752ab2a3c15b87db7a
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.hue_play_4
+    data:
+      rgb_color:
+      - 215
+      - 106
+      - 106
+      brightness_pct: 39
+  mode: single
+- id: '1779119504618'
+  alias: neck good
+  description: ''
+  triggers:
+  - device_id: 0114e9a40a87c0950bcd65997c48e057
+    domain: zha
+    type: remote_button_short_press
+    subtype: button
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.hue_play_3
+    data:
+      rgb_color:
+      - 18
+      - 210
+      - 15
+      brightness_pct: 43
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.neck_pain
+    data:
+      option: good
+  mode: single
+- id: '1779119655429'
+  alias: neck slightly
+  description: ''
+  triggers:
+  - device_id: ccff9e3003616fafac06dc9cc9f3d47c
+    domain: zha
+    type: remote_button_short_press
+    subtype: button
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.hue_play_3
+    data:
+      rgb_color:
+      - 198
+      - 139
+      - 36
+      brightness_pct: 40
+  - action: input_select.select_option
+    metadata: {}
+    target:
+      entity_id: input_select.neck_pain
+    data:
+      option: slightly
+  mode: single
+- id: '1779119812541'
+  alias: neck bad
+  description: ''
+  triggers:
+  - device_id: 0749e738b114eb0b5979b8644014d308
+    domain: zha
+    type: remote_button_short_press
+    subtype: button
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.hue_play_3
+    data:
+      rgb_color:
+      - 206
+      - 28
+      - 28
+      brightness_pct: 40
+  - action: input_select.select_option
+    metadata: {}
+    target:
+      entity_id: input_select.neck_pain
+    data:
+      option: unbearable
+  mode: single
+- id: '1780832399613'
+  alias: ups - battery telegram
+  description: ''
+  triggers:
+  - trigger: numeric_state
+    entity_id:
+    - sensor.ups_battery
+    below: 35
+  conditions: []
+  actions:
+  - action: telegram_bot.send_message
+    metadata: {}
+    data:
+      entity_id:
+      - notify.ha_andriy_orehov
+      message: low battery
+  mode: single
+- id: '1780832500001'
+  alias: ups - power lost
+  description: UPS switched to battery (mains/charger disconnected)
+  triggers:
+  - trigger: state
+    entity_id:
+    - sensor.ups_status
+    to:
+    - discharging
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 10
+  conditions: []
+  actions:
+  - action: telegram_bot.send_message
+    metadata: {}
+    data:
+      entity_id:
+      - notify.ha_andriy_orehov
+      message: ⚡ Power lost — UPS on battery, {{ states('sensor.ups_battery') }}%
+        remaining
+  mode: single
+- id: '1780832500002'
+  alias: ups - power restored
+  description: Mains/charger reconnected (status left discharging)
+  triggers:
+  - trigger: state
+    entity_id:
+    - sensor.ups_status
+    from:
+    - discharging
+    to:
+    - idle
+    - charging
+    - fast_charging
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 10
+  conditions: []
+  actions:
+  - action: telegram_bot.send_message
+    metadata: {}
+    data:
+      entity_id:
+      - notify.ha_andriy_orehov
+      message: Power restored — UPS {{ states('sensor.ups_status') | replace('_',
+        ' ') }} {{ states('sensor.ups_battery') }}%
   mode: single
