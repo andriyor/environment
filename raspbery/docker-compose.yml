@@ -93,6 +93,7 @@ services:
     volumes:
       - ./qbittorrent-config:/config
       - /mnt/storage:/data
+      - /mnt/nas_data:/ndata
     ports:
       - 8095:8080
       - 6881:6881
@@ -130,7 +131,7 @@ services:
       - ./stash-config:/root/.stash
       ## Point this at your collection.
       ## The left side is where your collection is on your host, the right side is where it will be in stash.
-      - /mnt/storage/downloads:/data
+      - /mnt/nas_data:/data
       ## This is where your stash's metadata lives
       - ./metadata:/metadata
       ## Any other cache content.
@@ -320,6 +321,25 @@ services:
       - INFLUXDB_ADMIN_TOKEN=${INFLUXDB_ADMIN_TOKEN}
     restart: unless-stopped
 
+  ezbookkeeping:
+    image: mayswind/ezbookkeeping:latest
+    container_name: ezbookkeeping
+    ports:
+      - 8082:8080
+    volumes:
+      - ./ezbookkeeping/data:/ezbookkeeping/data
+      - ./ezbookkeeping/log:/ezbookkeeping/log
+      - ./ezbookkeeping/storage:/ezbookkeeping/storage
+    environment:
+      - TZ=Europe/Kyiv
+      # sqlite3 is the default; db file lands in the ./ezbookkeeping/data mount
+      - EBK_DATABASE_TYPE=sqlite3
+      - EBK_DATABASE_DB_PATH=data/ezbookkeeping.db
+      # must match the published host port so generated links/redirects work
+      - EBK_SERVER_ROOT_URL=http://192.168.1.65:8082/
+      - EBK_SECURITY_SECRET_KEY=${EZBOOKKEEPING_SECRET_KEY}
+    restart: unless-stopped
+
   lidarr:
     image: linuxserver/lidarr:latest
     container_name: lidarr
@@ -336,10 +356,7 @@ services:
     restart: unless-stopped
 
 volumes:
-  portainer_data:
-  adguard:
   filebrowser_database:
   filebrowser_config:
-  rreading_glasses_data:
   telemt-data:
   grafana_data:
