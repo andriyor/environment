@@ -186,6 +186,35 @@ services:
       - FILEBROWSER_ADMIN_PASSWORD=${FILEBROWSER_ADMIN_PASSWORD}
     restart: unless-stopped
 
+  # nxzai/NextExplorer — trial, running next to filebrowser for comparison.
+  # No config file: everything is env vars. Each /mnt/<Label> becomes a UI volume.
+  # Missing vs filebrowser as of 2.2.7: no persistent index (search re-runs ripgrep
+  # in the current folder each time) and no recursive folder sizes (listings report
+  # the raw dir stat, 4096). Tracked upstream in nxzai/NextExplorer#301, expected in
+  # a later release — recheck on upgrade, then drop this note.
+  nextexplorer:
+    image: nxzai/explorer:latest
+    container_name: nextexplorer
+    ports:
+      - 8083:3000
+    volumes:
+      - ./nextexplorer/config:/config # sqlite db, app-config.json, settings
+      - ./nextexplorer/cache:/cache # thumbnails + sessions.db, safe to wipe
+      - /mnt/storage:/mnt/Storage
+      - /mnt/nas_data:/mnt/Nas
+    environment:
+      - PUBLIC_URL=http://192.168.1.65:8083 # canonical origin, used for share links
+      # other origins it may be reached from, else a mismatch warning on open
+      - INTERNAL_URL=http://raspberrypi:8083,http://raspberrypi.local:8083,http://localhost:8083
+      - SESSION_SECRET=${NEXTEXPLORER_SESSION_SECRET} # else logout on every restart
+      - PUID=0 # root, same reason as filebrowser above
+      - PGID=0
+      - AUTH_MODE=local
+      - AUTH_ADMIN_EMAIL=admin@local.lan # skips the setup wizard
+      - AUTH_ADMIN_PASSWORD=${NEXTEXPLORER_ADMIN_PASSWORD}
+      - TERMINAL_ENABLED=false # defaults to true = root shell in the browser
+    restart: unless-stopped
+
   seerr:
     image: ghcr.io/seerr-team/seerr:latest
     container_name: seerr

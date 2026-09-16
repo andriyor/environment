@@ -8,3 +8,4 @@ raspbery/.env
 raspbery/filebrowser/database.db
 raspbery/elasticsearch-example/node_modules
 .DS_Store
+raspbery/nextexplorer/
