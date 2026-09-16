@@ -24,6 +24,18 @@
 [docker/docker-install: Docker installation script](https://github.com/docker/docker-install)
 
 
+# FileBrowser Quantum
+
+[gtsteffaniak/filebrowser](https://github.com/gtsteffaniak/filebrowser) on 9090,
+replaced the original `filebrowser/filebrowser`.
+
+- `filebrowser/config.yaml` is mandatory — exits FATAL without it.
+- With more than one source, each needs `defaultEnabled: true`, else
+  `500 user has no access to source`.
+- `viewable: true` on the `pi` source disables indexing of `/`: still fully
+  browsable and writable, but no search and no recursive folder sizes.
+
+
 # Securo
 
 [securo-finance/securo: self-hosted personal finance manager](https://github.com/securo-finance/securo)

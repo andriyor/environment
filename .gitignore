@@ -4,5 +4,7 @@ common/secrets.zsh
 node_modules
 raspbery/config.yaml
 raspbery/config.js
+raspbery/.env
+raspbery/filebrowser/database.db
 raspbery/elasticsearch-example/node_modules
 .DS_Store

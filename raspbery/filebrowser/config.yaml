@@ -1,0 +1,21 @@
+server:
+  sources:
+    # with more than one source, defaultEnabled is required or users get no access
+    - path: "/mnt/storage"
+      name: "storage"
+      config:
+        defaultEnabled: true
+    - path: "/mnt/nas_data"
+      name: "nas"
+      config:
+        defaultEnabled: true
+    # the pi's own filesystem. the root-level "viewable" rule turns off indexing
+    # for this source only: still fully browsable, but no recursive scan of / and
+    # nothing from the OS in search results
+    - path: "/host"
+      name: "pi"
+      config:
+        defaultEnabled: true
+        rules:
+          - folderPath: "/"
+            viewable: true

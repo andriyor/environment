@@ -168,15 +168,22 @@ services:
       - 9696:9696
     restart: unless-stopped
 
+  # gtsteffaniak/filebrowser (FileBrowser Quantum), not the original filebrowser/filebrowser
   filebrowser:
-    image: filebrowser/filebrowser:latest
+    image: gtstef/filebrowser:stable
     container_name: filebrowser
+    # image defaults to uid 1000; root is needed for full read/write on the /host source
+    user: "0:0"
     ports:
       - 9090:80
     volumes:
-      - /:/srv
-      - filebrowser_database:/database
-      - filebrowser_config:/config
+      - ./filebrowser:/home/filebrowser/data # config.yaml + database.db
+      # mounted at the same paths as on the host, so config.yaml sources match
+      - /mnt/storage:/mnt/storage
+      - /mnt/nas_data:/mnt/nas_data
+      - /:/host # the pi's filesystem, browsable but not indexed (see config.yaml)
+    environment:
+      - FILEBROWSER_ADMIN_PASSWORD=${FILEBROWSER_ADMIN_PASSWORD}
     restart: unless-stopped
 
   seerr:
@@ -356,7 +363,5 @@ services:
     restart: unless-stopped
 
 volumes:
-  filebrowser_database:
-  filebrowser_config:
   telemt-data:
   grafana_data:
