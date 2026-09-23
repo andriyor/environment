@@ -143,9 +143,7 @@ https://addons.mozilla.org/en-US/firefox/addon/lovely-forks
 
 github icons
 
-https://chrome.google.com/webstore/detail/github-vscode-icons/hoccpcefjcgnabbmojbfoflggkecmpgd
-
-https://chrome.google.com/webstore/detail/awesome-stars/lcokkcbdmicofdahlooopcpinogephfb
+https://chromewebstore.google.com/detail/material-icons-for-github/bggfcpfjbdkhfhfmkjpbhnkhnpjjeomc
 
 ## time tracking
 

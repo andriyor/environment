@@ -1,4 +1,4 @@
-tap "caskroom/cask"
+tap "homebrew/cask"
 tap "buo/cask-upgrade"
 tap "koekeishiya/formulae"
 
@@ -58,6 +58,7 @@ brew "fzf" # fuzzy finder (use **<TAB> for completion)
 brew "fd" # fd is a program to find entries in your filesystem
 brew "ripgrep" # searches for text inside files across directories
 brew "television" # fuzzy finder for the terminal
+cask "claude-code"
 
 brew "neovim"
 brew "lazygit" # terminal UI for git
@@ -137,7 +138,6 @@ vscode "quentinguidee.gitignore-ultimate"
 vscode "ryu1kn.partial-diff"
 # github
 vscode "github.vscode-github-actions"
-vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "me-dutour-mathieu.vscode-github-actions"
 # files
