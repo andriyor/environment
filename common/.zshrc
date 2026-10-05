@@ -42,8 +42,6 @@ eval "$(pyenv init --path)"
 
 source <(fzf --zsh)
 
-eval "$(direnv hook zsh)"
-
 export CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1
 eval "$(zoxide init zsh)"
 
