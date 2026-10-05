@@ -19,6 +19,7 @@
 # ------------------------------------------------------------------------------
 tap "buo/cask-upgrade" # `brew cu`; needs `brew trust --command buo/cask-upgrade/cu`
 tap "crmne/tap"
+tap "stanmarek/tap"
 
 # ------------------------------------------------------------------------------
 # Development
@@ -26,7 +27,6 @@ tap "crmne/tap"
 # languages
 brew "fnm" # Node.js version manager (installs prebuild binary)
 brew "nvm" # for work
-brew "bun"
 brew "go"
 brew "maven" # for work
 brew "pyenv" # Python version management
@@ -93,6 +93,7 @@ brew "eza" # ls alternative
 brew "jq" # command-line JSON processor
 brew "tokei" # show the number of files, total lines within those files and code, comments
 brew "fastfetch" # neofetch like system information tool
+brew "stanmarek/tap/ghost-complete"
 brew "yt-dlp" # command-line audio/video downloader
 
 # fonts
@@ -201,6 +202,10 @@ vscode "ms-python.debugpy"
 vscode "ms-python.python"
 vscode "detachhead.basedpyright"
 vscode "ms-python.vscode-python-envs"
+vscode "meta.pyrefly"
+# swift
+vscode "swiftlang.swift-vscode"
+vscode "llvm-vs-code-extensions.lldb-dap"
 # markdown
 vscode "kejun.markdown-alert"
 vscode "bierner.github-markdown-preview"
@@ -216,6 +221,8 @@ vscode "unifiedjs.vscode-mdx"
 vscode "stateful.runme" # run js in markdown like in Notebooks
 # misc
 vscode "ms-vscode-remote.remote-ssh" # remote Development via ssh
+vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode.remote-explorer"
 vscode "astro-build.astro-vscode"
 vscode "gruntfuggly.todo-tree"
 vscode "humao.rest-client"
@@ -234,4 +241,6 @@ mas "rcmd", id: 1596283165 # Switch apps instantly using the ⌘ Right Command k
 mas "Velja", id: 1607635845 # browser picker
 mas "DaisyDisk", id: 411643860
 mas "Dato", id: 1470584107 # time zone travel
+mas "Xcode", id: 497799835
+mas "Cascadea", id: 1432182561 # CSS userstyles for Safari
 mas "Amphetamine", id: 937984704 # enable mac to stay awake on battery with the lid closed while an external display is connected
