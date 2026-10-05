@@ -1,4 +1,5 @@
 tap "buo/cask-upgrade"
+tap "crmne/tap"
 
 # fonts
 cask "font-jetbrains-mono" # used in obsidian
@@ -92,6 +93,7 @@ cask "cleanshot" # screenshot tool with self-timer and ocr
 
 # audio
 cask "spotify"
+cask "crmne/tap/spotifast" # native Spotify client; needs `brew trust --cask crmne/tap/spotifast`
 cask "loopback" # Cable-free audio routing
 cask "soundsource" # sound control per app
 cask "audio-hijack" # recording
