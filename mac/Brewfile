@@ -1,3 +1,19 @@
+# Stowed to ~/Brewfile. From ~:
+#   brew bundle install
+#
+# Remove everything not listed here (formulae, casks, taps, vscode extensions):
+#   brew bundle cleanup           # dry run, shows what would go
+#   brew bundle cleanup --force   # actually uninstall
+#
+# Update:
+#   brew update && brew upgrade   # formulae + casks
+#   brew cu -a                     # casks incl. self-updating ones (buo/cask-upgrade)
+#   mas upgrade                    # App Store apps
+#
+# New machine: trust third-party taps first, or bundle skips them:
+#   brew trust --command buo/cask-upgrade/cu
+#   brew trust --cask crmne/tap/spotifast
+
 # ------------------------------------------------------------------------------
 # Taps
 # ------------------------------------------------------------------------------
