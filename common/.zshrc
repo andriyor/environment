@@ -1,3 +1,12 @@
+# >>> ghost-complete initialize >>>
+# !! Contents within this block are managed by 'ghost-complete install' !!
+if [[ -f '/Users/aoriekhov/.config/ghost-complete/shell/init.zsh' ]]; then
+  builtin source '/Users/aoriekhov/.config/ghost-complete/shell/init.zsh'
+else
+  echo "ghost-complete: init script missing: "'/Users/aoriekhov/.config/ghost-complete/shell/init.zsh' >&2
+  echo "ghost-complete: run 'ghost-complete install' to restore it" >&2
+fi
+# <<< ghost-complete initialize <<<
 # https://jdhao.github.io/2021/03/24/zsh_history_setup/
 # history setup
 HISTFILE=$HOME/.zsh_history
@@ -52,3 +61,7 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
+# >>> ghost-complete shell integration >>>
+# !! Contents within this block are managed by 'ghost-complete install' !!
+source '/Users/aoriekhov/.config/ghost-complete/shell/ghost-complete.zsh'
+# <<< ghost-complete shell integration <<<
