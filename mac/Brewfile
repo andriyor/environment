@@ -1,48 +1,25 @@
-tap "buo/cask-upgrade"
+# ------------------------------------------------------------------------------
+# Taps
+# ------------------------------------------------------------------------------
+tap "buo/cask-upgrade" # `brew cu`; needs `brew trust --command buo/cask-upgrade/cu`
 tap "crmne/tap"
 
-# fonts
-cask "font-jetbrains-mono" # used in obsidian
-cask "font-jetbrains-mono-nerd-font" # used in iterm2 form icons
-cask "font-hack-nerd-font" # used in vscode terminal
-cask "font-fira-code"
-cask "font-martian-mono"
-cask "font-monaspace"
-cask "font-cascadia-code"
-
-# languages and tools
+# ------------------------------------------------------------------------------
+# Development
+# ------------------------------------------------------------------------------
+# languages
 brew "fnm" # Node.js version manager (installs prebuild binary)
 brew "nvm" # for work
 brew "bun"
 brew "go"
 brew "maven" # for work
 brew "pyenv" # Python version management
-brew "coreutils"
-
-# mac specific
-brew "mas" # Mac App Store command line interface
-cask "swiftbar" # custom menu bar programs
-cask "rectangle" # Move and resize windows in macOS using keyboard shortcuts or snap areas
-cask "stats" # system monitor in your menu bar
-cask "lunar" # displays brightness
-cask "hammerspoon" # automation of macOS (required by rcmd)
-cask "bartender" # Hides menu bar icons
-cask "contexts" # better Command-Tab
-cask "little-snitch" # network monitoring
-cask "processspy" # aggregate memory usages by process
-cask "pearcleaner" # app cleaner
-cask "karabiner-elements" # keyboard customizer for tilda in EU magic keyboard
-cask "logi-options+" # to set smooth scroll for mx master mouse
-cask "orbstack" # docker client
-cask "lookaway" # break time reminder app
-cask "timing" # automatic time and productivity tracking app
 
 # git
 brew "git" # fresh and faster than default installed
 brew "gh" # github cli
 brew "difftastic" # a structural diff that understands syntax
 brew "git-quick-stats" # access various statistics in git repository
-brew "tokei" # show the number of files, total lines within those files and code, comments
 brew "lazygit" # terminal UI for git
 cask "sublime-merge"
 
@@ -55,57 +32,16 @@ cask "visual-studio-code"
 cask "zed"
 cask "zed@preview"
 
-# api
+# dev tools
+cask "claude-code@latest" # tracks latest release; plain `claude-code` lags
+cask "orbstack" # docker client
+cask "session-manager-plugin" # aws
 cask "bruno" # local first API testing
 cask "postman"
+brew "scrcpy" # display and control your Android device
+cask "wkhtmltopdf" # for work
 
-# dev / cloud
-cask "claude-code@latest" # tracks latest release; plain `claude-code` lags
-brew "curl"
-cask "session-manager-plugin" # aws
-
-# terminal
-cask "iterm2" # main terminal (supports nerd fonts unlike default mac terminal)
-cask "ghostty" # fast but i need search
-
-# terminal cli
-brew "fzf" # fuzzy finder (use **<TAB> for completion)
-brew "fd" # fd is a program to find entries in your filesystem
-brew "ripgrep" # searches for text inside files across directories
-brew "television" # fuzzy finder for the terminal
-brew "bat" # cat alternative
-brew "eza" # ls alternative
-brew "sheldon" # shell plugin manager
-brew "stow" # symlink farm manager
-brew "yt-dlp" # command-line audio/video downloader
-brew "jq" # command-line JSON processor
-brew "zoxide" # a smarter cd command
-brew "starship" # prompt for shel
-brew "fastfetch" # neofetch like system information tool
-
-# media
-cask "obs"
-cask "eagle" # organize photos
-cask "zoom"
-cask "vlc"
-cask "pika" # colour picker
-cask "cleanshot" # screenshot tool with self-timer and ocr
-
-# audio
-cask "spotify"
-cask "crmne/tap/spotifast" # native Spotify client; needs `brew trust --cask crmne/tap/spotifast`
-cask "loopback" # Cable-free audio routing
-cask "soundsource" # sound control per app
-cask "audio-hijack" # recording
-brew "cava" # cross-platform audio visualizer
-
-# files, notes
-cask "commander-one" # file manager with dual-pane interface
-brew "rsync" # file copying tool for both remote and local files
-cask "insync" # Google Drive, OneDrive, and Dropbox sync
-cask "obsidian" # personal notes, journaling, knowledge bases, and project management,
-
-# database, services
+# databases and services
 brew "redis"
 brew "sqlite"
 brew "postgresql@14"
@@ -115,6 +51,75 @@ cask "dbeaver-community" # cross-platform database tool
 cask "tableplus" # database management
 cask "db-browser-for-sqlite"
 
+# ------------------------------------------------------------------------------
+# Terminal
+# ------------------------------------------------------------------------------
+# emulators
+cask "iterm2" # main terminal (supports nerd fonts unlike default mac terminal)
+cask "ghostty" # fast but i need search
+
+# shell
+brew "sheldon" # shell plugin manager
+brew "starship" # prompt for shel
+brew "zoxide" # a smarter cd command
+brew "stow" # symlink farm manager
+
+# cli tools
+brew "coreutils"
+brew "curl"
+brew "rsync" # file copying tool for both remote and local files
+brew "fzf" # fuzzy finder (use **<TAB> for completion)
+brew "television" # fuzzy finder for the terminal
+brew "fd" # fd is a program to find entries in your filesystem
+brew "ripgrep" # searches for text inside files across directories
+brew "bat" # cat alternative
+brew "eza" # ls alternative
+brew "jq" # command-line JSON processor
+brew "tokei" # show the number of files, total lines within those files and code, comments
+brew "fastfetch" # neofetch like system information tool
+brew "yt-dlp" # command-line audio/video downloader
+
+# fonts
+cask "font-jetbrains-mono" # used in obsidian
+cask "font-jetbrains-mono-nerd-font" # used in iterm2 form icons
+cask "font-hack-nerd-font" # used in vscode terminal
+cask "font-fira-code"
+cask "font-martian-mono"
+cask "font-monaspace"
+cask "font-cascadia-code"
+
+# ------------------------------------------------------------------------------
+# macOS
+# ------------------------------------------------------------------------------
+# menu bar and windows
+cask "swiftbar" # custom menu bar programs
+cask "bartender" # Hides menu bar icons
+cask "stats" # system monitor in your menu bar
+cask "rectangle" # Move and resize windows in macOS using keyboard shortcuts or snap areas
+cask "contexts" # better Command-Tab
+
+# input and display
+cask "karabiner-elements" # keyboard customizer for tilda in EU magic keyboard
+cask "logi-options+" # to set smooth scroll for mx master mouse
+cask "lunar" # displays brightness
+
+# system
+brew "mas" # Mac App Store command line interface
+cask "hammerspoon" # automation of macOS (required by rcmd)
+cask "little-snitch" # network monitoring
+cask "processspy" # aggregate memory usages by process
+cask "pearcleaner" # app cleaner
+
+# productivity
+cask "espanso" # text expander
+cask "lookaway" # break time reminder app
+cask "timing" # automatic time and productivity tracking app
+cask "pika" # colour picker
+cask "cleanshot" # screenshot tool with self-timer and ocr
+
+# ------------------------------------------------------------------------------
+# Apps
+# ------------------------------------------------------------------------------
 # browsers
 cask "google-chrome" # for work
 cask "microsoft-edge" # personal browser with pinned tabs not being scrollable in vertical view
@@ -122,19 +127,35 @@ cask "vivaldi" # emoji doesn't woks
 cask "firefox"
 cask "firefox@developer-edition" # use sometimes with sidebery
 
-# chat
+# communication
 cask "telegram"
 cask "viber"
 cask "signal"
+cask "zoom"
+
+# files and notes
+cask "commander-one" # file manager with dual-pane interface
+cask "insync" # Google Drive, OneDrive, and Dropbox sync
+cask "obsidian" # personal notes, journaling, knowledge bases, and project management,
+
+# media
+cask "obs"
+cask "eagle" # organize photos
+cask "vlc"
+
+# audio
+cask "spotify"
+cask "crmne/tap/spotifast" # native Spotify client; needs `brew trust --cask crmne/tap/spotifast`
+cask "loopback" # Cable-free audio routing
+cask "soundsource" # sound control per app
+cask "audio-hijack" # recording
+brew "cava" # cross-platform audio visualizer
 
 # misc
-cask "espanso" # text expander
-brew "scrcpy" # display and control your Android device
-cask "wkhtmltopdf" # for work
 # cask "raspberry-pi-imager"
 
 # ------------------------------------------------------------------------------
-#  VSCode extensions
+# VSCode extensions
 # ------------------------------------------------------------------------------
 # git
 vscode "eamodio.gitlens"
@@ -198,4 +219,3 @@ mas "Velja", id: 1607635845 # browser picker
 mas "DaisyDisk", id: 411643860
 mas "Dato", id: 1470584107 # time zone travel
 mas "Amphetamine", id: 937984704 # enable mac to stay awake on battery with the lid closed while an external display is connected
-
