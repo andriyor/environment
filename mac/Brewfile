@@ -1,6 +1,4 @@
-tap "homebrew/cask"
 tap "buo/cask-upgrade"
-tap "koekeishiya/formulae"
 
 # fonts
 cask "font-jetbrains-mono" # used in obsidian
@@ -58,7 +56,7 @@ brew "fzf" # fuzzy finder (use **<TAB> for completion)
 brew "fd" # fd is a program to find entries in your filesystem
 brew "ripgrep" # searches for text inside files across directories
 brew "television" # fuzzy finder for the terminal
-cask "claude-code"
+cask "claude-code@latest" # tracks latest release; plain `claude-code` lags
 
 brew "neovim"
 brew "lazygit" # terminal UI for git
