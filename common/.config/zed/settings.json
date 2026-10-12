@@ -68,6 +68,17 @@
           ]
         }
       ]
+    },
+    {
+      "host": "rp",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/aoriekhov"
+          ]
+        }
+      ]
     }
   ],
   "theme": {
