@@ -27,6 +27,8 @@ tap "stanmarek/tap"
 # languages
 brew "fnm" # Node.js version manager (installs prebuild binary)
 brew "nvm" # for work
+brew "bun" # JS runtime + test runner, used by side repos
+brew "deno" # JS/TS runtime, used by side repos
 brew "go"
 brew "maven" # for work
 brew "pyenv" # Python version management
