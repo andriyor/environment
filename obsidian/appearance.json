@@ -6,8 +6,8 @@
   "enabledCssSnippets": [
     "heading-spacing",
     "life-tracker-description",
-    "time-visualization-month",
-    "big-calendar-hide-done-checkbox"
+    "big-calendar-hide-done-checkbox",
+    "bases-kanban-wrap-title"
   ],
   "textFontFamily": "JetBrains Mono NL,Cascadia Code,Comic Mono",
   "baseFontSize": 15,

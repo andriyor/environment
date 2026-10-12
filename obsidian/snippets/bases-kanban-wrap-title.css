@@ -1,0 +1,25 @@
+/* Bases Kanban truncates card titles to one line; wrap them instead.
+   Bases lays cards out with fixed heights and absolute offsets, so put cards back in normal flow */
+.bases-kanban-column-inner {
+  height: auto !important;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.bases-kanban-card {
+  position: relative !important;
+  top: auto !important;
+  min-height: 0 !important;
+  contain: none !important;
+}
+.bases-kanban-card-property {
+  position: relative !important;
+  top: auto !important;
+  height: auto !important;
+}
+.bases-kanban-card-property.mod-title .bases-kanban-card-line {
+  height: auto;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}

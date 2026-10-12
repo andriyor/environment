@@ -1,0 +1,34 @@
+{
+  "pluginList": [
+    "larslockefeer/obsidian-plugin-todo",
+    "andriyor/Obsidian-Big-Calendar",
+    "andriyor/obsidian-life-tracker-base-view"
+  ],
+  "pluginSubListFrozenVersion": [
+    {
+      "repo": "larslockefeer/obsidian-plugin-todo",
+      "version": ""
+    },
+    {
+      "repo": "andriyor/Obsidian-Big-Calendar",
+      "version": ""
+    },
+    {
+      "repo": "andriyor/obsidian-life-tracker-base-view",
+      "version": ""
+    }
+  ],
+  "themesList": [],
+  "updateAtStartup": true,
+  "updateThemesAtStartup": true,
+  "enableAfterInstall": true,
+  "loggingEnabled": false,
+  "loggingPath": "BRAT-log",
+  "loggingVerboseEnabled": false,
+  "debuggingMode": false,
+  "notificationsEnabled": true,
+  "globalTokenName": "",
+  "personalAccessToken": "",
+  "selectLatestPluginVersionByDefault": false,
+  "allowIncompatiblePlugins": false
+}

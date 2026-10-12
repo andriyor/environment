@@ -10,7 +10,7 @@ Copied, not stowed: vault keeps real files so Obsidian Sync doesn't fight symlin
 common/scripts/obsidian-backup.sh
 ```
 
-Plugin `data.json` files skipped: excalidraw one contains API keys.
+Plugin settings (`plugins/*/data.json`) included, except excalidraw (big and often updated), big-calendar (personal tags) and life-tracker (personal health tracking).
 
 ## Restore
 
