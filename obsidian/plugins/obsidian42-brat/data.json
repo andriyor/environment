@@ -2,7 +2,8 @@
   "pluginList": [
     "larslockefeer/obsidian-plugin-todo",
     "andriyor/Obsidian-Big-Calendar",
-    "andriyor/obsidian-life-tracker-base-view"
+    "andriyor/obsidian-life-tracker-base-view",
+    "andriyor/obsidian-editor-breadcrumbs"
   ],
   "pluginSubListFrozenVersion": [
     {
@@ -15,6 +16,10 @@
     },
     {
       "repo": "andriyor/obsidian-life-tracker-base-view",
+      "version": ""
+    },
+    {
+      "repo": "andriyor/obsidian-editor-breadcrumbs",
       "version": ""
     }
   ],

@@ -7,7 +7,8 @@
     "heading-spacing",
     "life-tracker-description",
     "big-calendar-hide-done-checkbox",
-    "bases-kanban-wrap-title"
+    "bases-kanban-wrap-title",
+    "mood-calendar-no-vscroll"
   ],
   "textFontFamily": "JetBrains Mono NL,Cascadia Code,Comic Mono",
   "baseFontSize": 15,

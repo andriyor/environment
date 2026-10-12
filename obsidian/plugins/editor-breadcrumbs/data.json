@@ -1,0 +1,9 @@
+{
+  "showFolderPath": true,
+  "showFileName": true,
+  "maxSegmentLength": 20,
+  "hideWhenNoHeadings": false,
+  "followViewTop": true,
+  "showInReadingMode": true,
+  "showInTabHeader": false
+}

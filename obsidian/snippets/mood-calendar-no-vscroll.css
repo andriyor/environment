@@ -1,0 +1,30 @@
+/* overflow-x:auto implicitly makes overflow-y auto → spurious vertical scrollbar */
+.mood-calendar-scroll-container {
+    overflow-y: hidden;
+}
+
+/* compact layout so a month fits a short sidebar panel without scrolling */
+.workspace-leaf-content .view-content.mood-calendar-view {
+    padding-top: 0;
+    padding-bottom: 4px;
+}
+.mood-calendar-header {
+    margin-bottom: 2px;
+}
+.mood-calendar-weekdays {
+    margin-bottom: 0;
+}
+.mood-calendar-day {
+    min-height: 46px;
+    padding: 7px 1px 3px;
+}
+.mood-day-number {
+    margin-bottom: 1px;
+}
+.mood-emoji {
+    line-height: 1;
+}
+.mood-dot-container {
+    margin-top: 0;
+    height: 6px;
+}
