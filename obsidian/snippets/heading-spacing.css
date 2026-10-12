@@ -1,0 +1,21 @@
+.HyperMD-header.HyperMD-header-1 {
+    color: #a27f47;
+}
+
+.HyperMD-header.HyperMD-header-2 {
+    line-height: 2;
+    color: #a27f47;
+}
+
+.HyperMD-header.HyperMD-header-3 {
+    line-height: 2;
+    color: #a27f47;
+}
+
+.reveal {
+    font-size: 1em;
+}
+
+.font-size-16pt {
+  --font-text-size: 16pt;
+}

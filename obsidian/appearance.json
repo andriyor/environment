@@ -1,0 +1,16 @@
+{
+  "accentColor": "",
+  "theme": "moonstone",
+  "cssTheme": "Typewriter",
+  "nativeMenus": false,
+  "enabledCssSnippets": [
+    "heading-spacing",
+    "life-tracker-description",
+    "time-visualization-month",
+    "big-calendar-hide-done-checkbox"
+  ],
+  "textFontFamily": "JetBrains Mono NL,Cascadia Code,Comic Mono",
+  "baseFontSize": 15,
+  "baseFontSizeAction": true,
+  "translucency": false
+}

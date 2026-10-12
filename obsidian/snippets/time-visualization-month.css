@@ -1,0 +1,4 @@
+/* Time Visualization: bigger task text in month view (plugin default 0.63em) */
+.tv-month .tv-task {
+    font-size: 1.05em;
+}

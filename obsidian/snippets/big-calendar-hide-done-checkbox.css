@@ -1,0 +1,4 @@
+/* Big Calendar renders a read-only checkbox on task events; hide it for done tasks */
+.rbc-event-content.TASK-DONE .event-type-marker {
+  display: none;
+}
