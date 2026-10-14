@@ -266,3 +266,21 @@
       message: Power restored — UPS {{ states('sensor.ups_status') | replace('_',
         ' ') }} {{ states('sensor.ups_battery') }}%
   mode: single
+- id: '1780832500003'
+  alias: bluetti - low battery telegram
+  description: Bluetti EL100V2 battery below 20%
+  triggers:
+  - trigger: numeric_state
+    entity_id:
+    - sensor.el100v22619120898693_battery_level
+    below: 20
+  conditions: []
+  actions:
+  - action: telegram_bot.send_message
+    metadata: {}
+    data:
+      entity_id:
+      - notify.ha_andriy_orehov
+      message: 🔋 Bluetti low battery — {{ states('sensor.el100v22619120898693_battery_level')
+        }}%
+  mode: single
