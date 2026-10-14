@@ -286,7 +286,7 @@
   mode: single
 - id: '1780832500004'
   alias: bluetti - battery charged telegram
-  description: Bluetti EL100V2 battery above 90%
+  description: Bluetti EL100V2 battery above 90% — cut charger socket and notify
   triggers:
   - trigger: numeric_state
     entity_id:
@@ -294,11 +294,15 @@
     above: 90
   conditions: []
   actions:
+  - action: switch.turn_off
+    metadata: {}
+    target:
+      entity_id: switch.sonoff_s60zbtpf
   - action: telegram_bot.send_message
     metadata: {}
     data:
       entity_id:
       - notify.ha_andriy_orehov
       message: 🔋 Bluetti charged — {{ states('sensor.el100v22619120898693_battery_level')
-        }}%
+        }}%, socket turned off
   mode: single
