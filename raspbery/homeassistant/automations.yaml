@@ -284,3 +284,21 @@
       message: 🔋 Bluetti low battery — {{ states('sensor.el100v22619120898693_battery_level')
         }}%
   mode: single
+- id: '1780832500004'
+  alias: bluetti - battery charged telegram
+  description: Bluetti EL100V2 battery above 90%
+  triggers:
+  - trigger: numeric_state
+    entity_id:
+    - sensor.el100v22619120898693_battery_level
+    above: 90
+  conditions: []
+  actions:
+  - action: telegram_bot.send_message
+    metadata: {}
+    data:
+      entity_id:
+      - notify.ha_andriy_orehov
+      message: 🔋 Bluetti charged — {{ states('sensor.el100v22619120898693_battery_level')
+        }}%
+  mode: single
