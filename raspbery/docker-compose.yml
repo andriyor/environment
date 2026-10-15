@@ -393,6 +393,21 @@ services:
       - 8686:8686
     restart: unless-stopped
 
+  # Toggl timer on the iPhone Lock Screen (Live Activity via APNs); the app reports to :8790
+  toggl-lock:
+    container_name: toggl-lock
+    build:
+      context: https://github.com/andriyor/toggl-lock.git#master:server
+    env_file: ./toggl-lock/.env # APNs + Toggl settings, see server/.env.example
+    environment:
+      - APNS_KEY_PATH=/key.p8
+    volumes:
+      - ./toggl-lock/AuthKey.p8:/key.p8:ro
+      - ./toggl-lock/data:/data # state.json
+    ports:
+      - 8790:8790
+    restart: unless-stopped
+
 volumes:
   telemt-data:
   grafana_data:
