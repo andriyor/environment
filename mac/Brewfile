@@ -52,6 +52,7 @@ cask "zed@preview"
 
 # dev tools
 cask "claude-code@latest" # tracks latest release; plain `claude-code` lags
+cask "codex"
 cask "orbstack" # docker client
 cask "session-manager-plugin" # aws
 cask "bruno" # local first API testing
