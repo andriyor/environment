@@ -10,3 +10,4 @@ raspbery/elasticsearch-example/node_modules
 .DS_Store
 raspbery/nextexplorer/
 raspbery/toggl-lock/
+common/.config/karabiner/automatic_backups/
