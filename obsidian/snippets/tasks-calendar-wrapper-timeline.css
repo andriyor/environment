@@ -1,0 +1,39 @@
+/* Tasks Calendar Wrapper plugin, timeline view: task text in the editor's font and size */
+body .taskido .task .content {
+	font-family: var(--font-text);
+	font-size: calc(var(--font-text-size) * 0.85);
+	line-height: 1.4;
+}
+
+/* Smaller year and today headings */
+body .taskido .year {
+	font-size: 20px;
+	margin: 10px 0;
+}
+body .taskido .todayHeader {
+	font-size: 16px;
+	margin: 5px;
+}
+
+/* Smaller counter buttons (Today, Todo, Overdue, Unplanned...) */
+body .taskido .counters {
+	margin: 10px 0;
+}
+body .taskido .counter {
+	padding: 2px;
+	min-width: 50px;
+}
+body .taskido .count {
+	font-size: 14px;
+}
+body .taskido .counter .label {
+	font-size: 10px;
+}
+
+/* Less space between the new task entry and the date below it */
+body .taskido .quickEntryPanel {
+	margin-bottom: 5px;
+}
+body .taskido .dateLine {
+	margin: 5px 0;
+}

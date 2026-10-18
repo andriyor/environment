@@ -8,7 +8,9 @@
     "life-tracker-description",
     "big-calendar-hide-done-checkbox",
     "bases-kanban-wrap-title",
-    "mood-calendar-no-vscroll"
+    "mood-calendar-no-vscroll",
+    "tasks-timeline-editor-font",
+    "tasks-calendar-wrapper-timeline"
   ],
   "textFontFamily": "JetBrains Mono NL,Cascadia Code,Comic Mono",
   "baseFontSize": 15,

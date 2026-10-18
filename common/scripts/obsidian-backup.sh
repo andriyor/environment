@@ -6,7 +6,8 @@
 #   life-tracker                personal health tracking
 #   quickadd                    vault-specific choices
 #   obsidian-icon-folder        icons keyed by vault folder paths
-IGNORED_PLUGINS=(obsidian-excalidraw-plugin big-calendar life-tracker quickadd obsidian-icon-folder)
+#   tasks-calendar-wrapper      vault-specific include paths and excluded properties
+IGNORED_PLUGINS=(obsidian-excalidraw-plugin big-calendar life-tracker quickadd obsidian-icon-folder tasks-calendar-wrapper)
 
 excludes=()
 for p in "${IGNORED_PLUGINS[@]}"; do excludes+=(--exclude="plugins/$p/"); done

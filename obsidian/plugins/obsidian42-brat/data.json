@@ -1,16 +1,11 @@
 {
   "pluginList": [
     "andriyor/Obsidian-Big-Calendar",
-    "andriyor/obsidian-life-tracker-base-view",
     "andriyor/obsidian-editor-breadcrumbs"
   ],
   "pluginSubListFrozenVersion": [
     {
       "repo": "andriyor/Obsidian-Big-Calendar",
-      "version": ""
-    },
-    {
-      "repo": "andriyor/obsidian-life-tracker-base-view",
       "version": ""
     },
     {

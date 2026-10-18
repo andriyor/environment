@@ -1,6 +1,5 @@
 [
   "waypoint",
-  "obsidian-style-settings",
   "obsidian-excalidraw-plugin",
   "view-count",
   "find-unlinked-files",
@@ -15,7 +14,6 @@
   "obsidian-vault-statistics-plugin",
   "nldates-obsidian",
   "obsidian-tasks-plugin",
-  "life-tracker",
   "mood-calendar",
   "big-calendar",
   "lock-drag-and-drop",
@@ -24,5 +22,8 @@
   "editor-breadcrumbs",
   "mononote",
   "quickadd",
-  "obsidian-auto-link-title"
+  "obsidian-auto-link-title",
+  "life-tracker",
+  "tasks-calendar-wrapper",
+  "obsidian-icon-folder"
 ]

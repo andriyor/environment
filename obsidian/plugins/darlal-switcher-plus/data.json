@@ -199,6 +199,27 @@
         "isActive": false,
         "isAvailable": true
       },
+      "base-view-table": {
+        "id": "base-view-table",
+        "mode": 4,
+        "label": "table views",
+        "isActive": false,
+        "isAvailable": true
+      },
+      "base-view-list": {
+        "id": "base-view-list",
+        "mode": 4,
+        "label": "list views",
+        "isActive": false,
+        "isAvailable": true
+      },
+      "base-view-cards": {
+        "id": "base-view-cards",
+        "mode": 4,
+        "label": "card views",
+        "isActive": false,
+        "isAvailable": true
+      },
       "backlink": {
         "id": "backlink",
         "mode": 128,
@@ -267,14 +288,14 @@
         "mode": 16,
         "label": "bookmarks",
         "isActive": false,
-        "isAvailable": true
+        "isAvailable": false
       },
       "filenamesSearch": {
         "id": "filenamesSearch",
         "mode": 16,
         "label": "filenames",
         "isActive": false,
-        "isAvailable": true
+        "isAvailable": false
       },
       "headingsSearch": {
         "id": "headingsSearch",
@@ -346,6 +367,7 @@
     ]
   },
   "preferredSourceForTitle": "H1",
+  "frontmatterTitleProperty": "title",
   "closeWhenEmptyKeys": [
     {
       "modifiers": null,
@@ -376,10 +398,6 @@
     "coreLauncherButtonIconSelector": "span.clickable-icon",
     "coreLauncherButtonSelector": ".mobile-navbar-action.mobile-navbar-action-quick-switcher"
   },
-  "allowCreateNewFileInModeNames": [
-    "Standard",
-    "HeadingsList"
-  ],
   "showModeTriggerInstructions": true,
   "renderMarkdownContentInSuggestions": {
     "isEnabled": false,
@@ -463,5 +481,15 @@
       "Shift"
     ],
     "key": "s"
-  }
+  },
+  "showHeadingBreadcrumbs": true,
+  "headingBreadcrumbSeparator": " > ",
+  "maxBreadcrumbDepth": 0,
+  "showHeadingBreadcrumbsInSymbolMode": false,
+  "showTagsInSuggestions": false,
+  "tagSource": "both",
+  "excludeTagsFromDisplay": [],
+  "tagDisplaySeparator": " ",
+  "removeHashPrefixFromTags": false,
+  "maxTagsToDisplay": 0
 }
