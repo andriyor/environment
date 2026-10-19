@@ -15,6 +15,7 @@ for p in "${IGNORED_PLUGINS[@]}"; do excludes+=(--exclude="plugins/$p/"); done
 rsync -a -m --delete-excluded --filter='P README.md' \
   --include='hotkeys.json' --include='appearance.json' \
   --include='core-plugins.json' --include='community-plugins.json' \
+  --include='command-palette.json' \
   --include='snippets/***' \
   "${excludes[@]}" \
   --include='plugins/' --include='plugins/*/' --include='plugins/*/data.json' \

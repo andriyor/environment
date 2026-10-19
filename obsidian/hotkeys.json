@@ -67,5 +67,14 @@
       ],
       "key": "ArrowDown"
     }
+  ],
+  "command-palette:open": [],
+  "darlal-switcher-plus:switcher-plus:open-commands": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "P"
+    }
   ]
 }
