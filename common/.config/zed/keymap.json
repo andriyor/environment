@@ -1,0 +1,16 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    // Swap defaults: Open Recent is used more often than Open
+    "bindings": {
+      "cmd-o": ["projects::OpenRecent", { "create_new_window": false }],
+      "alt-cmd-o": "workspace::Open"
+    }
+  }
+]
