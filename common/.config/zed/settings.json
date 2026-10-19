@@ -21,6 +21,9 @@
     "dock": "left",
     "tree_view": true
   },
+  "terminal": {
+    "starts_open": true
+  },
   "edit_predictions": {
     "mode": "eager"
   },
