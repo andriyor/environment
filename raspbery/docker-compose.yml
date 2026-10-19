@@ -406,6 +406,7 @@ services:
       - ./toggl-lock/data:/data # state.json
     ports:
       - 8790:8790
+      - 8788:8788 # Toggl webhook; tunnel toggl-hook.oreh.uk → localhost:8788
     restart: unless-stopped
 
 volumes:
