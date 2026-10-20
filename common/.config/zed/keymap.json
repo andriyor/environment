@@ -9,7 +9,7 @@
   {
     // Swap defaults: Open Recent is used more often than Open
     "bindings": {
-      "cmd-o": ["projects::OpenRecent", { "create_new_window": false }],
+      "cmd-o": ["projects::OpenRecent", { "create_new_window": true }],
       "alt-cmd-o": "workspace::Open"
     }
   }
