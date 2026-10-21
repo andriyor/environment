@@ -17,6 +17,9 @@
   "collaboration_panel": {
     "dock": "left"
   },
+  "git": {
+    "diff_base": "default_branch"
+  },
   "git_panel": {
     "dock": "left",
     "tree_view": true
