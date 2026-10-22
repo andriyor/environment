@@ -12,5 +12,12 @@
       "cmd-o": ["projects::OpenRecent", { "create_new_window": true }],
       "alt-cmd-o": "workspace::Open"
     }
+  },
+  {
+    // Like Ghostty/iTerm: cmd-t opens a new terminal tab (default is ctrl-~)
+    "context": "Terminal",
+    "bindings": {
+      "cmd-t": "workspace::NewTerminal"
+    }
   }
 ]
