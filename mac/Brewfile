@@ -244,6 +244,6 @@ mas "rcmd", id: 1596283165 # Switch apps instantly using the ⌘ Right Command k
 mas "Velja", id: 1607635845 # browser picker
 mas "DaisyDisk", id: 411643860
 mas "Dato", id: 1470584107 # time zone travel
-mas "Xcode", id: 497799835
+# mas "Xcode", id: 497799835 slow down instal
 mas "Cascadea", id: 1432182561 # CSS userstyles for Safari
 mas "Amphetamine", id: 937984704 # enable mac to stay awake on battery with the lid closed while an external display is connected
