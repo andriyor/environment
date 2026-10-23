@@ -10,6 +10,12 @@
       "icon": "github",
       "name": "Update open daily note with GitHub activity",
       "mode": "any"
+    },
+    {
+      "id": "templater-obsidian:life-notes/template/toggl-activity.md",
+      "icon": "timer",
+      "name": "Update open daily note with Toggl time",
+      "mode": "any"
     }
   ],
   "rightRibbon": [],

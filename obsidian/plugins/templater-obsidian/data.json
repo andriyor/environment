@@ -22,6 +22,11 @@
       "template": "life-notes/template/github-activity.md",
       "insert_enabled": true,
       "create_enabled": false
+    },
+    {
+      "template": "life-notes/template/toggl-activity.md",
+      "insert_enabled": true,
+      "create_enabled": false
     }
   ],
   "startup_templates": [

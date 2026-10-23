@@ -1,10 +1,9 @@
 {
   "accentColor": "",
   "theme": "moonstone",
-  "cssTheme": "Typewriter",
+  "cssTheme": "Minimal",
   "nativeMenus": false,
   "enabledCssSnippets": [
-    "heading-spacing",
     "life-tracker-description",
     "big-calendar-hide-done-checkbox",
     "bases-kanban-wrap-title",
