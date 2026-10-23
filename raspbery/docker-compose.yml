@@ -409,6 +409,21 @@ services:
       - 8788:8788 # Toggl webhook; tunnel toggl-hook.oreh.uk → localhost:8788
     restart: unless-stopped
 
+  # Toggl tracker UI (Vite dev server, proxies the Toggl API with TOGGL_TOKEN).
+  # Plain HTTP. GET /api/selected-tags
+  # returns the tags picked in the UI, saved to ./toggl-wrapper/data.
+  toggl-wrapper:
+    container_name: toggl-wrapper
+    build:
+      context: https://github.com/andriyor/toggl-wrapper.git#master
+    ports:
+      - 5173:5173
+    environment:
+      - TOGGL_TOKEN=${TOGGL_TOKEN}
+    volumes:
+      - ./toggl-wrapper/data:/app/data
+    restart: unless-stopped
+
 volumes:
   telemt-data:
   grafana_data:
