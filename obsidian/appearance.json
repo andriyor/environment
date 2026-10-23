@@ -1,5 +1,5 @@
 {
-  "accentColor": "",
+  "accentColor": "#519d5c",
   "theme": "moonstone",
   "cssTheme": "Minimal",
   "nativeMenus": false,
@@ -9,7 +9,8 @@
     "bases-kanban-wrap-title",
     "mood-calendar-no-vscroll",
     "tasks-timeline-editor-font",
-    "tasks-calendar-wrapper-timeline"
+    "tasks-calendar-wrapper-timeline",
+    "heading-spacing"
   ],
   "textFontFamily": "JetBrains Mono NL,Cascadia Code,Comic Mono",
   "baseFontSize": 15,
