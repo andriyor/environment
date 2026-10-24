@@ -1,5 +1,4 @@
-eval "$(ssh-agent -s)"
-# ssh-add
+# ssh-agent: provided by macOS launchd (SSH_AUTH_SOCK); keys via ~/.ssh/config AddKeysToAgent+UseKeychain
 
 # -------------------------------------------------------
 # clean version of  `eval "$(/opt/homebrew/bin/brew shellenv)"`

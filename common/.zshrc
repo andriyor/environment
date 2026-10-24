@@ -47,7 +47,8 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 # pyenv (required for okta)
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
+# shims only; skip `pyenv init` rehash (~0.3s). Run `pyenv rehash` after installing Python/packages with CLIs
+export PATH="$PYENV_ROOT/shims:$PATH"
 
 source <(fzf --zsh)
 

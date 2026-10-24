@@ -1,6 +1,6 @@
 alias subl='open -a "Sublime Text"'
 
-redis-server --daemonize yes
+# redis: runs via `brew services start redis`
 . "$HOME/.cargo/env"
 
 bindkey "\e\eOD" backward-word
