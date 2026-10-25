@@ -44,4 +44,3 @@ nocodb/*
 !nocodb/.gitkeep
 ezbookkeeping/
 toggl-wrapper/
-mariadb/
