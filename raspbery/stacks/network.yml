@@ -1,0 +1,27 @@
+# Network services: DNS, proxies
+services:
+  # Network-wide DNS server with ad/tracker blocking
+  adguardhome:
+    image: adguard/adguardhome:latest
+    container_name: adguardhome
+    restart: unless-stopped
+    network_mode: host # Recommended for DNS to work reliably
+    volumes:
+      - ./adguard/work:/opt/adguardhome/work
+      - ./adguard/conf:/opt/adguardhome/conf
+    environment:
+      - TZ=Europe/Kyiv
+
+  # Telegram MTProto proxy (telemt)
+  mtproto-proxy:
+    image: ghcr.io/telemt/telemt:latest
+    restart: unless-stopped
+    ports:
+      - "3128:3128"
+    volumes:
+      - ./telemt-config.toml:/app/config.toml
+      - telemt-data:/app
+    command: ["/app/config.toml"]
+
+volumes:
+  telemt-data:

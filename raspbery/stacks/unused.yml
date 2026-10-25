@@ -1,6 +1,9 @@
+# Not in use. Behind the `unused` profile, so `docker compose up -d` skips them;
+# start one explicitly with `docker compose up -d <service>`.
 services:
   # Chat UI for LLMs (Ollama / OpenAI-compatible APIs)
   open-webui:
+    profiles: [unused]
     image: ghcr.io/open-webui/open-webui:main
     container_name: open-webui
     ports:
@@ -11,6 +14,7 @@ services:
 
   # Airtable-like spreadsheet UI on top of a database
   nocodb:
+    profiles: [unused]
     image: nocodb/nocodb:latest
     container_name: nocodb
     ports:
@@ -21,6 +25,7 @@ services:
 
   # Web UI for managing Docker containers
   portainer:
+    profiles: [unused]
     image: portainer/portainer-ce
     container_name: portainer
     ports:
@@ -32,6 +37,7 @@ services:
 
   # Reader / library server for books, comics and manga
   kavita:
+    profiles: [unused]
     image: jvmilazz0/kavita:latest
     container_name: kavita
     ports:
@@ -45,6 +51,7 @@ services:
 
   # Movie / show request manager that feeds radarr
   seerr:
+    profiles: [unused]
     image: ghcr.io/seerr-team/seerr:latest
     container_name: seerr
     environment:

@@ -24,6 +24,25 @@
 [docker/docker-install: Docker installation script](https://github.com/docker/docker-install)
 
 
+# Compose layout
+
+`docker-compose.yml` only `include:`s the files in `stacks/` (home, media, arr,
+network, monitoring, files, apps, tools, unused), all as one `raspbery` project. Run
+everything from this folder as before: `docker compose up -d`,
+`docker compose pull radarr`.
+
+- `project_directory: .` on each include keeps `./...` paths and `.env`
+  relative to this folder, not `stacks/`. Don't run a stack file on its own
+  with `-f` for `up` — it would resolve paths and the project name from
+  `stacks/`.
+- Act on one stack by its service list:
+  `docker compose pull $(docker compose -f stacks/arr.yml config --services)`.
+- `stacks/unused.yml` services carry `profiles: [unused]`, so plain `up -d`
+  skips them; `docker compose up -d kavita` still starts one.
+- The older `docker-compose-{elastic,kafka,monitoring,nextcloud}` files are
+  separate, not included.
+
+
 # FileBrowser Quantum
 
 [gtsteffaniak/filebrowser](https://github.com/gtsteffaniak/filebrowser) on 9090,

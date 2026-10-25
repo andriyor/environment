@@ -1,0 +1,21 @@
+# Third-party self-hosted tools
+services:
+  # Personal finance / expense tracker
+  ezbookkeeping:
+    image: mayswind/ezbookkeeping:latest
+    container_name: ezbookkeeping
+    ports:
+      - 8082:8080
+    volumes:
+      - ./ezbookkeeping/data:/ezbookkeeping/data
+      - ./ezbookkeeping/log:/ezbookkeeping/log
+      - ./ezbookkeeping/storage:/ezbookkeeping/storage
+    environment:
+      - TZ=Europe/Kyiv
+      # sqlite3 is the default; db file lands in the ./ezbookkeeping/data mount
+      - EBK_DATABASE_TYPE=sqlite3
+      - EBK_DATABASE_DB_PATH=data/ezbookkeeping.db
+      # must match the published host port so generated links/redirects work
+      - EBK_SERVER_ROOT_URL=http://192.168.1.65:8082/
+      - EBK_SECURITY_SECRET_KEY=${EZBOOKKEEPING_SECRET_KEY}
+    restart: unless-stopped

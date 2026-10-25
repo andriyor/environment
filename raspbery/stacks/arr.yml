@@ -1,0 +1,97 @@
+# *arr stack: indexers, movie/music managers, subtitles, download client
+services:
+  # Torrent client; download client for radarr / lidarr
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    environment:
+      - PUID=1000 # Run 'id' in terminal to check your UID
+      - PGID=1000 # Run 'id' in terminal to check your GID
+      - TZ=Etc/UTC
+      - WEBUI_PORT=8080
+      - TORRENTING_PORT=6881
+    volumes:
+      - ./qbittorrent-config:/config
+      - /mnt/storage:/data
+      - /mnt/nas_data:/ndata
+    ports:
+      - 8095:8080
+      - 6881:6881
+      - 6881:6881/udp
+    restart: unless-stopped
+
+  # Indexer manager: syncs trackers to radarr / lidarr, uses flaresolverr
+  prowlarr:
+    image: lscr.io/linuxserver/prowlarr:latest
+    container_name: prowlarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - ./prowlarr-config:/config
+    ports:
+      - 9696:9696
+    restart: unless-stopped
+
+  # Proxy that solves Cloudflare challenges for prowlarr indexers
+  flaresolverr:
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+    container_name: flaresolverr
+    environment:
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - LOG_FILE=${LOG_FILE:-none}
+      - LOG_HTML=${LOG_HTML:-false}
+      - CAPTCHA_SOLVER=${CAPTCHA_SOLVER:-none}
+      - TZ=Europe/London
+    ports:
+      - "8191:8191"
+    volumes:
+      - /var/lib/flaresolver:/config
+    restart: unless-stopped
+
+  # Movie manager: searches indexers via prowlarr, downloads via qbittorrent
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - ./radarr/data:/config
+      - /mnt/storage:/data
+    ports:
+      - 7878:7878
+    restart: unless-stopped
+
+  # Music manager: searches indexers via prowlarr, downloads via qbittorrent
+  lidarr:
+    image: linuxserver/lidarr:latest
+    container_name: lidarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Kyiv
+    volumes:
+      - ./lidarr-config:/config
+      - /mnt/storage/music:/music
+      - /mnt/storage/downloads:/downloads
+    ports:
+      - 8686:8686
+    restart: unless-stopped
+
+  # Subtitle downloader for radarr's movies
+  bazarr:
+    image: lscr.io/linuxserver/bazarr:latest
+    container_name: bazarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - ./bazarr-config:/config
+      - /mnt/storage/movies:/data/movies
+    ports:
+      - 6767:6767
+    restart: unless-stopped
