@@ -277,18 +277,6 @@ services:
       TOKEN: ${BESZEL_TOKEN}
       HUB_URL: http://localhost:9099
 
-  kavita:
-    image: jvmilazz0/kavita:latest
-    container_name: kavita
-    ports:
-      - "5000:5000"
-    volumes:
-      - /mnt/storage/books:/manga
-      - ./kavita:/kavita/config
-    environment:
-      - TZ=Your/Timezone
-    restart: unless-stopped
-
   bazarr:
     image: lscr.io/linuxserver/bazarr:latest
     container_name: bazarr
