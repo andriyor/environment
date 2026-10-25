@@ -114,6 +114,12 @@ dtparam=i2c_arm_baudrate=50000
 Reboot after editing, then verify: `i2cdetect -y 1` (UPS HAT (E) shows at
 `0x2d`, INA219-based HATs at `0x42`).
 
+Home Assistant reads it via the `waveshare_ups_hat` integration from my fork
+[andriyor/hacs_waveshare_ups_hat](https://github.com/andriyor/hacs_waveshare_ups_hat)
+(adds UPS HAT (E) support, `ups_hat_e.py`; upstream mykhailog's only handles
+INA219 HATs). Install it in HACS as a custom repository pointing at the fork,
+not the upstream one.
+
 
 # Raspberry Pi USB current cap
 
