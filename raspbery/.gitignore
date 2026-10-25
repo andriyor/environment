@@ -1,0 +1,57 @@
+# Container runtime data: databases, logs, caches, app state. Only hand-written
+# config is tracked; whole-dir ignores are for dirs with nothing worth keeping.
+
+# *arr / media / download apps
+bazarr-config/
+lidarr-config/
+prowlarr-config/
+radarr/
+seerr/
+whisparr-config/
+transmission-config/
+jellyfin-config/
+navidrome/
+kavita/
+calibre/
+bookshelf/
+audiobookshelf/
+audiobookshelf-metadata/
+stash-config/
+stash-generated/
+metadata/
+
+# qbittorrent: keep qBittorrent.conf only
+qbittorrent-config/*
+!qbittorrent-config/qBittorrent/
+qbittorrent-config/qBittorrent/*
+!qbittorrent-config/qBittorrent/qBittorrent.conf
+
+# Home Assistant: keep hand-written config, ignore state, logs, dbs, secrets
+homeassistant/*
+!homeassistant/.gitkeep
+!homeassistant/configuration.yaml
+!homeassistant/automations.yaml
+!homeassistant/scripts.yaml
+!homeassistant/scenes.yaml
+matter/
+zigbee2mqtt/
+mosquitto/
+influxdb-data/
+
+# Monitoring / network
+beszel_data/
+beszel_agent_data/
+adguard/conf/
+adguard/work/
+etc-pihole/
+mtg.toml
+
+# Own / small apps: keep .gitkeep placeholders
+airtable/database.db
+data/*
+!data/.gitkeep
+nocodb/*
+!nocodb/.gitkeep
+ezbookkeeping/
+toggl-wrapper/
+mariadb/
