@@ -11,8 +11,9 @@
   - action: google_sheets.append_sheet
     metadata: {}
     data:
-      add_created_column: true
+      add_created_column: false
       data:
+        created: '{{ now().strftime(''%Y-%m-%d %H:%M:%S'') }}'
         source: button
       config_entry: 01KQW920J1C6G83BZ17PTAKRMB
   mode: single
