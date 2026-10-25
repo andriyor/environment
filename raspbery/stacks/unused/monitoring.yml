@@ -52,7 +52,7 @@ services:
       - "3000:3000"
     volumes:
       - grafana-storage:/var/lib/grafana
-      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ../../grafana/provisioning:/etc/grafana/provisioning # shared with stacks/home.yml grafana
     restart: unless-stopped
 
 volumes:

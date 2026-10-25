@@ -39,9 +39,11 @@ everything from this folder as before: `docker compose up -d`,
   `docker compose pull $(docker compose -f stacks/arr.yml config --services)`.
 - `stacks/unused.yml` services carry `profiles: [unused]`, so plain `up -d`
   skips them; `docker compose up -d kavita` still starts one.
-- The older `docker-compose-{elastic,kafka,monitoring,nextcloud}` files are
-  separate, not included.
-
+- `stacks/unused/` holds old standalone stacks (elastic, kafka, monitoring,
+  nextcloud), not included. Run one with `docker compose -f stacks/unused/kafka.yml up -d`;
+  its project is then named `unused`, so pass `-p raspbery` to reuse the old
+  `raspbery_*` volumes (it will warn about orphans — never add
+  `--remove-orphans` there, it would stop the whole main stack).
 
 # FileBrowser Quantum
 
