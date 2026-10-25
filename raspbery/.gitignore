@@ -7,15 +7,8 @@ lidarr-config/
 prowlarr-config/
 radarr/
 seerr/
-whisparr-config/
-transmission-config/
 jellyfin-config/
-navidrome/
 kavita/
-calibre/
-bookshelf/
-audiobookshelf/
-audiobookshelf-metadata/
 stash-config/
 stash-generated/
 metadata/
@@ -34,8 +27,6 @@ homeassistant/*
 !homeassistant/scripts.yaml
 !homeassistant/scenes.yaml
 matter/
-zigbee2mqtt/
-mosquitto/
 influxdb-data/
 
 # Monitoring / network
@@ -43,7 +34,6 @@ beszel_data/
 beszel_agent_data/
 adguard/conf/
 adguard/work/
-etc-pihole/
 mtg.toml
 
 # Own / small apps: keep .gitkeep placeholders
