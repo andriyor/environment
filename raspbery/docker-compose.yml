@@ -18,5 +18,3 @@ include:
     project_directory: .
   - path: stacks/tools.yml
     project_directory: .
-  - path: stacks/unused.yml
-    project_directory: .

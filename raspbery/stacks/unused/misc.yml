@@ -1,9 +1,8 @@
-# Not in use. Behind the `unused` profile, so `docker compose up -d` skips them;
-# start one explicitly with `docker compose up -d <service>`.
+# Not in use, small single-container apps. Standalone, not included from docker-compose.yml.
+# Data dirs stay in raspbery/ (../../).
 services:
   # Chat UI for LLMs (Ollama / OpenAI-compatible APIs)
   open-webui:
-    profiles: [unused]
     image: ghcr.io/open-webui/open-webui:main
     container_name: open-webui
     ports:
@@ -14,18 +13,16 @@ services:
 
   # Airtable-like spreadsheet UI on top of a database
   nocodb:
-    profiles: [unused]
     image: nocodb/nocodb:latest
     container_name: nocodb
     ports:
       - "9100:8080"
     volumes:
-      - ./nocodb:/usr/app/data
+      - ../../nocodb:/usr/app/data
     restart: unless-stopped
 
   # Web UI for managing Docker containers
   portainer:
-    profiles: [unused]
     image: portainer/portainer-ce
     container_name: portainer
     ports:
@@ -37,21 +34,19 @@ services:
 
   # Reader / library server for books, comics and manga
   kavita:
-    profiles: [unused]
     image: jvmilazz0/kavita:latest
     container_name: kavita
     ports:
       - "5000:5000"
     volumes:
       - /mnt/storage/books:/manga
-      - ./kavita:/kavita/config
+      - ../../kavita:/kavita/config
     environment:
       - TZ=Europe/Kyiv
     restart: unless-stopped
 
   # Movie / show request manager that feeds radarr
   seerr:
-    profiles: [unused]
     image: ghcr.io/seerr-team/seerr:latest
     container_name: seerr
     environment:
@@ -61,7 +56,7 @@ services:
     ports:
       - 5055:5055
     volumes:
-      - ./seerr:/app/config
+      - ../../seerr:/app/config
     healthcheck:
       test: wget --no-verbose --tries=1 --spider http://localhost:5055/api/v1/status || exit 1
       start_period: 20s

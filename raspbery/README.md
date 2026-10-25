@@ -27,7 +27,7 @@
 # Compose layout
 
 `docker-compose.yml` only `include:`s the files in `stacks/` (home, media, arr,
-network, monitoring, files, apps, tools, unused), all as one `raspbery` project. Run
+network, monitoring, files, apps, tools), all as one `raspbery` project. Run
 everything from this folder as before: `docker compose up -d`,
 `docker compose pull radarr`.
 
@@ -37,10 +37,9 @@ everything from this folder as before: `docker compose up -d`,
   `stacks/`.
 - Act on one stack by its service list:
   `docker compose pull $(docker compose -f stacks/arr.yml config --services)`.
-- `stacks/unused.yml` services carry `profiles: [unused]`, so plain `up -d`
-  skips them; `docker compose up -d kavita` still starts one.
-- `stacks/unused/` holds old standalone stacks (elastic, kafka, monitoring,
-  nextcloud), not included. Run one with `docker compose -f stacks/unused/kafka.yml up -d`;
+- `stacks/unused/` holds standalone stacks not in use (elastic, kafka,
+  monitoring, nextcloud, and `misc.yml` with kavita, seerr, nocodb, portainer,
+  open-webui), not included. Run one with `docker compose -f stacks/unused/kafka.yml up -d`;
   its project is then named `unused`, so pass `-p raspbery` to reuse the old
   `raspbery_*` volumes (it will warn about orphans — never add
   `--remove-orphans` there, it would stop the whole main stack).
