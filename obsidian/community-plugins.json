@@ -14,17 +14,18 @@
   "obsidian-vault-statistics-plugin",
   "nldates-obsidian",
   "obsidian-tasks-plugin",
-  "mood-calendar",
   "big-calendar",
   "lock-drag-and-drop",
-  "todo-sidebar",
   "new-tab-default-page",
   "editor-breadcrumbs",
   "mononote",
   "quickadd",
   "life-tracker",
-  "tasks-calendar-wrapper",
   "obsidian-icon-folder",
   "cmdr",
-  "obsidian-style-settings"
+  "obsidian-style-settings",
+  "todo-sidebar",
+  "toggl-tasks",
+  "tasks-calendar-wrapper",
+  "calendar-plus"
 ]

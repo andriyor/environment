@@ -37,3 +37,11 @@ body .taskido .quickEntryPanel {
 body .taskido .dateLine {
 	margin: 5px 0;
 }
+
+/* Done and cancelled tasks: muted, without strikethrough (calendar and timeline) */
+body .tcw-calendar-task.done > span,
+body .tcw-calendar-task.cancelled > span,
+body .taskido .task.done .content,
+body .taskido .task.cancelled .content {
+	text-decoration: none;
+}
