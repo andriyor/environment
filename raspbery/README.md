@@ -94,6 +94,18 @@ docker-compose.prod.yml up -d --pull always`. Migrations run automatically on
 backend start, so snapshot the `securo_pgdata` volume first.
 
 
+# Raspotify
+
+[dtcooper/raspotify](https://github.com/dtcooper/raspotify) (apt package,
+Spotify Connect via librespot) on the IQaudIO DAC. Settings are in
+`raspotify.conf` here, not `/etc/raspotify/conf`: a systemd drop-in
+(`/etc/systemd/system/raspotify.service.d/override.conf`, set up by
+`install.sh`) clears the package's `EnvironmentFile` and points it at this
+file. systemd reads it before sandboxing, so `ProtectHome=true` doesn't block
+it, and package upgrades never touch it. After editing:
+`sudo systemctl restart raspotify`.
+
+
 # Raspberry Pi I2C
 
 The Waveshare UPS HAT talks over the Pi's hardware I2C bus (`i2c-1`). Enable it

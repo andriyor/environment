@@ -11,3 +11,9 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 curl -Lo lazygit.tar.gz https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/lazygit_0.57.0_linux_arm64.tar.gz
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit -D -t /usr/local/bin/
+
+# https://github.com/dtcooper/raspotify — settings live in raspotify.conf (this repo), not /etc/raspotify/conf
+curl -sL https://dtcooper.github.io/raspotify/install.sh | sh
+sudo mkdir -p /etc/systemd/system/raspotify.service.d
+printf '[Service]\nEnvironmentFile=\nEnvironmentFile=/home/aoriekhov/apps/environment/raspbery/raspotify.conf\n' | sudo tee /etc/systemd/system/raspotify.service.d/override.conf
+sudo systemctl daemon-reload && sudo systemctl restart raspotify
