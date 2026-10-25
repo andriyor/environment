@@ -1,4 +1,5 @@
 services:
+  # Chat UI for LLMs (Ollama / OpenAI-compatible APIs)
   open-webui:
     image: ghcr.io/open-webui/open-webui:main
     container_name: open-webui
@@ -8,6 +9,7 @@ services:
       - open-webui:/app/backend/data
     restart: always
 
+  # Airtable-like spreadsheet UI on top of a database
   nocodb:
     image: nocodb/nocodb:latest
     container_name: nocodb
@@ -17,6 +19,7 @@ services:
       - ./nocodb:/usr/app/data
     restart: unless-stopped
 
+  # Web UI for managing Docker containers
   portainer:
     image: portainer/portainer-ce
     container_name: portainer
@@ -27,6 +30,7 @@ services:
       - portainer_data:/data
     restart: unless-stopped
 
+  # Reader / library server for books, comics and manga
   kavita:
     image: jvmilazz0/kavita:latest
     container_name: kavita
@@ -37,6 +41,26 @@ services:
       - ./kavita:/kavita/config
     environment:
       - TZ=Europe/Kyiv
+    restart: unless-stopped
+
+  # Movie / show request manager that feeds radarr
+  seerr:
+    image: ghcr.io/seerr-team/seerr:latest
+    container_name: seerr
+    environment:
+      - LOG_LEVEL=debug
+      - TZ=Asia/Tashkent
+      - PORT=5055 #optional
+    ports:
+      - 5055:5055
+    volumes:
+      - ./seerr:/app/config
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://localhost:5055/api/v1/status || exit 1
+      start_period: 20s
+      timeout: 3s
+      interval: 15s
+      retries: 3
     restart: unless-stopped
 
 volumes:

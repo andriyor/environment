@@ -1,4 +1,5 @@
 services:
+  # Network-wide DNS server with ad/tracker blocking
   adguardhome:
     image: adguard/adguardhome:latest
     container_name: adguardhome
@@ -10,6 +11,7 @@ services:
     environment:
       - TZ=Europe/Kyiv
 
+  # Uptime / health-check status page for the services here (checks in config.yaml)
   gatus:
     container_name: gatus
     image: ghcr.io/twin/gatus:stable
@@ -22,6 +24,7 @@ services:
       - GATUS_CONFIG_PATH=/config/config.yaml
     restart: unless-stopped
 
+  # Home automation hub (Zigbee dongle via /dev, Matter via matter-server)
   homeassistant:
     container_name: homeassistant
     image: ghcr.io/home-assistant/home-assistant:stable
@@ -37,6 +40,7 @@ services:
     network_mode: host
     privileged: true
 
+  # Matter controller backend used by Home Assistant
   matter-server:
     container_name: matter-server
     image: ghcr.io/home-assistant-libs/python-matter-server:stable
@@ -48,6 +52,7 @@ services:
       - ./matter:/data
     command: --primary-interface eth0
 
+  # Personal blog, built from andriyor/blog
   blog:
     container_name: blog
     build:
@@ -56,6 +61,7 @@ services:
       - "8080:80"
     restart: unless-stopped
 
+  # Custom wrapper around the Airtable API, built from andriyor/airtable-wrapper
   airtable:
     container_name: airtable-wrapper
     build:
@@ -69,6 +75,7 @@ services:
       - AIRTABLE_API=${AIRTABLE_API}
     restart: unless-stopped
 
+  # Media server for movies / shows / music on /mnt/storage
   jellyfin:
     image: jellyfin/jellyfin:latest
     container_name: jellyfin
@@ -83,6 +90,7 @@ services:
       - 8096:8096
     restart: unless-stopped
 
+  # Torrent client; download client for radarr / lidarr
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
     container_name: qbittorrent
@@ -102,6 +110,7 @@ services:
       - 6881:6881/udp
     restart: unless-stopped
 
+  # Organizer and player for the video collection on the NAS
   stash:
     image: stashapp/stash:latest
     container_name: stash
@@ -143,6 +152,7 @@ services:
       ## Where to store generated content (screenshots,previews,transcodes,sprites)
       - ./stash-generated:/generated
 
+  # Movie manager: searches indexers via prowlarr, downloads via qbittorrent
   radarr:
     image: lscr.io/linuxserver/radarr:latest
     container_name: radarr
@@ -157,6 +167,7 @@ services:
       - 7878:7878
     restart: unless-stopped
 
+  # Indexer manager: syncs trackers to radarr / lidarr, uses flaresolverr
   prowlarr:
     image: lscr.io/linuxserver/prowlarr:latest
     container_name: prowlarr
@@ -217,25 +228,7 @@ services:
       - TERMINAL_ENABLED=false # defaults to true = root shell in the browser
     restart: unless-stopped
 
-  seerr:
-    image: ghcr.io/seerr-team/seerr:latest
-    container_name: seerr
-    environment:
-      - LOG_LEVEL=debug
-      - TZ=Asia/Tashkent
-      - PORT=5055 #optional
-    ports:
-      - 5055:5055
-    volumes:
-      - ./seerr:/app/config
-    healthcheck:
-      test: wget --no-verbose --tries=1 --spider http://localhost:5055/api/v1/status || exit 1
-      start_period: 20s
-      timeout: 3s
-      interval: 15s
-      retries: 3
-    restart: unless-stopped
-
+  # Book search and downloader into /mnt/storage/books
   shelfmark:
     image: ghcr.io/calibrain/shelfmark:latest
     container_name: shelfmark
@@ -250,6 +243,7 @@ services:
       - /shelfmark:/config # App configuration
       # Required for torrent / usenet - path must match your download client'
 
+  # Server monitoring hub (CPU, RAM, disk, containers)
   beszel:
     image: henrygd/beszel:latest
     container_name: beszel
@@ -261,6 +255,7 @@ services:
     volumes:
       - ./beszel_data:/beszel_data
 
+  # Beszel agent reporting this Pi's metrics to the hub
   beszel-agent:
     image: henrygd/beszel-agent
     container_name: beszel-agent
@@ -277,6 +272,7 @@ services:
       TOKEN: ${BESZEL_TOKEN}
       HUB_URL: http://localhost:9099
 
+  # Subtitle downloader for radarr's movies
   bazarr:
     image: lscr.io/linuxserver/bazarr:latest
     container_name: bazarr
@@ -291,6 +287,7 @@ services:
       - 6767:6767
     restart: unless-stopped
     
+  # Proxy that solves Cloudflare challenges for prowlarr indexers
   flaresolverr:
     image: ghcr.io/flaresolverr/flaresolverr:latest
     container_name: flaresolverr
@@ -306,6 +303,7 @@ services:
       - /var/lib/flaresolver:/config
     restart: unless-stopped
 
+  # Telegram MTProto proxy (telemt)
   mtproto-proxy:
     image: ghcr.io/telemt/telemt:latest
     restart: unless-stopped
@@ -316,6 +314,7 @@ services:
       - telemt-data:/app
     command: ["/app/config.toml"]
 
+  # Time-series DB for Home Assistant long-term history
   influxdb:
     image: influxdb:2.7
     container_name: influxdb
@@ -332,6 +331,7 @@ services:
       - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=${INFLUXDB_ADMIN_TOKEN}
     restart: unless-stopped
 
+  # Dashboards over InfluxDB / Home Assistant data
   grafana:
     image: grafana/grafana:latest
     container_name: grafana
@@ -347,6 +347,7 @@ services:
       - INFLUXDB_ADMIN_TOKEN=${INFLUXDB_ADMIN_TOKEN}
     restart: unless-stopped
 
+  # Personal finance / expense tracker
   ezbookkeeping:
     image: mayswind/ezbookkeeping:latest
     container_name: ezbookkeeping
@@ -366,6 +367,7 @@ services:
       - EBK_SECURITY_SECRET_KEY=${EZBOOKKEEPING_SECRET_KEY}
     restart: unless-stopped
 
+  # Music manager: searches indexers via prowlarr, downloads via qbittorrent
   lidarr:
     image: linuxserver/lidarr:latest
     container_name: lidarr
