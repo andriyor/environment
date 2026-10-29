@@ -53,7 +53,7 @@ cask "zed@preview"
 # dev tools
 cask "claude-code@latest" # tracks latest release; plain `claude-code` lags
 cask "codex"
-cask "orbstack" # docker client
+# cask "orbstack" # docker client
 cask "session-manager-plugin" # aws
 cask "bruno" # local first API testing
 cask "postman"
@@ -124,7 +124,7 @@ cask "logi-options+" # to set smooth scroll for mx master mouse
 cask "lunar" # displays brightness
 
 # system
-brew "mas" # Mac App Store command line interface
+brew "mas" # Mac App Store command line interface; needs Spotlight indexing (mdutil -i on /) for list/outdated/upgrade
 cask "hammerspoon" # automation of macOS (required by rcmd)
 cask "little-snitch" # network monitoring
 cask "processspy" # aggregate memory usages by process
@@ -141,16 +141,16 @@ cask "cleanshot" # screenshot tool with self-timer and ocr
 # Apps
 # ------------------------------------------------------------------------------
 # browsers
-cask "google-chrome" # for work
+# cask "google-chrome" # for work
 cask "microsoft-edge" # personal browser with pinned tabs not being scrollable in vertical view
-cask "vivaldi" # emoji doesn't woks
+# cask "vivaldi" # emoji doesn't woks
 cask "firefox"
 cask "firefox@developer-edition" # use sometimes with sidebery
 
 # communication
 cask "telegram"
 cask "viber"
-cask "signal"
+# cask "signal"
 cask "zoom"
 
 # files and notes
