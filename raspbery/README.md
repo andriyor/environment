@@ -165,9 +165,13 @@ and session cross the Wi-Fi unencrypted, and the iPhone home-screen install
 still needs HTTPS. Without `LAN_HOSTS`: `ssh -L 3300:localhost:3300 rp`, then
 http://localhost:3300.
 
-Don't recreate `keepard-sync` mid-import: the killed run leaves a 5-minute lease
-in `bank_sync_runs` and a `keepard/state/sync/monobank-rodion.blocked` latch.
-Delete the latch after the lease expires.
+A run killed mid-import (e.g. recreating `keepard-sync`) leaves a
+`keepard/state/sync/monobank-rodion.blocked` latch, and later runs log
+`"result":"blocked"`. Leave it: after 10 minutes the scheduler sees the attempt
+still `running` with no live lease and retries by itself, or press "Retry import"
+on Bank connections. Don't mark the attempt failed in the database or delete the
+latch by hand — that hides the evidence the auto-recovery looks for
+([docs/scheduling.md](https://github.com/sars/keepard/blob/main/docs/scheduling.md)).
 
 Previous years, once (monobank allows one request a minute, so pause the loop):
 
