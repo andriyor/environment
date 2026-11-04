@@ -185,6 +185,45 @@ Logs: `docker compose logs -f keepard-sync`; `"result":"disabled"` means a
 marker above is missing or not root-owned.
 
 
+# Firefly III
+
+[firefly-iii](https://github.com/firefly-iii/firefly-iii) on http://192.168.1.65:8085,
+in `stacks/finance.yml`. The image is the release `fireflyiii/core:version-6.7.9`
+with 3 files of my dashboard currency switcher
+([andriyor/firefly-iii `currency-switch`](https://github.com/andriyor/firefly-iii/tree/currency-switch),
+issue firefly-iii#13160) downloaded over it, so nothing is compiled on the Pi.
+Before bumping the tag, rebase the branch onto it. SQLite in the
+`firefly-database` volume, no separate database container. `firefly-cron` calls
+the cron endpoint daily at 03:00 (recurring transactions, exchange rates).
+
+One-time setup, from this folder on the Pi. `firefly/` is gitignored and is
+also the build context:
+
+```bash
+install -d -m 700 firefly
+umask 077
+cat > firefly/.env <<EOF
+APP_ENV=production
+APP_KEY=$(openssl rand -hex 16)
+STATIC_CRON_TOKEN=$(openssl rand -hex 16)
+APP_URL=http://192.168.1.65:8085
+SITE_OWNER=<my email>
+TZ=Europe/Kyiv
+DEFAULT_LANGUAGE=en_US
+DB_CONNECTION=sqlite
+ENABLE_EXCHANGE_RATES=true
+ENABLE_EXTERNAL_RATES=true
+EOF
+docker compose up -d --build firefly firefly-cron
+```
+
+`APP_KEY` encrypts data: keep it, a new one makes the database unreadable.
+Open the URL and register; the first account is the admin.
+
+Update the switcher after pushing to the branch:
+`docker compose build --no-cache firefly && docker compose up -d firefly`.
+
+
 # Raspotify
 
 [dtcooper/raspotify](https://github.com/dtcooper/raspotify) (apt package,
