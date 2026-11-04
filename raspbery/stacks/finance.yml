@@ -41,13 +41,13 @@ services:
       start_period: 30s
     restart: unless-stopped
 
-  # Dashboard. Accepts only Host localhost:3300 or the HTTPS PUBLIC_ORIGIN, and its
-  # session cookie is Secure, so plain-HTTP LAN access does not work.
+  # Dashboard, built from the lan-hosts branch of my fork: LAN_HOSTS in app.env
+  # lets it run on http://192.168.0.162:3300; upstream accepts only localhost or HTTPS.
   keepard:
     <<: *keepard
     container_name: keepard
     build:
-      context: https://github.com/sars/keepard.git#main
+      context: https://github.com/andriyor/keepard.git#lan-hosts
     environment:
       APP_MODE: postgres
       PORT: "3300"
@@ -55,7 +55,7 @@ services:
       CREDENTIALS_DIRECTORY: /etc/private-finances/credentials
       ENABLEBANKING_SESSION_DIRECTORY: /var/lib/private-finances-consent
     ports:
-      - "127.0.0.1:3300:3300"
+      - "3300:3300"
 
   # Replaces upstream's systemd timers: monobank import every hour (upstream: 6h
   # after the previous run) and exchange rates 4 times a day for the display currency.

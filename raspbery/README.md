@@ -98,7 +98,8 @@ backend start, so snapshot the `securo_pgdata` volume first.
 
 [sars/keepard](https://github.com/sars/keepard): self-hosted spending tracker
 that imports monobank through its personal API. In `stacks/finance.yml`:
-`keepard-db` (postgres), `keepard` (dashboard, built from GitHub, so it is
+`keepard-db` (postgres), `keepard` (dashboard, built from the `lan-hosts`
+branch of my fork [andriyor/keepard](https://github.com/andriyor/keepard/tree/lan-hosts),
 compiled on the Pi) and `keepard-sync`, a loop that replaces upstream's systemd
 timers. Upstream's `compose.yaml` and `/opt` + `/etc/private-finances` layout
 are not used: `./keepard/config` is mounted as `/etc/private-finances`.
@@ -130,7 +131,11 @@ MEMBER_1_PASSWORD=<generated>
 MEMBER_2_NAME=Nobody
 MEMBER_2_EMAIL=<any other address>
 MEMBER_2_PASSWORD=<generated>
+LAN_HOSTS=192.168.0.162:3300
 ```
+
+A password with `$` must be in single quotes (`MEMBER_1_PASSWORD='...'`), or
+Compose reads `$...` as a variable and cuts it.
 
 monobank token from [api.monobank.ua](https://api.monobank.ua/). The file name
 is fixed (`rodion` is keepard's internal key for member 1), owned by the
@@ -153,11 +158,16 @@ sudo chmod 644 keepard/config/local-restore-verified keepard/config/schedules/mo
 Start: `docker compose up -d --build keepard keepard-db keepard-sync`. The
 first build compiles TypeScript on the Pi and takes a while.
 
-Open it through an SSH tunnel: `ssh -L 3300:localhost:3300 rp`, then
-http://localhost:3300. Plain `http://192.168.0.162:3300` does not work: keepard
-accepts only Host `localhost:3300` or an HTTPS `PUBLIC_ORIGIN`, and its session
-cookie is `Secure`. Phone access needs a domain over HTTPS (`PUBLIC_ORIGIN` in
-`app.env`) behind a reverse proxy or tunnel.
+Open http://192.168.0.162:3300. Upstream accepts only Host `localhost:3300` or
+an HTTPS `PUBLIC_ORIGIN` and always sends a `Secure` session cookie; the fork's
+`LAN_HOSTS` adds that address and drops `Secure` for it. Plain HTTP: password
+and session cross the Wi-Fi unencrypted, and the iPhone home-screen install
+still needs HTTPS. Without `LAN_HOSTS`: `ssh -L 3300:localhost:3300 rp`, then
+http://localhost:3300.
+
+Don't recreate `keepard-sync` mid-import: the killed run leaves a 5-minute lease
+in `bank_sync_runs` and a `keepard/state/sync/monobank-rodion.blocked` latch.
+Delete the latch after the lease expires.
 
 Previous years, once (monobank allows one request a minute, so pause the loop):
 
