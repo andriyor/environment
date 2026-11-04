@@ -42,7 +42,7 @@ services:
     restart: unless-stopped
 
   # Dashboard, built from the lan-hosts branch of my fork: LAN_HOSTS in app.env
-  # lets it run on http://192.168.0.162:3300; upstream accepts only localhost or HTTPS.
+  # lets it run on http://192.168.1.65:3300; upstream accepts only localhost or HTTPS.
   keepard:
     <<: *keepard
     container_name: keepard

@@ -131,7 +131,7 @@ MEMBER_1_PASSWORD=<generated>
 MEMBER_2_NAME=Nobody
 MEMBER_2_EMAIL=<any other address>
 MEMBER_2_PASSWORD=<generated>
-LAN_HOSTS=192.168.0.162:3300
+LAN_HOSTS=192.168.1.65:3300
 ```
 
 A password with `$` must be in single quotes (`MEMBER_1_PASSWORD='...'`), or
@@ -158,7 +158,7 @@ sudo chmod 644 keepard/config/local-restore-verified keepard/config/schedules/mo
 Start: `docker compose up -d --build keepard keepard-db keepard-sync`. The
 first build compiles TypeScript on the Pi and takes a while.
 
-Open http://192.168.0.162:3300. Upstream accepts only Host `localhost:3300` or
+Open http://192.168.1.65:3300. Upstream accepts only Host `localhost:3300` or
 an HTTPS `PUBLIC_ORIGIN` and always sends a `Secure` session cookie; the fork's
 `LAN_HOSTS` adds that address and drops `Secure` for it. Plain HTTP: password
 and session cross the Wi-Fi unencrypted, and the iPhone home-screen install
