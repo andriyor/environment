@@ -94,6 +94,83 @@ docker-compose.prod.yml up -d --pull always`. Migrations run automatically on
 backend start, so snapshot the `securo_pgdata` volume first.
 
 
+# Keepard
+
+[sars/keepard](https://github.com/sars/keepard): self-hosted spending tracker
+that imports monobank through its personal API. In `stacks/finance.yml`:
+`keepard-db` (postgres), `keepard` (dashboard, built from GitHub, so it is
+compiled on the Pi) and `keepard-sync`, a loop that replaces upstream's systemd
+timers. Upstream's `compose.yaml` and `/opt` + `/etc/private-finances` layout
+are not used: `./keepard/config` is mounted as `/etc/private-finances`.
+
+One-time setup, from this folder on the Pi:
+
+```bash
+install -d -m 755 keepard/config keepard/state
+install -d -m 700 keepard/config/credentials keepard/state/consent keepard/state/sync
+sudo install -d -m 755 -o root -g root keepard/config/schedules
+```
+
+`keepard/config/db.env` (mode 600), with `openssl rand -hex 32`:
+
+```ini
+POSTGRES_PASSWORD=<generated>
+```
+
+`keepard/config/app.env` (mode 600), the same password in `DATABASE_URL`, host
+`keepard-db`. Keepard requires exactly two members; member 2 is a dummy that
+never signs in and has no bank token. Passwords at least 20 characters
+(`openssl rand -hex 24`), applied at every start; there is no reset by email.
+
+```ini
+DATABASE_URL=postgresql://private-finances:<generated>@keepard-db:5432/private_finances
+MEMBER_1_NAME=Andrii
+MEMBER_1_EMAIL=<my email>
+MEMBER_1_PASSWORD=<generated>
+MEMBER_2_NAME=Nobody
+MEMBER_2_EMAIL=<any other address>
+MEMBER_2_PASSWORD=<generated>
+```
+
+monobank token from [api.monobank.ua](https://api.monobank.ua/). The file name
+is fixed (`rodion` is keepard's internal key for member 1), owned by the
+container user (`KEEPARD_UID`, default 1000 = `id -u`), mode 600:
+
+```bash
+read -rsp "Token: " v; echo; umask 077
+printf "%s\n" "$v" > keepard/config/credentials/monobank-rodion-token; unset v
+```
+
+Turn imports on. The scheduler only trusts markers owned by root and not
+group/other-writable, so these are written with sudo:
+
+```bash
+echo local-restore-verified | sudo tee keepard/config/local-restore-verified >/dev/null
+echo monobank-rodion | sudo tee keepard/config/schedules/monobank-rodion.enabled >/dev/null
+sudo chmod 644 keepard/config/local-restore-verified keepard/config/schedules/monobank-rodion.enabled
+```
+
+Start: `docker compose up -d --build keepard keepard-db keepard-sync`. The
+first build compiles TypeScript on the Pi and takes a while.
+
+Open it through an SSH tunnel: `ssh -L 3300:localhost:3300 rp`, then
+http://localhost:3300. Plain `http://192.168.0.162:3300` does not work: keepard
+accepts only Host `localhost:3300` or an HTTPS `PUBLIC_ORIGIN`, and its session
+cookie is `Secure`. Phone access needs a domain over HTTPS (`PUBLIC_ORIGIN` in
+`app.env`) behind a reverse proxy or tunnel.
+
+Previous years, once (monobank allows one request a minute, so pause the loop):
+
+```bash
+docker compose stop keepard-sync
+docker compose run --rm keepard-sync node dist/src/backfill-cli.js monobank rodion 2020-01-01 2026-11-04
+docker compose start keepard-sync
+```
+
+Logs: `docker compose logs -f keepard-sync`; `"result":"disabled"` means a
+marker above is missing or not root-owned.
+
+
 # Raspotify
 
 [dtcooper/raspotify](https://github.com/dtcooper/raspotify) (apt package,

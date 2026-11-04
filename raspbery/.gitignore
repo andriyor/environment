@@ -45,3 +45,5 @@ nocodb/*
 ezbookkeeping/
 toggl-wrapper/
 karakeep/
+# keepard: config, credentials, state; setup in README "Keepard"
+keepard/

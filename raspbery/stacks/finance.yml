@@ -1,0 +1,84 @@
+# Finance: keepard (sars/keepard), self-hosted spending tracker with monobank import.
+# Config and credentials live in ./keepard/config, mounted read-only as
+# /etc/private-finances, the path keepard reads. Setup: README "Keepard".
+x-keepard: &keepard
+  image: keepard:local
+  user: "${KEEPARD_UID:-1000}:${KEEPARD_GID:-1000}"
+  read_only: true
+  tmpfs:
+    - /tmp
+  cap_drop:
+    - ALL
+  security_opt:
+    - no-new-privileges:true
+  env_file: ./keepard/config/app.env
+  environment:
+    CREDENTIALS_DIRECTORY: /etc/private-finances/credentials
+    ENABLEBANKING_SESSION_DIRECTORY: /var/lib/private-finances-consent
+  volumes:
+    - ./keepard/config:/etc/private-finances:ro
+    - ./keepard/state/consent:/var/lib/private-finances-consent
+  depends_on:
+    keepard-db:
+      condition: service_healthy
+  restart: unless-stopped
+
+services:
+  keepard-db:
+    container_name: keepard-db
+    image: postgres:16
+    env_file: ./keepard/config/db.env # POSTGRES_PASSWORD, same as in DATABASE_URL
+    environment:
+      POSTGRES_USER: private-finances
+      POSTGRES_DB: private_finances
+    volumes:
+      - keepard-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U private-finances -d private_finances"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+
+  # Dashboard. Accepts only Host localhost:3300 or the HTTPS PUBLIC_ORIGIN, and its
+  # session cookie is Secure, so plain-HTTP LAN access does not work.
+  keepard:
+    <<: *keepard
+    container_name: keepard
+    build:
+      context: https://github.com/sars/keepard.git#main
+    environment:
+      APP_MODE: postgres
+      PORT: "3300"
+      BIND_ADDRESS: 0.0.0.0
+      CREDENTIALS_DIRECTORY: /etc/private-finances/credentials
+      ENABLEBANKING_SESSION_DIRECTORY: /var/lib/private-finances-consent
+    ports:
+      - "127.0.0.1:3300:3300"
+
+  # Replaces upstream's systemd timers: monobank import every hour (upstream: 6h
+  # after the previous run) and exchange rates 4 times a day for the display currency.
+  # ponytail: one fixed instance, add monobank-katya here for a second member.
+  keepard-sync:
+    <<: *keepard
+    container_name: keepard-sync
+    pull_policy: never # keepard:local is built by the keepard service
+    healthcheck:
+      disable: true
+    volumes:
+      - ./keepard/config:/etc/private-finances:ro
+      - ./keepard/state/consent:/var/lib/private-finances-consent
+      - ./keepard/state/sync:/var/lib/private-finances-sync
+    command:
+      - sh
+      - -c
+      - |
+        while :; do
+          node dist/src/schedule.js monobank-rodion
+          [ $(( $(date -u +%H) % 6 )) -eq 5 ] && node dist/src/fx-sync-cli.js
+          sleep 3600
+        done
+
+volumes:
+  keepard-pgdata:
