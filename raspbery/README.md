@@ -4,6 +4,8 @@
 
 [Personal blog](https://github.com/andriyor/blog)
 
+[Runway Budget: balances, runway and Monobank spending](https://github.com/andriyor/runway-budget)
+
 [Track channel messages based on keywords and receive notification from bot](https://github.com/andriyor/tele-track)
 
 ## Third party
@@ -223,6 +225,32 @@ Open the URL and register; the first account is the admin.
 Update the switcher after pushing to the branch:
 `docker compose build --no-cache firefly && docker compose up -d firefly`.
 
+
+# Runway Budget
+
+[andriyor/runway-budget](https://github.com/andriyor/runway-budget) on http://192.168.1.65:8087,
+in `stacks/apps.yml`: `runway-api` (Fastify, SQLite in `./runway-budget/data`) and `runway-web`
+(nginx, proxies `/api` to the API), both built on the Pi from `main`. The API syncs one Monobank
+card at 09:00 and 21:00 Kyiv time (`TZ=Europe/Kyiv`).
+
+One-time setup, from this folder on the Pi. `runway-budget/` is gitignored:
+
+```bash
+install -d -m 700 runway-budget runway-budget/data
+umask 077
+cat > runway-budget/.env <<EOF
+MONO_TOKEN=<personal token from api.monobank.ua>
+MONO_ACCOUNT=<card account id from /personal/client-info>
+EOF
+docker compose up -d --build runway-api runway-web
+```
+
+The database is created on first start. To move an existing one, copy it to
+`runway-budget/data/data.db` before starting (`sqlite3 data.db ".backup copy.db"` makes a safe
+copy of a database in use). Older history: one sync per earlier 31-day window, a minute apart,
+e.g. `curl -X POST "localhost:8087/api/accounts/mono/sync?to=$(date -d '-31 days' +%s)"`.
+
+Update after pushing to `main`: `docker compose up -d --build runway-api runway-web`.
 
 # Raspotify
 
