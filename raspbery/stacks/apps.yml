@@ -53,3 +53,31 @@ services:
     volumes:
       - ./toggl-wrapper/data:/app/data
     restart: unless-stopped
+
+  # Runway Budget: balances, runway and Monobank spending, built from andriyor/runway-budget.
+  # ./runway-budget/.env holds MONO_TOKEN and MONO_ACCOUNT (synced at 09:00 and 21:00);
+  # SQLite lives in ./runway-budget/data.
+  runway-api:
+    container_name: runway-api
+    build:
+      context: https://github.com/andriyor/runway-budget.git#main
+      target: api
+    env_file: ./runway-budget/.env
+    environment:
+      - TZ=Europe/Kyiv
+    volumes:
+      - ./runway-budget/data:/data
+    networks:
+      default:
+        aliases: [api] # runway-web's nginx proxies /api to http://api:3000
+    restart: unless-stopped
+
+  runway-web:
+    container_name: runway-web
+    build:
+      context: https://github.com/andriyor/runway-budget.git#main
+      target: web
+    ports:
+      - "8087:80"
+    depends_on: [runway-api]
+    restart: unless-stopped

@@ -49,3 +49,5 @@ karakeep/
 keepard/
 # firefly: .env with APP_KEY and cron token; setup in README "Firefly III"
 firefly/
+# runway-budget: .env with the Monobank token, SQLite in data/
+runway-budget/
