@@ -71,3 +71,13 @@ services:
       - /mnt/storage/books:/books # Default destination for book downloads
       - /shelfmark:/config # App configuration
       # Required for torrent / usenet - path must match your download client'
+
+  # Alternative Jellyfin web client (Flutter); has a T subtitle toggle that jellyfin-web lacks
+  fladder:
+    image: ghcr.io/donutware/fladder:latest
+    container_name: fladder
+    environment:
+      - BASE_URL=http://192.168.1.65:8096 # locks the UI to this Jellyfin server
+    ports:
+      - 8097:80
+    restart: unless-stopped
