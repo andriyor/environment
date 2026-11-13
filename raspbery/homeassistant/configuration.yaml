@@ -39,3 +39,23 @@ sensor:
     model: e                     # Waveshare UPS HAT (E), MCU @ 0x2d
     name: UPS                    # Optional
     unique_id: waveshare_ups     # Optional
+
+template:
+  - sensor:
+      # Pi load = HAT input power minus power going into the battery.
+      # On battery VBUS is 0 and battery current is negative, so this becomes
+      # the discharge power. Ignores converter losses — an estimate.
+      - name: "UPS Load Power"
+        unique_id: ups_load_power
+        unit_of_measurement: W
+        device_class: power
+        state_class: measurement
+        availability: >
+          {{ has_value('sensor.ups_vbus_power')
+             and has_value('sensor.ups_battery_voltage')
+             and has_value('sensor.ups_battery_current') }}
+        state: >
+          {% set vbus = states('sensor.ups_vbus_power') | float %}
+          {% set bat = states('sensor.ups_battery_voltage') | float
+                     * states('sensor.ups_battery_current') | float %}
+          {{ (vbus - bat) | round(2) }}
