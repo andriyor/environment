@@ -7,6 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "disable_ai": false,
   "diff_view_style": "split",
   "project_panel": {
     "dock": "left"
@@ -29,17 +30,16 @@
     "font_family": "JetBrainsMono Nerd Font Mono" // starship icons; Ghostty bundles them, Zed doesn't
   },
   "edit_predictions": {
-    "mode": "eager"
+    "provider": "none" // Zed AI predictions off; agent work goes through claude CLI below
   },
   "agent": {
     "dock": "right",
-    "default_model": {
-      "effort": "medium",
-      "enable_thinking": true,
-      "provider": "zed.dev",
-      "model": "gpt-5.4"
-    },
-    "model_parameters": []
+    "terminal_init_command": "claude" // Terminal Threads run the installed Claude Code CLI
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry" // Claude Agent from the ACP registry; billed to the Claude login, not Zed
+    }
   },
   "ssh_connections": [
     {
