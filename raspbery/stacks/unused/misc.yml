@@ -65,6 +65,16 @@ services:
       retries: 3
     restart: unless-stopped
 
+  # Alternative Jellyfin web client (Flutter); has a T subtitle toggle that jellyfin-web lacks
+  fladder:
+    image: ghcr.io/donutware/fladder:latest
+    container_name: fladder
+    environment:
+      - BASE_URL=http://192.168.1.65:8096 # locks the UI to this Jellyfin server
+    ports:
+      - 8097:80
+    restart: unless-stopped
+
 volumes:
   portainer_data:
   adguard:

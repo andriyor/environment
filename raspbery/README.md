@@ -43,7 +43,7 @@ everything from this folder as before: `docker compose up -d`,
   `docker compose pull $(docker compose -f stacks/arr.yml config --services)`.
 - `stacks/unused/` holds standalone stacks not in use (elastic, kafka,
   monitoring, nextcloud, and `misc.yml` with kavita, seerr, nocodb, portainer,
-  open-webui), not included. Run one with `docker compose -f stacks/unused/kafka.yml up -d`;
+  open-webui, fladder), not included. Run one with `docker compose -f stacks/unused/kafka.yml up -d`;
   its project is then named `unused`, so pass `-p raspbery` to reuse the old
   `raspbery_*` volumes (it will warn about orphans — never add
   `--remove-orphans` there, it would stop the whole main stack).
