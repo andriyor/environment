@@ -48,6 +48,42 @@ everything from this folder as before: `docker compose up -d`,
   `raspbery_*` volumes (it will warn about orphans — never add
   `--remove-orphans` there, it would stop the whole main stack).
 
+## Healthchecks
+
+Only images that ship their own `HEALTHCHECK` have one (jellyfin, firefly,
+karakeep, keepard, filebrowser, nextexplorer, shelfmark, mtproto-proxy), plus
+`keepard-db` because `keepard` waits on it with `condition: service_healthy`.
+Adding one to every service was tried and reverted (Nov 2026):
+
+- Nothing acts on "unhealthy": `restart: unless-stopped` only restarts when the
+  process exits, there's no autoheal, and Gatus checks only external endpoints.
+- Every probe is an `exec` every 30s, and Docker writes each result to
+  `/var/lib/docker`, which is on the SD card (the I/O bottleneck).
+
+Add one per service only with a consumer: a `depends_on: service_healthy`, or
+an autoheal container for something that hangs without exiting. For "is it
+down?" alerts, add the service to Gatus (`config.yaml`) instead. The probes
+were verified working, if needed again:
+
+| Service | Probe |
+| --- | --- |
+| prowlarr / radarr / lidarr | `curl -fsS http://localhost:<port>/ping` |
+| bazarr | `curl -fsS http://localhost:6767/api/system/ping` |
+| flaresolverr / influxdb / meilisearch | `curl -fsS http://localhost:<port>/health` |
+| grafana | `wget -qO /dev/null http://localhost:3000/api/health` |
+| homeassistant | `curl -fsS http://localhost:8123/manifest.json` (give it `start_period: 2m`) |
+| matter-server | `curl -sS -o /dev/null http://localhost:5580/` (websocket, any response = up) |
+| stash | `wget -qO /dev/null http://localhost:9999/healthz` |
+| ezbookkeeping | `wget -qO /dev/null http://localhost:8080/healthz.json` |
+| adguardhome | `wget -qO /dev/null http://127.0.0.1:80/login.html` |
+| toggl-wrapper | `wget ... http://127.0.0.1:5173/` (vite is IPv4-only, not `localhost`) |
+| toggl-lock | `nc -z 127.0.0.1 8790` (no GET route, `/` is 404) |
+| runway | `node -e "fetch('http://127.0.0.1:3000/')..."` (no curl/wget) |
+| archivegram / airtable-wrapper | `python3 -c "import urllib.request as u; u.urlopen(...)"` |
+| blog | `bash -c 'exec 3<>/dev/tcp/127.0.0.1/80'` (httpd, no curl/wget) |
+| beszel / beszel-agent | `/beszel health --url http://localhost:8090`, `/agent health` (distroless) |
+| gatus | none possible: scratch image, no shell, no health subcommand |
+
 # FileBrowser Quantum
 
 [gtsteffaniak/filebrowser](https://github.com/gtsteffaniak/filebrowser) on 9090,
