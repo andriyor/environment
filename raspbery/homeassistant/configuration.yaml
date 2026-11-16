@@ -40,6 +40,38 @@ sensor:
     name: UPS                    # Optional
     unique_id: waveshare_ups     # Optional
 
+  # kWh counters for the Energy dashboard (it needs energy, these sources are W).
+  # left + max_sub_interval: the value holds until the next reading, and the
+  # total keeps growing every 5 min even when the power reading doesn't change.
+  # Pi: HAT input power, not "UPS Load Power" (that estimate goes negative).
+  - platform: integration
+    name: Pi Energy
+    unique_id: pi_energy
+    source: sensor.ups_vbus_power
+    unit_prefix: k
+    method: left
+    round: 3
+    max_sub_interval:
+      minutes: 5
+  - platform: integration
+    name: Bluetti AC Out Energy
+    unique_id: bluetti_ac_out_energy
+    source: sensor.el100v22619120898693_alternating_current_out_power
+    unit_prefix: k
+    method: left
+    round: 3
+    max_sub_interval:
+      minutes: 5
+  - platform: integration
+    name: Bluetti DC Out Energy
+    unique_id: bluetti_dc_out_energy
+    source: sensor.el100v22619120898693_direct_current_out_power
+    unit_prefix: k
+    method: left
+    round: 3
+    max_sub_interval:
+      minutes: 5
+
 template:
   - sensor:
       # Pi load = HAT input power minus power going into the battery.
