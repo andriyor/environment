@@ -70,3 +70,20 @@ services:
     ports:
       - "8087:3000"
     restart: unless-stopped
+
+  # Archivegram: archives friends' Instagram stories, built from andriyor/archivegram (private, so
+  # from a local clone in ./archivegram/src; see README "Archivegram"). One container: the API serves
+  # the web app at /. ./archivegram/.env holds INSTAGRAM_USERNAME; the Instaloader session is in
+  # ./archivegram/instaloader; database, stories and profile pictures live in ./archivegram/data.
+  archivegram:
+    container_name: archivegram
+    build: ./archivegram/src
+    env_file: ./archivegram/.env
+    environment:
+      - TZ=Europe/Kyiv # stories are grouped by local day
+    volumes:
+      - ./archivegram/data:/app/api/data
+      - ./archivegram/instaloader:/home/app/.config/instaloader:ro
+    ports:
+      - "8088:8000"
+    restart: unless-stopped

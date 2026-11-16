@@ -6,6 +6,8 @@
 
 [Runway Budget: balances, runway and Monobank spending](https://github.com/andriyor/runway-budget)
 
+[Archivegram: keep up with friends' Instagram stories](https://github.com/andriyor/archivegram)
+
 [Track channel messages based on keywords and receive notification from bot](https://github.com/andriyor/tele-track)
 
 ## Third party
@@ -251,6 +253,31 @@ copy of a database in use). Older history: one sync per earlier 31-day window, a
 e.g. `curl -X POST "localhost:8087/api/accounts/mono/sync?to=$(date -d '-31 days' +%s)"`.
 
 Update after pushing to `main`: `docker compose up -d --build runway-api runway-web`.
+
+# Archivegram
+
+[andriyor/archivegram](https://github.com/andriyor/archivegram) (private) on http://192.168.1.65:8088,
+in `stacks/apps.yml`: one container, the FastAPI API serving the built web app. It downloads the
+current stories of all subscribed profiles about every 6 hours (`DOWNLOAD_INTERVAL_HOURS`), stories
+grouped by Kyiv day (`TZ=Europe/Kyiv`). The repo is private, so it is built from a clone in
+`archivegram/src` rather than a git URL. `archivegram/` is gitignored.
+
+One-time setup, from this folder on the Pi. The Instagram session comes from a machine where you
+logged in with Instaloader (`~/.config/instaloader/session-<account>`, see the Archivegram README):
+
+```bash
+install -d -m 700 archivegram archivegram/instaloader
+git clone https://github.com/andriyor/archivegram.git archivegram/src
+mkdir -p archivegram/data  # or copy an existing api/data here
+echo "INSTAGRAM_USERNAME=<account>" > archivegram/.env && chmod 600 archivegram/.env
+scp <machine>:.config/instaloader/session-<account> archivegram/instaloader/
+docker compose up -d --build archivegram
+```
+
+Update after pushing to `master`: `git -C archivegram/src pull && docker compose up -d --build archivegram`.
+
+Run only one instance per Instagram account: two would download with the same session and double
+the requests Instagram sees.
 
 # Raspotify
 

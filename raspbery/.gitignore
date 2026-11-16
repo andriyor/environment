@@ -51,3 +51,5 @@ keepard/
 firefly/
 # runway-budget: .env with the Monobank token, SQLite in data/
 runway-budget/
+# archivegram: private repo clone, Instagram session, SQLite and media; setup in README "Archivegram"
+archivegram/
