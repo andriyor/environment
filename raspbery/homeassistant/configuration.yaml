@@ -1,6 +1,23 @@
 
-# Loads default set of integrations. Do not remove.
-default_config:
+# default_config minus what's unused here, to save memory: cloud (no Nabu Casa),
+# go2rtc + stream (no cameras), file, usage_prediction, homeassistant_alerts.
+# assist_pipeline + conversation stay: esphome depends on them.
+# Recheck the list on upgrades: homeassistant/components/default_config/manifest.json
+assist_pipeline:
+bluetooth:
+conversation:
+dhcp:
+energy:
+history:
+logbook:
+media_source:
+mobile_app:
+my:
+ssdp:
+sun:
+usb:
+webhook:
+zeroconf:
 
 # Load frontend themes from the themes folder
 frontend:
