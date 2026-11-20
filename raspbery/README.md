@@ -84,6 +84,21 @@ were verified working, if needed again:
 | beszel / beszel-agent | `/beszel health --url http://localhost:8090`, `/agent health` (distroless) |
 | gatus | none possible: scratch image, no shell, no health subcommand |
 
+# Stash theme
+
+`stash/custom.css` is a custom theme ("Velvet": dark glass, rose → violet
+accent). `stash-config/` is root-owned and gitignored, so apply the theme
+through the API (open on 9999, no auth) instead of copying files:
+
+```sh
+jq -n --rawfile css stash/custom.css \
+  '{query:"mutation($css:String!){configureInterface(input:{css:$css,cssEnabled:true}){cssEnabled}}",variables:{css:$css}}' \
+  | curl -s localhost:9999/graphql -H 'content-type: application/json' -d @-
+```
+
+Hard-refresh the browser afterwards. To turn it off: Settings › Interface ›
+Custom CSS.
+
 # FileBrowser Quantum
 
 [gtsteffaniak/filebrowser](https://github.com/gtsteffaniak/filebrowser) on 9090,
