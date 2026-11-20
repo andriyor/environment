@@ -67,7 +67,7 @@ were verified working, if needed again:
 
 | Service | Probe |
 | --- | --- |
-| prowlarr / radarr / lidarr | `curl -fsS http://localhost:<port>/ping` |
+| prowlarr / radarr / lidarr / whisparr | `curl -fsS http://localhost:<port>/ping` |
 | bazarr | `curl -fsS http://localhost:6767/api/system/ping` |
 | flaresolverr / influxdb / meilisearch | `curl -fsS http://localhost:<port>/health` |
 | grafana | `wget -qO /dev/null http://localhost:3000/api/health` |

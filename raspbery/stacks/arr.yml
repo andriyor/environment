@@ -81,6 +81,26 @@ services:
       - 8686:8686
     restart: unless-stopped
 
+  # Adult scene/movie manager (Radarr-based v3): searches via prowlarr, downloads via qbittorrent.
+  # Same /data + /ndata paths as qbittorrent so download paths match. Library is
+  # /ndata/porn (what stash scans); downloads go to /ndata/downloads/whisparr on the
+  # same disk so imports hardlink instead of copying.
+  whisparr:
+    image: ghcr.io/hotio/whisparr:v3
+    container_name: whisparr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Etc/UTC
+    volumes:
+      - ./whisparr-config:/config
+      - /mnt/storage:/data
+      - /mnt/nas_data:/ndata
+    ports:
+      - 6969:6969
+    restart: unless-stopped
+
   # Subtitle downloader for radarr's movies
   bazarr:
     image: lscr.io/linuxserver/bazarr:latest
