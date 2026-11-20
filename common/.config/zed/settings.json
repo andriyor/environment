@@ -22,6 +22,7 @@
     "diff_base": "default_branch"
   },
   "git_panel": {
+    "group_by": "status",
     "dock": "left",
     "tree_view": true
   },

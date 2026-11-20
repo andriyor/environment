@@ -25,7 +25,6 @@
 
 [core]
     editor = micro
-    sshCommand = "ssh -i ~/.ssh/andriyorehov@gmail.com -o IdentitiesOnly=yes"
 ;   # Enable file system monitor (needs watchman on macOS: brew install watchman)
 	fsmonitor = true
 ; 	# Cache untracked file info (big speedup in repos with many untracked files)
@@ -56,3 +55,4 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+

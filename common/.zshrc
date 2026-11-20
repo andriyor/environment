@@ -64,5 +64,5 @@ esac
 # pnpm end
 # >>> ghost-complete shell integration >>>
 # !! Contents within this block are managed by 'ghost-complete install' !!
-source '/Users/aoriekhov/.config/ghost-complete/shell/ghost-complete.zsh'
+# source '/Users/aoriekhov/.config/ghost-complete/shell/ghost-complete.zsh'
 # <<< ghost-complete shell integration <<<
