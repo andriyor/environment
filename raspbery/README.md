@@ -368,3 +368,46 @@ so firmware caps all USB ports at 600mA total; this raises it to 1.6A. Safe
 here — the HAT draws only 14.5W during a dual-disk copy off a 19.5V PD brick.
 
 
+# Router (Synology SRM)
+
+Synology SRM at `192.168.1.1`, UI at `http://192.168.1.1:8000`. The WAN IP is
+public (no CGNAT), so port forwards work. The Pi (eth0 `2c:cf:67:87:8d:c2`) has
+a DHCP reservation for `192.168.1.65`.
+
+Port forwards:
+
+| Name | Port | Protocol | Target |
+|---|---|---|---|
+| qbittorrent | 6881 → 6881 | TCP+UDP | 192.168.1.65 |
+
+Without the 6881 forward, qBittorrent can still download from seeders that
+accept incoming connections, but torrents whose few seeders are also firewalled
+never connect. UPnP is enabled on the router, but qBittorrent's UPnP can't help:
+the container runs on a Docker bridge, so it would map to its `172.18.x` address.
+
+Check whether the forward works from the Pi (needs NAT loopback, which SRM does):
+`timeout 5 bash -c '</dev/tcp/<WAN IP>/6881' && echo open`.
+
+## SRM web API
+
+Changes can be made from the Pi without a browser:
+
+- Login: POST `http://192.168.1.1:8000/webapi/auth.cgi` with
+  `api=SYNO.API.Auth&version=3&method=login&account=…&passwd=…&session=webui&format=sid&enable_syno_token=yes`.
+  It returns `sid` and `synotoken`.
+- Calls: POST `/webapi/_______________________________________________________entry.cgi`
+  (yes, that many underscores) with `api`, `method`, `version`, `_sid`,
+  `SynoToken`, and each parameter JSON-encoded.
+- `GET /webapi/query.cgi?api=SYNO.API.Info&version=1&method=query&query=all`
+  lists every API (no login needed).
+- Port forwards: `SYNO.Core.Network.Router.PortForward` v1, `get` / `set`.
+  `set` takes `rules=[…]` and **replaces the whole list**, so always send the
+  existing rules plus the new one. A rule is
+  `{"id":0,"enabled":true,"service":"qbittorrent","sourcePort":"6881","targetIP":"192.168.1.65","targetPort":"6881","protocol":"all"}`.
+  `protocol` must be `tcp`, `udp` or `all` (TCP+UDP); anything else returns HTTP 500.
+- DHCP reservations: `SYNO.Core.Network.DHCPServer.Reservation` v2 `get`
+  with `ifname="lbr0"`.
+- Field names for other settings come from the UI code:
+  `/webman/modules/nsm-Home/NSMHome.js` (fetch with cookie `id=<sid>`).
+
+
