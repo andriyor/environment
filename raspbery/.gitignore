@@ -13,11 +13,8 @@ stash-config/
 stash-generated/
 metadata/
 
-# qbittorrent: keep qBittorrent.conf only
-qbittorrent-config/*
-!qbittorrent-config/qBittorrent/
-qbittorrent-config/qBittorrent/*
-!qbittorrent-config/qBittorrent/qBittorrent.conf
+# qbittorrent: qBittorrent.conf holds the WebUI password hash and is rewritten by the app
+qbittorrent-config/
 
 # Home Assistant: keep hand-written config, ignore state, logs, dbs, secrets
 homeassistant/*
