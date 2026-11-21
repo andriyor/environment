@@ -38,7 +38,9 @@ services:
       - NEXTAUTH_SECRET=${KARAKEEP_NEXTAUTH_SECRET}
       - DISABLE_SIGNUPS=true
       - NODE_OPTIONS=--max-old-space-size=256
-      - WORKERS_DISABLED_WORKERS=inference,video
+      # inference must stay on even without an AI key: it marks new bookmarks
+      # as tagged; with it off they stay "pending" and the UI shows a skeleton
+      - WORKERS_DISABLED_WORKERS=video
       - CRAWLER_ENABLE_ADBLOCKER=false
     restart: unless-stopped
 
